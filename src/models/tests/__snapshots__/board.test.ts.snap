@@ -1,0 +1,49 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Board can be serialized 1`] = `
+Object {
+  "grid": Object {
+    "-2,7": RockFinishPathCard {
+      "connectors": Array [
+        1,
+        4,
+      ],
+      "id": "test-id",
+      "isUpsideDown": false,
+      "status": "unused",
+    },
+    "0,0": StartPathCard {
+      "connectors": Array [
+        1,
+        2,
+        3,
+        4,
+      ],
+      "id": "test-id",
+      "isUpsideDown": false,
+      "status": "unused",
+    },
+    "0,7": RockFinishPathCard {
+      "connectors": Array [
+        1,
+        2,
+      ],
+      "id": "test-id",
+      "isUpsideDown": false,
+      "status": "unused",
+    },
+    "2,7": GoldFinishPathCard {
+      "connectors": Array [
+        1,
+        2,
+        3,
+        4,
+      ],
+      "id": "test-id",
+      "isUpsideDown": false,
+      "status": "unused",
+    },
+  },
+  "id": "test-id",
+}
+`;

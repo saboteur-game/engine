@@ -1,0 +1,12 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Player can be serialized 1`] = `
+Object {
+  "age": 35,
+  "hand": Object {},
+  "id": "test-id",
+  "isSaboteur": false,
+  "name": "Alice",
+  "viewedFinishCards": Object {},
+}
+`;

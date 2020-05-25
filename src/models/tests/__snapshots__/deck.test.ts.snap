@@ -1,0 +1,20 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Deck can be serialized 1`] = `
+Object {
+  "drawPile": Array [
+    PassageCard {
+      "connectors": Array [
+        1,
+        2,
+        3,
+        4,
+      ],
+      "id": "test-id",
+      "isUpsideDown": false,
+      "status": "unused",
+    },
+  ],
+  "id": "test-id",
+}
+`;

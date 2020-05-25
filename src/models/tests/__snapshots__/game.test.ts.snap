@@ -1,0 +1,613 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Game can be serialized 1`] = `
+Object {
+  "board": Board {
+    "grid": Object {
+      "-2,7": RockFinishPathCard {
+        "connectors": Array [
+          1,
+          4,
+        ],
+        "id": "test-id",
+        "isUpsideDown": false,
+        "status": "unused",
+      },
+      "0,0": StartPathCard {
+        "connectors": Array [
+          1,
+          2,
+          3,
+          4,
+        ],
+        "id": "test-id",
+        "isUpsideDown": false,
+        "status": "unused",
+      },
+      "0,7": RockFinishPathCard {
+        "connectors": Array [
+          1,
+          2,
+        ],
+        "id": "test-id",
+        "isUpsideDown": false,
+        "status": "unused",
+      },
+      "2,7": GoldFinishPathCard {
+        "connectors": Array [
+          1,
+          2,
+          3,
+          4,
+        ],
+        "id": "test-id",
+        "isUpsideDown": false,
+        "status": "unused",
+      },
+    },
+    "id": "test-id",
+  },
+  "deck": Deck {
+    "drawPile": Array [
+      PassageCard {
+        "connectors": Array [
+          2,
+          4,
+        ],
+        "id": "test-id",
+        "isUpsideDown": false,
+        "status": "unused",
+      },
+      PassageCard {
+        "connectors": Array [
+          2,
+          4,
+        ],
+        "id": "test-id",
+        "isUpsideDown": false,
+        "status": "unused",
+      },
+      PassageCard {
+        "connectors": Array [
+          2,
+          4,
+        ],
+        "id": "test-id",
+        "isUpsideDown": false,
+        "status": "unused",
+      },
+      PassageCard {
+        "connectors": Array [
+          1,
+          3,
+        ],
+        "id": "test-id",
+        "isUpsideDown": false,
+        "status": "unused",
+      },
+      PassageCard {
+        "connectors": Array [
+          1,
+          3,
+        ],
+        "id": "test-id",
+        "isUpsideDown": false,
+        "status": "unused",
+      },
+      PassageCard {
+        "connectors": Array [
+          1,
+          3,
+        ],
+        "id": "test-id",
+        "isUpsideDown": false,
+        "status": "unused",
+      },
+      PassageCard {
+        "connectors": Array [
+          1,
+          3,
+        ],
+        "id": "test-id",
+        "isUpsideDown": false,
+        "status": "unused",
+      },
+      PassageCard {
+        "connectors": Array [
+          1,
+          4,
+        ],
+        "id": "test-id",
+        "isUpsideDown": false,
+        "status": "unused",
+      },
+      PassageCard {
+        "connectors": Array [
+          1,
+          4,
+        ],
+        "id": "test-id",
+        "isUpsideDown": false,
+        "status": "unused",
+      },
+      PassageCard {
+        "connectors": Array [
+          1,
+          4,
+        ],
+        "id": "test-id",
+        "isUpsideDown": false,
+        "status": "unused",
+      },
+      PassageCard {
+        "connectors": Array [
+          1,
+          4,
+        ],
+        "id": "test-id",
+        "isUpsideDown": false,
+        "status": "unused",
+      },
+      PassageCard {
+        "connectors": Array [
+          1,
+          2,
+        ],
+        "id": "test-id",
+        "isUpsideDown": false,
+        "status": "unused",
+      },
+      PassageCard {
+        "connectors": Array [
+          1,
+          2,
+        ],
+        "id": "test-id",
+        "isUpsideDown": false,
+        "status": "unused",
+      },
+      PassageCard {
+        "connectors": Array [
+          1,
+          2,
+        ],
+        "id": "test-id",
+        "isUpsideDown": false,
+        "status": "unused",
+      },
+      PassageCard {
+        "connectors": Array [
+          1,
+          2,
+        ],
+        "id": "test-id",
+        "isUpsideDown": false,
+        "status": "unused",
+      },
+      PassageCard {
+        "connectors": Array [
+          1,
+          2,
+        ],
+        "id": "test-id",
+        "isUpsideDown": false,
+        "status": "unused",
+      },
+      PassageCard {
+        "connectors": Array [
+          1,
+          2,
+          4,
+        ],
+        "id": "test-id",
+        "isUpsideDown": false,
+        "status": "unused",
+      },
+      PassageCard {
+        "connectors": Array [
+          1,
+          2,
+          4,
+        ],
+        "id": "test-id",
+        "isUpsideDown": false,
+        "status": "unused",
+      },
+      PassageCard {
+        "connectors": Array [
+          1,
+          2,
+          4,
+        ],
+        "id": "test-id",
+        "isUpsideDown": false,
+        "status": "unused",
+      },
+      PassageCard {
+        "connectors": Array [
+          1,
+          2,
+          4,
+        ],
+        "id": "test-id",
+        "isUpsideDown": false,
+        "status": "unused",
+      },
+      PassageCard {
+        "connectors": Array [
+          1,
+          2,
+          4,
+        ],
+        "id": "test-id",
+        "isUpsideDown": false,
+        "status": "unused",
+      },
+      PassageCard {
+        "connectors": Array [
+          1,
+          2,
+          3,
+        ],
+        "id": "test-id",
+        "isUpsideDown": false,
+        "status": "unused",
+      },
+      PassageCard {
+        "connectors": Array [
+          1,
+          2,
+          3,
+        ],
+        "id": "test-id",
+        "isUpsideDown": false,
+        "status": "unused",
+      },
+      PassageCard {
+        "connectors": Array [
+          1,
+          2,
+          3,
+        ],
+        "id": "test-id",
+        "isUpsideDown": false,
+        "status": "unused",
+      },
+      PassageCard {
+        "connectors": Array [
+          1,
+          2,
+          3,
+        ],
+        "id": "test-id",
+        "isUpsideDown": false,
+        "status": "unused",
+      },
+      PassageCard {
+        "connectors": Array [
+          1,
+          2,
+          3,
+        ],
+        "id": "test-id",
+        "isUpsideDown": false,
+        "status": "unused",
+      },
+      PassageCard {
+        "connectors": Array [
+          1,
+          2,
+          3,
+          4,
+        ],
+        "id": "test-id",
+        "isUpsideDown": false,
+        "status": "unused",
+      },
+      PassageCard {
+        "connectors": Array [
+          1,
+          2,
+          3,
+          4,
+        ],
+        "id": "test-id",
+        "isUpsideDown": false,
+        "status": "unused",
+      },
+      PassageCard {
+        "connectors": Array [
+          1,
+          2,
+          3,
+          4,
+        ],
+        "id": "test-id",
+        "isUpsideDown": false,
+        "status": "unused",
+      },
+      PassageCard {
+        "connectors": Array [
+          1,
+          2,
+          3,
+          4,
+        ],
+        "id": "test-id",
+        "isUpsideDown": false,
+        "status": "unused",
+      },
+      PassageCard {
+        "connectors": Array [
+          1,
+          2,
+          3,
+          4,
+        ],
+        "id": "test-id",
+        "isUpsideDown": false,
+        "status": "unused",
+      },
+      DeadendCard {
+        "connectors": Array [
+          1,
+        ],
+        "id": "test-id",
+        "isUpsideDown": false,
+        "status": "unused",
+      },
+      DeadendCard {
+        "connectors": Array [
+          2,
+        ],
+        "id": "test-id",
+        "isUpsideDown": false,
+        "status": "unused",
+      },
+      DeadendCard {
+        "connectors": Array [
+          1,
+          2,
+        ],
+        "id": "test-id",
+        "isUpsideDown": false,
+        "status": "unused",
+      },
+      DeadendCard {
+        "connectors": Array [
+          1,
+          3,
+        ],
+        "id": "test-id",
+        "isUpsideDown": false,
+        "status": "unused",
+      },
+      DeadendCard {
+        "connectors": Array [
+          1,
+          4,
+        ],
+        "id": "test-id",
+        "isUpsideDown": false,
+        "status": "unused",
+      },
+      DeadendCard {
+        "connectors": Array [
+          2,
+          4,
+        ],
+        "id": "test-id",
+        "isUpsideDown": false,
+        "status": "unused",
+      },
+      DeadendCard {
+        "connectors": Array [
+          1,
+          2,
+          3,
+        ],
+        "id": "test-id",
+        "isUpsideDown": false,
+        "status": "unused",
+      },
+      DeadendCard {
+        "connectors": Array [
+          1,
+          2,
+          4,
+        ],
+        "id": "test-id",
+        "isUpsideDown": false,
+        "status": "unused",
+      },
+      DeadendCard {
+        "connectors": Array [
+          1,
+          2,
+          3,
+          4,
+        ],
+        "id": "test-id",
+        "isUpsideDown": false,
+        "status": "unused",
+      },
+      MapActionCard {
+        "id": "test-id",
+        "status": "unused",
+      },
+      MapActionCard {
+        "id": "test-id",
+        "status": "unused",
+      },
+      MapActionCard {
+        "id": "test-id",
+        "status": "unused",
+      },
+      MapActionCard {
+        "id": "test-id",
+        "status": "unused",
+      },
+      MapActionCard {
+        "id": "test-id",
+        "status": "unused",
+      },
+      MapActionCard {
+        "id": "test-id",
+        "status": "unused",
+      },
+      RockfallActionCard {
+        "id": "test-id",
+        "status": "unused",
+      },
+      RockfallActionCard {
+        "id": "test-id",
+        "status": "unused",
+      },
+      RockfallActionCard {
+        "id": "test-id",
+        "status": "unused",
+      },
+      BreakActionCard {
+        "appliesTo": Array [
+          "pick",
+        ],
+        "id": "test-id",
+        "status": "unused",
+      },
+      BreakActionCard {
+        "appliesTo": Array [
+          "pick",
+        ],
+        "id": "test-id",
+        "status": "unused",
+      },
+      BreakActionCard {
+        "appliesTo": Array [
+          "pick",
+        ],
+        "id": "test-id",
+        "status": "unused",
+      },
+      BreakActionCard {
+        "appliesTo": Array [
+          "lamp",
+        ],
+        "id": "test-id",
+        "status": "unused",
+      },
+      BreakActionCard {
+        "appliesTo": Array [
+          "lamp",
+        ],
+        "id": "test-id",
+        "status": "unused",
+      },
+      BreakActionCard {
+        "appliesTo": Array [
+          "lamp",
+        ],
+        "id": "test-id",
+        "status": "unused",
+      },
+      BreakActionCard {
+        "appliesTo": Array [
+          "wagon",
+        ],
+        "id": "test-id",
+        "status": "unused",
+      },
+      BreakActionCard {
+        "appliesTo": Array [
+          "wagon",
+        ],
+        "id": "test-id",
+        "status": "unused",
+      },
+      BreakActionCard {
+        "appliesTo": Array [
+          "wagon",
+        ],
+        "id": "test-id",
+        "status": "unused",
+      },
+      RepairActionCard {
+        "appliesTo": Array [
+          "pick",
+        ],
+        "id": "test-id",
+        "status": "unused",
+      },
+      RepairActionCard {
+        "appliesTo": Array [
+          "pick",
+        ],
+        "id": "test-id",
+        "status": "unused",
+      },
+      RepairActionCard {
+        "appliesTo": Array [
+          "lamp",
+        ],
+        "id": "test-id",
+        "status": "unused",
+      },
+      RepairActionCard {
+        "appliesTo": Array [
+          "lamp",
+        ],
+        "id": "test-id",
+        "status": "unused",
+      },
+      RepairActionCard {
+        "appliesTo": Array [
+          "wagon",
+        ],
+        "id": "test-id",
+        "status": "unused",
+      },
+      RepairActionCard {
+        "appliesTo": Array [
+          "wagon",
+        ],
+        "id": "test-id",
+        "status": "unused",
+      },
+      RepairActionCard {
+        "appliesTo": Array [
+          "pick",
+          "lamp",
+        ],
+        "id": "test-id",
+        "status": "unused",
+      },
+      RepairActionCard {
+        "appliesTo": Array [
+          "pick",
+          "wagon",
+        ],
+        "id": "test-id",
+        "status": "unused",
+      },
+      RepairActionCard {
+        "appliesTo": Array [
+          "lamp",
+          "wagon",
+        ],
+        "id": "test-id",
+        "status": "unused",
+      },
+    ],
+    "id": "test-id",
+  },
+  "discard": Discard {
+    "discardPile": Array [],
+    "id": "test-id",
+  },
+  "id": "test-id",
+  "isFinished": false,
+  "isStarted": false,
+  "playOrder": Array [],
+  "players": Object {},
+  "turn": 0,
+}
+`;

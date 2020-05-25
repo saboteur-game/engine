@@ -1,0 +1,39 @@
+{
+  "name": "saboteur-engine",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.ts",
+  "scripts": {
+    "eslint": "eslint --ext .js,.jsx,.ts,.tsx .",
+    "type-check": "tsc --noEmit",
+    "lint": "npm run eslint && npm run type-check",
+    "lint.fix": "npm run eslint -- --fix && npm run type-check",
+    "test": "jest"
+  },
+  "keywords": [
+    "saboteur",
+    "game",
+    "engine"
+  ],
+  "contributors": [
+    "Alistair Brown <github@alistairjcbrown.com>"
+  ],
+  "license": "MIT",
+  "dependencies": {
+    "@types/uuid": "^8.0.0",
+    "eventemitter2": "^6.4.1",
+    "uuid": "^8.1.0"
+  },
+  "devDependencies": {
+    "@types/jest": "^25.2.3",
+    "@typescript-eslint/eslint-plugin": "^3.0.1",
+    "@typescript-eslint/parser": "^3.0.1",
+    "eslint": "^7.1.0",
+    "eslint-config-prettier": "^6.11.0",
+    "eslint-plugin-prettier": "^3.1.3",
+    "jest": "^26.0.1",
+    "prettier": "^2.0.5",
+    "ts-jest": "^26.0.0",
+    "typescript": "^3.9.3"
+  }
+}

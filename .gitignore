@@ -1,0 +1,25 @@
+.DS_Store
+.idea
+node_modules
+.next
+.graphqlconfig
+schema.graphql
+
+# ui-test
+allure-report
+allure-results
+
+# cobertura coverage reports
+coverage/
+
+# jest-junit reports
+test-report\.xml
+
+# env
+ui-test/qa.env
+ui-test/prod.env
+ui-test/setup/*
+
+# pact tests
+pact-test/logs
+pact-test/pacts

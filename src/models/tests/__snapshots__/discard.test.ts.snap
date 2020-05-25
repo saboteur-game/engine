@@ -1,0 +1,8 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Discard can be serialized 1`] = `
+Object {
+  "discardPile": Array [],
+  "id": "test-id",
+}
+`;
