@@ -49,7 +49,7 @@ class Game {
   addPlayer(player: Player): void {
     const playerIds = Object.keys(this.players);
     if (playerIds.length === MAX_PLAYERS) {
-      throw new Error("Already at max players");
+      throw new Error("Maximum number of players");
     }
 
     this.players[player.id] = player;
@@ -58,6 +58,8 @@ class Game {
 
   removePlayer(playerId: string): void {
     const removedPlayer = this.players[playerId];
+    if (!removedPlayer) return;
+
     delete this.players[playerId];
     eventEmitter.emit("remove-player", removedPlayer);
   }
@@ -104,10 +106,16 @@ class Game {
     eventEmitter.emit("start-turn", this.getActivePlayer());
   }
 
-  getActivePlayer(): Player {
+  getActivePlayer(): Player | undefined {
+    if (!this.isStarted) return undefined;
+
     const playerIndex = this.turn % this.playOrder.length;
     const activePlayerId = this.playOrder[playerIndex];
     return this.players[activePlayerId];
+  }
+
+  getPlayers(): Player[] {
+    return Object.keys(this.players).map((id) => this.players[id]);
   }
 
   getPlayer(playerId: string): Player | undefined {
@@ -115,6 +123,10 @@ class Game {
   }
 
   playCard(player: Player, cardId: string, parameters: CardParameters): void {
+    if (!this.isStarted) {
+      throw new Error("Game has not started");
+    }
+
     const playedCard = player.playCard(cardId, parameters);
     if (!playedCard) {
       throw new Error("Player does not have card");
@@ -136,7 +148,15 @@ class Game {
   }
 
   discardCard(player: Player, cardId?: string): void {
-    if (player.getHandCardCount() === 0) return;
+    if (!this.isStarted) {
+      throw new Error("Game has not started");
+    }
+
+    if (player.getHandCardCount() === 0) {
+      eventEmitter.emit("discard-card", player, null);
+      this.endTurn();
+      return;
+    }
 
     if (!cardId) {
       throw new Error("Player must discard");
@@ -153,6 +173,10 @@ class Game {
     if (drawnCard) player.addToHand(drawnCard);
 
     this.endTurn();
+  }
+
+  getTopOfDiscardPile(): Card | null | undefined {
+    return this.discard.getTopCard();
   }
 
   toJS(): Pojo {

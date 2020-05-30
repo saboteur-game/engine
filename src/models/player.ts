@@ -39,6 +39,10 @@ class Player {
     delete this.hand[cardId];
   }
 
+  getHand(): (ActionCard | PathCard)[] {
+    return Object.keys(this.hand).map((id) => this.hand[id]);
+  }
+
   getHandCardCount(): number {
     return Object.keys(this.hand).length;
   }

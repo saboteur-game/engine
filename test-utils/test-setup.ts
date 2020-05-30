@@ -1,4 +1,5 @@
+let count = 0;
 jest.mock("../src/utils", () => ({
-  generateId: () => "test-id",
+  generateId: () => `test-id-${count++}`,
   shuffle: <T>(value: T): T => value,
 }));
