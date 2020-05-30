@@ -1,5 +1,5 @@
 import { generateId, Pojo } from "../utils";
-import Card from "./cards/card";
+import Card, { Status } from "./cards/card";
 
 class Discard {
   id: string;
@@ -22,6 +22,20 @@ class Discard {
 
   getCardCount(): number {
     return this.discardPile.length;
+  }
+
+  getTopCard(): Card | null | undefined {
+    const topCard = this.discardPile[0];
+    if (!topCard) return undefined;
+
+    // Return the played card. In the physical game, this would have been
+    // discarded face-up after being played.
+    if (topCard.status === Status.played) return topCard;
+
+    // Return null. In the physical game, this would have been discarded
+    // face-down. Null represents the presence of a card without any details
+    // on what that card is.
+    return null;
   }
 
   toJS(): Pojo {

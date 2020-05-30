@@ -3,6 +3,6 @@
 exports[`Discard can be serialized 1`] = `
 Object {
   "discardPile": Array [],
-  "id": "test-id",
+  "id": "test-id-1",
 }
 `;

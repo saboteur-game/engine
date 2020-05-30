@@ -42,6 +42,24 @@ describe("Player", () => {
     });
   });
 
+  describe("addToHand", () => {
+    describe("when there are no cards in the players hand", () => {
+      it("returns empty array", () => {
+        expect(player.getHand()).toEqual([]);
+      });
+    });
+
+    describe("when there are cards in the players hand", () => {
+      beforeEach(() => {
+        player.addToHand(card);
+      });
+
+      it("returns populated array", () => {
+        expect(player.getHand()).toMatchSnapshot();
+      });
+    });
+  });
+
   describe("playCard", () => {
     beforeEach(() => {
       player.addToHand(card);
