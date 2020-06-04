@@ -1,13 +1,23 @@
+import { mocked } from "ts-jest/utils";
 import eventEmitter from "../../event-emitter";
 import Player from "../player";
 import { PathCard } from "../cards/path-cards";
 import { MapActionCard, ActionCard } from "../cards/action-cards";
 import CardParameters from "../cards/card-parameters";
+import { getShuffledDeck } from "../cards";
 import Game from "../game";
 
 jest.mock("../../event-emitter");
+jest.mock("../cards", () => {
+  jest.spyOn(global.Math, "random").mockReturnValue(0.5);
+  const cards = jest.requireActual("../cards");
+  return {
+    ...cards,
+    getShuffledDeck: jest.fn().mockReturnValue(cards.getShuffledDeck()),
+  };
+});
 
-jest.spyOn(global.Math, "random").mockReturnValue(0.5);
+const mockedGetSuffledDeck = mocked(getShuffledDeck);
 
 describe("Game", () => {
   let game: Game;
@@ -36,6 +46,19 @@ describe("Game", () => {
 
   it("can be serialized", () => {
     expect(game.toJS()).toMatchSnapshot();
+  });
+
+  describe("on event", () => {
+    const mockEventHandler = jest.fn();
+
+    beforeEach(() => {
+      game.on("*", mockEventHandler);
+    });
+
+    it("sets up event listener", () => {
+      expect(eventEmitter.on).toHaveBeenCalledTimes(1);
+      expect(eventEmitter.on).toHaveBeenCalledWith("*", mockEventHandler);
+    });
   });
 
   describe("addPlayer", () => {
@@ -431,6 +454,51 @@ describe("Game", () => {
             players[1]
           );
         });
+      });
+    });
+  });
+
+  describe("when the deck is reduced", () => {
+    let players: Player[];
+
+    beforeEach(() => {
+      jest.clearAllMocks();
+      mockedGetSuffledDeck.mockReturnValue([
+        new MapActionCard(),
+        new MapActionCard(),
+        new MapActionCard(),
+      ]);
+      game = new Game();
+      players = addPlayersToGame(3);
+      game.start();
+    });
+
+    it("deals available cards to players", () => {
+      expect(players[0].getHand().length).toBe(1);
+      expect(players[1].getHand().length).toBe(1);
+      expect(players[2].getHand().length).toBe(1);
+    });
+
+    describe("playCard", () => {
+      beforeEach(() => {
+        const card = players[0].getHand()[0];
+        const parameters = { position: "0,7" };
+        game.playCard(players[0], card.id, parameters);
+      });
+
+      it("does not add a new card to the players hand", () => {
+        expect(players[0].getHand().length).toBe(0);
+      });
+    });
+
+    describe("discardCard", () => {
+      beforeEach(() => {
+        const card = players[0].getHand()[0];
+        game.discardCard(players[0], card.id);
+      });
+
+      it("does not add a new card to the players hand", () => {
+        expect(players[0].getHand().length).toBe(0);
       });
     });
   });
