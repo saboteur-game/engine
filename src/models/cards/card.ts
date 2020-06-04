@@ -22,13 +22,19 @@ class Card {
   }
 
   setDiscarded(): void {
-    // TODO: Check if the state was unused and throw if it was anything else
-    this.status = Status.discarded;
+    if (this.status === Status.unused) {
+      this.status = Status.discarded;
+    } else {
+      throw new Error("Card in unknown state to set as discarded");
+    }
   }
 
   setPlayed(): void {
-    // TODO: Check if the state was unused or played and throw if it was anything else
-    this.status = Status.played;
+    if (this.status === Status.unused || this.status === Status.played) {
+      this.status = Status.played;
+    } else {
+      throw new Error("Card in unknown state to set as played");
+    }
   }
 
   toJS(): Pojo {

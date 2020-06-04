@@ -1,0 +1,12 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`ToolActionCard can be serialized 1`] = `
+Object {
+  "appliesTo": Array [
+    "lamp",
+  ],
+  "id": "test-id-0",
+  "parameters": undefined,
+  "status": "unused",
+}
+`;
