@@ -35,7 +35,9 @@ class Player {
   }
 
   removeFromHand(cardId: string): void {
-    // TODO: Should we throw if the card Id isn't in our hand?
+    if (!this.hand[cardId]) {
+      throw new Error("Cannot remove card which isn't in players hand");
+    }
     delete this.hand[cardId];
   }
 
@@ -47,21 +49,20 @@ class Player {
     return Object.keys(this.hand).length;
   }
 
-  playCard(
-    cardId: string,
-    parameters: CardParameters
-  ): ActionCard | PathCard | undefined {
+  playCard(cardId: string, parameters: CardParameters): ActionCard | PathCard {
     const card = this.hand[cardId];
-    // TODO: Should we throw if the card Id isn't in our hand?
-    if (!card) return undefined;
+    if (!card) {
+      throw new Error("Cannot play card which isn't in players hand");
+    }
 
     return card.play(parameters);
   }
 
-  discardCard(cardId: string): Card | undefined {
+  discardCard(cardId: string): Card {
     const card = this.hand[cardId];
-    // TODO: Should we throw if the card Id isn't in our hand?
-    if (!card) return undefined;
+    if (!card) {
+      throw new Error("Cannot discard card which isn't in players hand");
+    }
 
     this.removeFromHand(cardId);
     return card;

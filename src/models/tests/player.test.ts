@@ -66,10 +66,10 @@ describe("Player", () => {
     });
 
     describe("when card is not in the players hand", () => {
-      it("returns undefined", () => {
-        expect(player.playCard("test-card-id-123", { position: "0,1" })).toBe(
-          undefined
-        );
+      it("throws exception", () => {
+        expect(() =>
+          player.playCard("test-card-id-123", { position: "0,1" })
+        ).toThrow("Cannot play card which isn't in players hand");
       });
     });
 
@@ -88,10 +88,10 @@ describe("Player", () => {
     });
 
     describe("when card is not in the players hand", () => {
-      it("returns undefined and does not change the players hand", () => {
-        expect(player.getHandCardCount()).toBe(1);
-        expect(player.discardCard("test-card-id-123")).toBe(undefined);
-        expect(player.getHandCardCount()).toBe(1);
+      it("throws exception", () => {
+        expect(() => player.discardCard("test-card-id-123")).toThrow(
+          "Cannot discard card which isn't in players hand"
+        );
       });
     });
 
