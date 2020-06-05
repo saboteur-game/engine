@@ -2,8 +2,8 @@ import { generateId, Pojo } from "../utils";
 
 class Position {
   id: string;
-  private x: number;
-  private y: number;
+  x: number;
+  y: number;
 
   constructor(x: number, y: number) {
     this.id = generateId();

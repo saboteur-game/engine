@@ -1,13 +1,13 @@
-import Card from "../card";
+import Card, { Sides } from "../card";
 import { Pojo } from "../../../utils";
 import CardParameters from "../card-parameters";
 
 class PathCard extends Card {
-  connectors: number[];
+  connectors: Sides[];
   isUpsideDown: boolean;
   parameters: CardParameters | undefined;
 
-  constructor(connectors: number[], isUpsideDown?: boolean) {
+  constructor(connectors: Sides[], isUpsideDown?: boolean) {
     super();
     this.connectors = connectors;
     this.isUpsideDown = isUpsideDown || false;

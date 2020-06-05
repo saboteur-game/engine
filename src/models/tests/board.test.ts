@@ -6,6 +6,7 @@ import {
   StartPathCard,
   PassageCard,
 } from "../cards/path-cards";
+import { Sides } from "../cards/card";
 
 jest.spyOn(global.Math, "random").mockReturnValue(0.5);
 
@@ -14,7 +15,12 @@ const FINISH_POSITION = middleFinishPosition;
 const PLAY_POSITION = new Position(0, 1);
 
 const playPassage = (board: Board): void => {
-  const passageCard = new PassageCard([1, 2, 3, 4]);
+  const passageCard = new PassageCard([
+    Sides.top,
+    Sides.right,
+    Sides.bottom,
+    Sides.left,
+  ]);
   board.addCard(passageCard, PLAY_POSITION);
 };
 
@@ -56,7 +62,12 @@ describe("Board", () => {
   describe("add card to the board", () => {
     describe("when card cannot be added", () => {
       it("throws exception", () => {
-        const pathCard = new PathCard([1, 2, 3, 4]);
+        const pathCard = new PathCard([
+          Sides.top,
+          Sides.right,
+          Sides.bottom,
+          Sides.left,
+        ]);
         expect(() => board.addCard(pathCard, PLAY_POSITION)).toThrow(
           "Invalid type of card provided"
         );
@@ -67,7 +78,12 @@ describe("Board", () => {
       let passageCard: PassageCard;
 
       beforeEach(() => {
-        passageCard = new PassageCard([1, 2, 3, 4]);
+        passageCard = new PassageCard([
+          Sides.top,
+          Sides.right,
+          Sides.bottom,
+          Sides.left,
+        ]);
       });
 
       describe("and position is taken", () => {

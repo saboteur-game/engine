@@ -1,6 +1,7 @@
 import Position from "../../../position";
 import CardParameters from "../../card-parameters";
 import PathCard from "../path-card";
+import { Sides } from "../../card";
 
 const PLAY_POSITION = new Position(0, 1);
 
@@ -9,7 +10,7 @@ describe("PathCard", () => {
   let cardParameters: CardParameters;
 
   beforeEach(() => {
-    pathCard = new PathCard([1, 2, 3, 4]);
+    pathCard = new PathCard([Sides.top, Sides.right, Sides.bottom, Sides.left]);
     cardParameters = { position: PLAY_POSITION };
   });
 

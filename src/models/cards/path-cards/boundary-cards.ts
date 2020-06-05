@@ -1,8 +1,9 @@
 import { PathCard } from ".";
+import { Sides } from "../card";
 
 export class StartPathCard extends PathCard {
   constructor(isUpsideDown?: boolean) {
-    super([1, 2, 3, 4], isUpsideDown);
+    super([Sides.top, Sides.right, Sides.bottom, Sides.left], isUpsideDown);
   }
 }
 
@@ -10,7 +11,7 @@ export class FinishPathCard extends PathCard {}
 
 export class GoldFinishPathCard extends FinishPathCard {
   constructor(isUpsideDown?: boolean) {
-    super([1, 2, 3, 4], isUpsideDown);
+    super([Sides.top, Sides.right, Sides.bottom, Sides.left], isUpsideDown);
   }
 }
 

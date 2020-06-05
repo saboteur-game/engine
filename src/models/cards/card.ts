@@ -7,6 +7,13 @@ export enum Status {
   discarded = "discarded",
 }
 
+export enum Sides {
+  top = 1,
+  right = 2,
+  bottom = 3,
+  left = 4,
+}
+
 class Card {
   id: string;
   status: Status;

@@ -1,5 +1,5 @@
 // Utils is mocked in test setup
-const { generateId, shuffle } = jest.requireActual("../utils");
+const { generateId, shuffle } = jest.requireActual("..");
 
 describe("utils", () => {
   describe("generateId", () => {
