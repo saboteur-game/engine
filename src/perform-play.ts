@@ -6,7 +6,7 @@ import {
   RockfallActionCard,
   ToolActionCard,
 } from "./models/cards/action-cards";
-import { FinishPathCard, PathCard } from "./models/cards/path-cards";
+import { FinishPathCard, TunnelCard } from "./models/cards/path-cards";
 import Player from "./models/player";
 import Board from "./models/board";
 import {
@@ -30,6 +30,11 @@ function performToolAction(playedCard: ToolActionCard): void {
   }
 }
 
+function performPathAction(playedCard: TunnelCard, board: Board): void {
+  const { position } = playedCard.parameters as IBoardCardParameters;
+  board.addCard(playedCard, position);
+}
+
 function performRockfallAction(
   playedCard: RockfallActionCard,
   board: Board
@@ -49,16 +54,17 @@ function performMapAction(
 }
 
 function performPlay(
-  playedCard: ActionCard | PathCard,
+  playedCard: ActionCard | TunnelCard,
   player: Player,
   board: Board
 ): Card[] {
-  // TODO: Update the game state with passed in card
-  // If it's a path card - is it played against the board
-  //  - Do not return this card as it's not discarded
-
   if (!playedCard.parameters) {
     throw new Error("Missing action parameters");
+  }
+
+  if (playedCard instanceof TunnelCard) {
+    performPathAction(playedCard, board);
+    return []; // Tunnel cards are played to the board and not discarded
   }
 
   if (playedCard instanceof ToolActionCard) {
@@ -68,7 +74,7 @@ function performPlay(
 
   if (playedCard instanceof RockfallActionCard) {
     const removedCard = performRockfallAction(playedCard, board);
-    return [removedCard, playedCard];
+    return [removedCard, playedCard]; // Discard both the action card and the removed tunnel card
   }
 
   if (playedCard instanceof MapActionCard) {

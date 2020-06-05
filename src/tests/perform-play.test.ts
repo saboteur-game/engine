@@ -8,7 +8,7 @@ import {
 import Player from "../models/player";
 import Board, { middleFinishPosition } from "../models/board";
 import { Tools } from "../constants";
-import { PassageCard } from "../models/cards/path-cards";
+import { PassageCard, DeadendCard } from "../models/cards/path-cards";
 import Position from "../models/position";
 import performPlay from "../perform-play";
 
@@ -31,6 +31,40 @@ describe("performPlay", () => {
       expect(() => performPlay(actionCard, activePlayer, board)).toThrow(
         "Missing action parameters"
       );
+    });
+  });
+
+  describe("when PassageCard is played", () => {
+    let tunnelCard: PassageCard;
+
+    beforeEach(() => {
+      tunnelCard = new PassageCard([1, 2, 3, 4]);
+    });
+
+    it("adds the card to the board", () => {
+      expect(board.getCardAt(PLAY_POSITION)).toBe(undefined);
+
+      tunnelCard.play({ position: PLAY_POSITION });
+      performPlay(tunnelCard, activePlayer, board);
+
+      expect(board.getCardAt(PLAY_POSITION)).toBe(tunnelCard);
+    });
+  });
+
+  describe("when DeadendCard is played", () => {
+    let tunnelCard: PassageCard;
+
+    beforeEach(() => {
+      tunnelCard = new DeadendCard([1, 2, 3, 4]);
+    });
+
+    it("adds the card to the board", () => {
+      expect(board.getCardAt(PLAY_POSITION)).toBe(undefined);
+
+      tunnelCard.play({ position: PLAY_POSITION });
+      performPlay(tunnelCard, activePlayer, board);
+
+      expect(board.getCardAt(PLAY_POSITION)).toBe(tunnelCard);
     });
   });
 
@@ -86,23 +120,22 @@ describe("performPlay", () => {
   });
 
   describe("when RockfallActionCard is played", () => {
-    const position = PLAY_POSITION;
     let actionCard: RockfallActionCard;
     let passageCard: PassageCard;
 
     beforeEach(() => {
       actionCard = new RockfallActionCard();
       passageCard = new PassageCard([1, 2, 3, 4]);
-      board.addCard(passageCard, position);
+      board.addCard(passageCard, PLAY_POSITION);
     });
 
     it("removes the card from the board", () => {
-      expect(board.getCardAt(position)).toBe(passageCard);
+      expect(board.getCardAt(PLAY_POSITION)).toBe(passageCard);
 
-      actionCard.play({ position });
+      actionCard.play({ position: PLAY_POSITION });
       performPlay(actionCard, activePlayer, board);
 
-      expect(board.getCardAt(position)).toBe(undefined);
+      expect(board.getCardAt(PLAY_POSITION)).toBe(undefined);
     });
   });
 
