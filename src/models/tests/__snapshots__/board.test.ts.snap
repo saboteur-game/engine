@@ -10,7 +10,7 @@ Object {
       ],
       "id": "test-id-4",
       "isUpsideDown": false,
-      "status": "unused",
+      "status": "played",
     },
     "0,0": StartPathCard {
       "connectors": Array [
@@ -21,7 +21,7 @@ Object {
       ],
       "id": "test-id-1",
       "isUpsideDown": false,
-      "status": "unused",
+      "status": "played",
     },
     "0,7": RockFinishPathCard {
       "connectors": Array [
@@ -30,7 +30,7 @@ Object {
       ],
       "id": "test-id-3",
       "isUpsideDown": false,
-      "status": "unused",
+      "status": "played",
     },
     "2,7": GoldFinishPathCard {
       "connectors": Array [
@@ -41,7 +41,7 @@ Object {
       ],
       "id": "test-id-2",
       "isUpsideDown": false,
-      "status": "unused",
+      "status": "played",
     },
   },
   "id": "test-id-0",

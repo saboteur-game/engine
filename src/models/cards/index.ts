@@ -82,14 +82,16 @@ export interface IPlacedCards {
   rock2: RockFinishPathCard;
 }
 
-export const getPlacedCards = (): IPlacedCards => ({
-  start: new StartPathCard(randomBoolean()),
-  gold: new GoldFinishPathCard(randomBoolean()),
-  rock1: new RockFinishPathCard([1, 2], randomBoolean()),
-  rock2: new RockFinishPathCard([1, 4], randomBoolean()),
-});
+export const getPlacedCards = (): IPlacedCards => {
+  const start = new StartPathCard(randomBoolean());
+  const gold = new GoldFinishPathCard(randomBoolean());
+  const rock1 = new RockFinishPathCard([1, 2], randomBoolean());
+  const rock2 = new RockFinishPathCard([1, 4], randomBoolean());
 
-// TODO: Mark all placed cards as `setPlayed`
+  [start, gold, rock1, rock2].forEach((card) => card.setPlayed());
+
+  return { start, gold, rock1, rock2 };
+};
 
 export const getShuffledDeck = (): Array<ActionCard | PathCard> => {
   const pathCards = [
