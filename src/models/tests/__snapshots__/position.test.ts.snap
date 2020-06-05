@@ -1,0 +1,9 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Position can be serialized 1`] = `
+Object {
+  "id": "test-id-0",
+  "x": 1,
+  "y": 2,
+}
+`;

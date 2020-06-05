@@ -1,5 +1,8 @@
+import Position from "../../../position";
 import CardParameters from "../../card-parameters";
 import ActionCard from "../action-card";
+
+const PLAY_POSITION = new Position(0, 1);
 
 describe("ActionCard", () => {
   let actionCard: ActionCard;
@@ -7,7 +10,7 @@ describe("ActionCard", () => {
 
   beforeEach(() => {
     actionCard = new ActionCard();
-    cardParameters = { position: "0,0" };
+    cardParameters = { position: PLAY_POSITION };
   });
 
   it("can be serialized", () => {

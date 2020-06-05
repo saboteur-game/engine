@@ -2,6 +2,9 @@ import Player from "../player";
 import { MapActionCard } from "../cards/action-cards";
 import { Tools } from "../../constants";
 import { FinishPathCard, RockFinishPathCard } from "../cards/path-cards";
+import Position from "../position";
+
+const PLAY_POSITION = new Position(0, 1);
 
 describe("Player", () => {
   let card: MapActionCard;
@@ -30,15 +33,25 @@ describe("Player", () => {
     });
   });
 
-  describe("removeCard", () => {
-    beforeEach(() => {
-      player.addToHand(card);
+  describe("removeFromHand", () => {
+    describe("when the card is in the players hand", () => {
+      beforeEach(() => {
+        player.addToHand(card);
+      });
+
+      it("removes the card from the players hand", () => {
+        expect(player.getHandCardCount()).toBe(1);
+        player.removeFromHand(card.id);
+        expect(player.getHandCardCount()).toBe(0);
+      });
     });
 
-    it("removes the card from the players hand", () => {
-      expect(player.getHandCardCount()).toBe(1);
-      player.removeFromHand(card.id);
-      expect(player.getHandCardCount()).toBe(0);
+    describe("when the card is not in the players hand", () => {
+      it("throws exception", () => {
+        expect(() => player.removeFromHand(card.id)).toThrow(
+          "Cannot remove card which isn't in players hand"
+        );
+      });
     });
   });
 
@@ -68,7 +81,7 @@ describe("Player", () => {
     describe("when card is not in the players hand", () => {
       it("throws exception", () => {
         expect(() =>
-          player.playCard("test-card-id-123", { position: "0,1" })
+          player.playCard("test-card-id-123", { position: PLAY_POSITION })
         ).toThrow("Cannot play card which isn't in players hand");
       });
     });
@@ -76,8 +89,10 @@ describe("Player", () => {
     describe("when card is in the players hand", () => {
       it("returns played card with parameters", () => {
         expect(card.parameters).toBe(undefined);
-        expect(player.playCard(card.id, { position: "0,1" })).toBe(card);
-        expect(card.parameters).toEqual({ position: "0,1" });
+        expect(player.playCard(card.id, { position: PLAY_POSITION })).toBe(
+          card
+        );
+        expect(card.parameters).toEqual({ position: PLAY_POSITION });
       });
     });
   });

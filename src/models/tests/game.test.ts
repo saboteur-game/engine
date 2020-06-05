@@ -5,6 +5,7 @@ import { PathCard } from "../cards/path-cards";
 import { MapActionCard, ActionCard } from "../cards/action-cards";
 import CardParameters from "../cards/card-parameters";
 import { getShuffledDeck } from "../cards";
+import { middleFinishPosition } from "../board";
 import Game from "../game";
 
 jest.mock("../../event-emitter");
@@ -241,7 +242,7 @@ describe("Game", () => {
     beforeEach(() => {
       players = addPlayersToGame(3);
       card = new MapActionCard();
-      parameters = { position: "0,7" };
+      parameters = { position: middleFinishPosition };
     });
 
     describe("when game is not started", () => {
@@ -482,7 +483,7 @@ describe("Game", () => {
     describe("playCard", () => {
       beforeEach(() => {
         const card = players[0].getHand()[0];
-        const parameters = { position: "0,7" };
+        const parameters = { position: middleFinishPosition };
         game.playCard(players[0], card.id, parameters);
       });
 

@@ -1,5 +1,8 @@
+import Position from "../../../position";
 import CardParameters from "../../card-parameters";
 import PathCard from "../path-card";
+
+const PLAY_POSITION = new Position(0, 1);
 
 describe("PathCard", () => {
   let pathCard: PathCard;
@@ -7,7 +10,7 @@ describe("PathCard", () => {
 
   beforeEach(() => {
     pathCard = new PathCard([1, 2, 3, 4]);
-    cardParameters = { position: "0,0" };
+    cardParameters = { position: PLAY_POSITION };
   });
 
   it("can be serialized", () => {

@@ -11,14 +11,14 @@ const eventEmitter = new EventEmitter.EventEmitter2({
 });
 
 const emitter = {
-  emit(name: string, ...data: unknown[]) {
+  emit(name: string, ...data: unknown[]): void {
     eventEmitter.emit(name, {
       data,
       time: Date.now(),
     });
   },
 
-  on(name: string, listener: ListenerFn) {
+  on(name: string, listener: ListenerFn): void {
     eventEmitter.on(name, listener);
   },
 };
