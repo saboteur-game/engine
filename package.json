@@ -1,7 +1,7 @@
 {
   "name": "saboteur-engine",
   "version": "1.0.0",
-  "description": "",
+  "description": "Saboteur game engine",
   "main": "index.ts",
   "scripts": {
     "eslint": "eslint --ext .js,.jsx,.ts,.tsx .",
@@ -18,6 +18,12 @@
   "contributors": [
     "Alistair Brown <github@alistairjcbrown.com>"
   ],
+  "homepage": "https://github.com/saboteur-game/engine/",
+  "bugs": "https://github.com/saboteur-game/engine/issues",
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:saboteur-game/engine.git"
+  },
   "license": "MIT",
   "dependencies": {
     "@types/uuid": "^8.0.0",
