@@ -5,7 +5,7 @@ Array [
   Player {
     "age": 35,
     "hand": Object {},
-    "id": "test-id-129",
+    "id": "test-id-133",
     "isSaboteur": false,
     "name": "Alice",
     "tools": Object {
@@ -27,7 +27,7 @@ Object {
           1,
           4,
         ],
-        "id": "test-id-74",
+        "id": "test-id-78",
         "isUpsideDown": false,
         "status": "played",
       },
@@ -38,7 +38,7 @@ Object {
           3,
           4,
         ],
-        "id": "test-id-71",
+        "id": "test-id-75",
         "isUpsideDown": false,
         "status": "played",
       },
@@ -47,7 +47,7 @@ Object {
           1,
           2,
         ],
-        "id": "test-id-73",
+        "id": "test-id-77",
         "isUpsideDown": false,
         "status": "played",
       },
@@ -58,12 +58,12 @@ Object {
           3,
           4,
         ],
-        "id": "test-id-72",
+        "id": "test-id-76",
         "isUpsideDown": false,
         "status": "played",
       },
     },
-    "id": "test-id-70",
+    "id": "test-id-74",
   },
   "deck": Deck {
     "drawPile": Array [
@@ -615,13 +615,13 @@ Object {
         "status": "unused",
       },
     ],
-    "id": "test-id-68",
+    "id": "test-id-72",
   },
   "discard": Discard {
     "discardPile": Array [],
-    "id": "test-id-69",
+    "id": "test-id-73",
   },
-  "id": "test-id-67",
+  "id": "test-id-71",
   "isFinished": false,
   "isStarted": false,
   "playOrder": Array [],
@@ -770,9 +770,13 @@ Array [
 
 exports[`Game playCard when game is started card is in the players hand adds the card to the discard pile 1`] = `
 MapActionCard {
-  "id": "test-id-328",
+  "id": "test-id-332",
   "parameters": Object {
-    "position": "0,7",
+    "position": Position {
+      "id": "test-id-69",
+      "x": 0,
+      "y": 7,
+    },
   },
   "status": "played",
 }
@@ -838,7 +842,7 @@ Array [
         "status": "unused",
       },
     },
-    "id": "test-id-203",
+    "id": "test-id-207",
     "isSaboteur": true,
     "name": "Player 1",
     "tools": Object {
@@ -907,7 +911,7 @@ Array [
         "status": "unused",
       },
     },
-    "id": "test-id-204",
+    "id": "test-id-208",
     "isSaboteur": false,
     "name": "Player 2",
     "tools": Object {
@@ -976,7 +980,7 @@ Array [
         "status": "unused",
       },
     },
-    "id": "test-id-205",
+    "id": "test-id-209",
     "isSaboteur": false,
     "name": "Player 3",
     "tools": Object {

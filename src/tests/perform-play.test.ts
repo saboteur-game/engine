@@ -6,10 +6,13 @@ import {
   MapActionCard,
 } from "../models/cards/action-cards";
 import Player from "../models/player";
-import Board from "../models/board";
-import performPlay from "../perform-play";
+import Board, { middleFinishPosition } from "../models/board";
 import { Tools } from "../constants";
 import { PassageCard } from "../models/cards/path-cards";
+import Position from "../models/position";
+import performPlay from "../perform-play";
+
+const PLAY_POSITION = new Position(0, 1);
 
 describe("performPlay", () => {
   let activePlayer: Player;
@@ -83,7 +86,7 @@ describe("performPlay", () => {
   });
 
   describe("when RockfallActionCard is played", () => {
-    const position = "0,1";
+    const position = PLAY_POSITION;
     let actionCard: RockfallActionCard;
     let passageCard: PassageCard;
 
@@ -104,7 +107,6 @@ describe("performPlay", () => {
   });
 
   describe("when MapActionCard is played", () => {
-    const position = "0,7";
     let actionCard: MapActionCard;
 
     beforeEach(() => {
@@ -114,7 +116,7 @@ describe("performPlay", () => {
     it("shows the card to the player", () => {
       expect(activePlayer.getViewedFinishCards()).toHaveLength(0);
 
-      actionCard.play({ position });
+      actionCard.play({ position: middleFinishPosition });
       performPlay(actionCard, activePlayer, board);
 
       expect(activePlayer.getViewedFinishCards()).toHaveLength(1);
@@ -122,7 +124,6 @@ describe("performPlay", () => {
   });
 
   describe("when unknown card is played", () => {
-    const position = "0,7";
     let actionCard: ActionCard;
 
     beforeEach(() => {
@@ -130,7 +131,7 @@ describe("performPlay", () => {
     });
 
     it("throws exception", () => {
-      actionCard.play({ position });
+      actionCard.play({ position: middleFinishPosition });
       expect(() => performPlay(actionCard, activePlayer, board)).toThrow(
         "Unknown card"
       );

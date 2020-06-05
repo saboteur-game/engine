@@ -1,8 +1,9 @@
 import { Tools } from "../../constants";
+import Position from "../position";
 import Player from "../player";
 
 export interface IBoardCardParameters {
-  position: string;
+  position: Position;
 }
 
 export interface IToolActionCardParameters {

@@ -1,4 +1,5 @@
-import Board from "../board";
+import Board, { startPosition, middleFinishPosition } from "../board";
+import Position from "../position";
 import {
   PathCard,
   FinishPathCard,
@@ -8,9 +9,9 @@ import {
 
 jest.spyOn(global.Math, "random").mockReturnValue(0.5);
 
-const START_POSITION = "0,0";
-const FINISH_POSITION = "0,7";
-const PLAY_POSITION = "0,1";
+const START_POSITION = startPosition;
+const FINISH_POSITION = middleFinishPosition;
+const PLAY_POSITION = new Position(0, 1);
 
 const playPassage = (board: Board): void => {
   const passageCard = new PassageCard([1, 2, 3, 4]);

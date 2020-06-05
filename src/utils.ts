@@ -1,6 +1,6 @@
 import { v4 as uuidv4 } from "uuid";
 
-const generateId = () => uuidv4();
+const generateId = (): string => uuidv4();
 
 // https://stackoverflow.com/a/2450976
 function shuffle<T>(originalArray: T[]): T[] {
