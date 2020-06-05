@@ -265,7 +265,7 @@ describe("Game", () => {
       describe("card is not in the players hand", () => {
         it("throws exception", () => {
           expect(() => game.playCard(players[0], card.id, parameters)).toThrow(
-            "Player does not have card"
+            "Cannot play card which isn't in players hand"
           );
         });
 
@@ -347,7 +347,7 @@ describe("Game", () => {
       describe("card is not in the players hand", () => {
         it("throws exception", () => {
           expect(() => game.discardCard(players[0], card.id)).toThrow(
-            "Player does not have card"
+            "Cannot discard card which isn't in players hand"
           );
         });
 

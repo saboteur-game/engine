@@ -128,10 +128,6 @@ class Game {
     }
 
     const playedCard = player.playCard(cardId, parameters);
-    if (!playedCard) {
-      throw new Error("Player does not have card");
-    }
-
     const affectedCards = performPlay(playedCard, player, this.board);
 
     eventEmitter.emit("play-card", player, playedCard);
@@ -163,10 +159,6 @@ class Game {
     }
 
     const card = player.discardCard(cardId);
-    if (!card) {
-      throw new Error("Player does not have card");
-    }
-
     this.discard.addDiscarded(card);
     eventEmitter.emit("discard-card", player, card);
     const drawnCard = this.deck.drawCard();
