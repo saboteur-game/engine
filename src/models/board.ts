@@ -3,6 +3,7 @@ import Position from "./position";
 import Card from "./cards/card";
 import { getPlacedCards } from "./cards";
 import { PassageCard, DeadendCard } from "./cards/path-cards";
+// import canCardsConnect from "../utils/can-cards-connect";
 
 interface IGrid {
   [key: string]: Card;
@@ -42,7 +43,21 @@ class Board {
       throw new Error(`Position ${position} is already occupied`);
     }
 
-    // TODO: Check card can be legally added here!!
+    // const availablePositions = this.getAvailablePositions();
+    // const matchingPosition = availablePositions.find(
+    //   ({ x, y }) => position.x === x && position.y === y
+    // );
+    // if (!matchingPosition) {
+    //   throw new Error(`Position ${position} is not available`);
+    // }
+
+    // const adjacentCards = this.getAdjacentCards(position);
+    // const cardFits = adjacentCards.every((adjacentCard, index) =>
+    //   canCardsConnect(index + 1, adjacentCard, card)
+    // );
+    // if (!cardFits) {
+    //   throw new Error(`Selected cannot cannot fit in ${position}`);
+    // }
 
     card.setPlayed();
     this.grid[position.toString()] = card;
@@ -64,6 +79,18 @@ class Board {
   getCardAt(position: Position): Card | undefined {
     return this.grid[position.toString()];
   }
+
+  // getAvailablePositions(): Position[] {
+  //   // 1. We need a function which can provide all legal spaces that a card can be placed on
+  //   //   - and then we need to check that this position is one of those
+  //   //   - Start at the starting square and follow the paths outwards?
+  //   return [];
+  // }
+
+  // getAdjacentCards(position: Position): TunnelCard[] {
+  //   // 2. We need to check what adjacent cards there are and the connectors they have
+  //   return [];
+  // }
 
   toJS(): Pojo {
     return {

@@ -1,6 +1,6 @@
 import { shuffle } from "../../utils";
 import { Tools } from "../../constants";
-import Card from "./card";
+import Card, { Sides } from "./card";
 import {
   StartPathCard,
   GoldFinishPathCard,
@@ -85,8 +85,16 @@ export interface IPlacedCards {
 export const getPlacedCards = (): IPlacedCards => {
   const start = new StartPathCard(randomBoolean());
   const gold = new GoldFinishPathCard(randomBoolean());
-  const rock1 = new RockFinishPathCard([1, 2], randomBoolean());
-  const rock2 = new RockFinishPathCard([1, 4], randomBoolean());
+  // TODO: Does it matter if someone connects to this on a path that isn't valid?
+  // The instructions say it doesn't matter, but anything we can do?
+  const rock1 = new RockFinishPathCard(
+    [Sides.top, Sides.right],
+    randomBoolean()
+  );
+  const rock2 = new RockFinishPathCard(
+    [Sides.top, Sides.left],
+    randomBoolean()
+  );
 
   [start, gold, rock1, rock2].forEach((card) => card.setPlayed());
 
@@ -95,22 +103,52 @@ export const getPlacedCards = (): IPlacedCards => {
 
 export const getShuffledDeck = (): Array<ActionCard | PathCard> => {
   const pathCards = [
-    ...multiply(3, () => new PassageCard([2, 4], randomBoolean())),
-    ...multiply(4, () => new PassageCard([1, 3], randomBoolean())),
-    ...multiply(4, () => new PassageCard([1, 4], randomBoolean())),
-    ...multiply(5, () => new PassageCard([1, 2], randomBoolean())),
-    ...multiply(5, () => new PassageCard([1, 2, 4], randomBoolean())),
-    ...multiply(5, () => new PassageCard([1, 2, 3], randomBoolean())),
-    ...multiply(5, () => new PassageCard([1, 2, 3, 4], randomBoolean())),
-    new DeadendCard([1], randomBoolean()),
-    new DeadendCard([2], randomBoolean()),
-    new DeadendCard([1, 2], randomBoolean()),
-    new DeadendCard([1, 3], randomBoolean()),
-    new DeadendCard([1, 4], randomBoolean()),
-    new DeadendCard([2, 4], randomBoolean()),
-    new DeadendCard([1, 2, 3], randomBoolean()),
-    new DeadendCard([1, 2, 4], randomBoolean()),
-    new DeadendCard([1, 2, 3, 4], randomBoolean()),
+    ...multiply(
+      3,
+      () => new PassageCard([Sides.right, Sides.left], randomBoolean())
+    ),
+    ...multiply(
+      4,
+      () => new PassageCard([Sides.top, Sides.bottom], randomBoolean())
+    ),
+    ...multiply(
+      4,
+      () => new PassageCard([Sides.top, Sides.left], randomBoolean())
+    ),
+    ...multiply(
+      5,
+      () => new PassageCard([Sides.top, Sides.right], randomBoolean())
+    ),
+    ...multiply(
+      5,
+      () =>
+        new PassageCard([Sides.top, Sides.right, Sides.left], randomBoolean())
+    ),
+    ...multiply(
+      5,
+      () =>
+        new PassageCard([Sides.top, Sides.right, Sides.bottom], randomBoolean())
+    ),
+    ...multiply(
+      5,
+      () =>
+        new PassageCard(
+          [Sides.top, Sides.right, Sides.bottom, Sides.left],
+          randomBoolean()
+        )
+    ),
+    new DeadendCard([Sides.top], randomBoolean()),
+    new DeadendCard([Sides.right], randomBoolean()),
+    new DeadendCard([Sides.top, Sides.right], randomBoolean()),
+    new DeadendCard([Sides.top, Sides.bottom], randomBoolean()),
+    new DeadendCard([Sides.top, Sides.left], randomBoolean()),
+    new DeadendCard([Sides.right, Sides.left], randomBoolean()),
+    new DeadendCard([Sides.top, Sides.right, Sides.bottom], randomBoolean()),
+    new DeadendCard([Sides.top, Sides.right, Sides.left], randomBoolean()),
+    new DeadendCard(
+      [Sides.top, Sides.right, Sides.bottom, Sides.left],
+      randomBoolean()
+    ),
   ] as Array<PathCard>;
 
   const actionCards = [

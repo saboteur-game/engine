@@ -11,6 +11,7 @@ import { Tools } from "../constants";
 import { PassageCard, DeadendCard } from "../models/cards/path-cards";
 import Position from "../models/position";
 import performPlay from "../perform-play";
+import { Sides } from "../models/cards/card";
 
 const PLAY_POSITION = new Position(0, 1);
 
@@ -38,7 +39,12 @@ describe("performPlay", () => {
     let tunnelCard: PassageCard;
 
     beforeEach(() => {
-      tunnelCard = new PassageCard([1, 2, 3, 4]);
+      tunnelCard = new PassageCard([
+        Sides.top,
+        Sides.right,
+        Sides.bottom,
+        Sides.left,
+      ]);
     });
 
     it("adds the card to the board", () => {
@@ -55,7 +61,12 @@ describe("performPlay", () => {
     let tunnelCard: PassageCard;
 
     beforeEach(() => {
-      tunnelCard = new DeadendCard([1, 2, 3, 4]);
+      tunnelCard = new DeadendCard([
+        Sides.top,
+        Sides.right,
+        Sides.bottom,
+        Sides.left,
+      ]);
     });
 
     it("adds the card to the board", () => {
@@ -125,7 +136,12 @@ describe("performPlay", () => {
 
     beforeEach(() => {
       actionCard = new RockfallActionCard();
-      passageCard = new PassageCard([1, 2, 3, 4]);
+      passageCard = new PassageCard([
+        Sides.top,
+        Sides.right,
+        Sides.bottom,
+        Sides.left,
+      ]);
       board.addCard(passageCard, PLAY_POSITION);
     });
 

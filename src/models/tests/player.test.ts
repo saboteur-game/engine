@@ -3,6 +3,7 @@ import { MapActionCard } from "../cards/action-cards";
 import { Tools } from "../../constants";
 import { FinishPathCard, RockFinishPathCard } from "../cards/path-cards";
 import Position from "../position";
+import { Sides } from "../cards/card";
 
 const PLAY_POSITION = new Position(0, 1);
 
@@ -213,7 +214,12 @@ describe("Player", () => {
       let finishCard: RockFinishPathCard;
 
       beforeEach(() => {
-        finishCard = new RockFinishPathCard([1, 2, 3, 4]);
+        finishCard = new RockFinishPathCard([
+          Sides.top,
+          Sides.right,
+          Sides.bottom,
+          Sides.left,
+        ]);
       });
 
       it("adds to the list of viewed cards", () => {

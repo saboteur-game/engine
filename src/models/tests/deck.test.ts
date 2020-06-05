@@ -2,6 +2,7 @@ import { mocked } from "ts-jest/utils";
 import Deck from "../deck";
 import { getShuffledDeck } from "../cards";
 import { PassageCard } from "../cards/path-cards";
+import { Sides } from "../cards/card";
 
 const mockedGetSuffledDeck = mocked(getShuffledDeck);
 
@@ -12,7 +13,7 @@ describe("Deck", () => {
   let card: PassageCard;
 
   beforeEach(() => {
-    card = new PassageCard([1, 2, 3, 4]);
+    card = new PassageCard([Sides.top, Sides.right, Sides.bottom, Sides.left]);
     mockedGetSuffledDeck.mockReturnValue([card]);
   });
 
