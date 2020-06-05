@@ -5,6 +5,6 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
-      - run: yarn install
-      - run: yarn lint
-      - run: yarn test
+      - run: npm install
+      - run: npm run lint
+      - run: npm test
