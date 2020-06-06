@@ -321,4 +321,210 @@ describe("Board", () => {
       });
     });
   });
+
+  describe("get available positions from the board", () => {
+    describe("initial board setup", () => {
+      it("returns the four surrounding positions of the start position", () => {
+        expect(board.getAvailablePositions()).toMatchSnapshot();
+      });
+    });
+
+    describe("when there is a passage formed", () => {
+      beforeEach(() => {
+        board.addCard(
+          new PassageCard([Sides.top, Sides.right, Sides.bottom]),
+          new Position(0, -1)
+        );
+        board.addCard(
+          new PassageCard([Sides.top, Sides.right, Sides.bottom, Sides.left]),
+          new Position(1, 0)
+        );
+        board.addCard(
+          new PassageCard([Sides.right, Sides.bottom]),
+          new Position(1, 1)
+        );
+        board.addCard(
+          new PassageCard([Sides.top, Sides.right, Sides.left]),
+          new Position(2, 1)
+        );
+      });
+
+      it("returns correct positions for continuing the passage ", () => {
+        expect(board.getAvailablePositions()).toMatchSnapshot();
+      });
+    });
+
+    describe("when there is a passage with dead-ends", () => {
+      beforeEach(() => {
+        board.addCard(
+          new PassageCard([Sides.right, Sides.left]),
+          new Position(-1, 0)
+        );
+        board.addCard(new DeadendCard([Sides.right]), new Position(-2, 0));
+        board.addCard(
+          new PassageCard([Sides.top, Sides.right, Sides.bottom]),
+          new Position(0, -1)
+        );
+        board.addCard(
+          new PassageCard([Sides.top, Sides.right, Sides.bottom, Sides.left]),
+          new Position(1, 0)
+        );
+        board.addCard(
+          new PassageCard([Sides.right, Sides.bottom]),
+          new Position(1, 1)
+        );
+        board.addCard(
+          new DeadendCard([Sides.top, Sides.bottom, Sides.left]),
+          new Position(1, -1)
+        );
+        board.addCard(
+          new DeadendCard([Sides.right, Sides.left]),
+          new Position(2, 0)
+        );
+      });
+
+      it("returns correct positions and does not put positions around dead ends", () => {
+        expect(board.getAvailablePositions()).toMatchSnapshot();
+      });
+    });
+
+    describe("when there is a circular passage", () => {
+      beforeEach(() => {
+        board.addCard(
+          new PassageCard([Sides.right, Sides.left]),
+          new Position(-1, 0)
+        );
+        board.addCard(
+          new PassageCard([Sides.top, Sides.right, Sides.bottom]),
+          new Position(0, -1)
+        );
+        board.addCard(
+          new PassageCard([Sides.top, Sides.right, Sides.bottom, Sides.left]),
+          new Position(1, 0)
+        );
+        board.addCard(
+          new PassageCard([Sides.right, Sides.bottom]),
+          new Position(1, 1)
+        );
+        board.addCard(
+          new PassageCard([Sides.top, Sides.left]),
+          new Position(1, -1)
+        );
+        board.addCard(
+          new PassageCard([Sides.top, Sides.left]),
+          new Position(2, 0)
+        );
+        board.addCard(
+          new PassageCard([Sides.bottom, Sides.left]),
+          new Position(2, 1)
+        );
+      });
+
+      it("returns correct positions", () => {
+        expect(board.getAvailablePositions()).toMatchSnapshot();
+      });
+    });
+
+    describe("when there are no available positions", () => {
+      beforeEach(() => {
+        board.addCard(
+          new PassageCard([Sides.top, Sides.left]),
+          new Position(1, 0)
+        );
+        board.addCard(
+          new PassageCard([Sides.bottom, Sides.left]),
+          new Position(1, 1)
+        );
+        board.addCard(
+          new PassageCard([Sides.right, Sides.bottom]),
+          new Position(0, 1)
+        );
+        board.addCard(
+          new PassageCard([Sides.top, Sides.left], true),
+          new Position(-1, 0)
+        );
+        board.addCard(
+          new PassageCard([Sides.bottom, Sides.left], true),
+          new Position(-1, -1)
+        );
+        board.addCard(
+          new PassageCard([Sides.right, Sides.bottom], true),
+          new Position(0, -1)
+        );
+      });
+
+      it("returns correct positions", () => {
+        expect(board.getAvailablePositions()).toEqual([]);
+      });
+    });
+
+    describe("when there is a passage formed with upside down cards", () => {
+      beforeEach(() => {
+        board.addCard(
+          new PassageCard([Sides.top, Sides.right, Sides.bottom], true),
+          new Position(0, -1)
+        );
+        board.addCard(
+          new PassageCard(
+            [Sides.top, Sides.right, Sides.bottom, Sides.left],
+            true
+          ),
+          new Position(1, 0)
+        );
+        board.addCard(
+          new PassageCard([Sides.right, Sides.bottom], true),
+          new Position(2, 0)
+        );
+        board.addCard(
+          new PassageCard([Sides.top, Sides.right, Sides.left], true),
+          new Position(2, 1)
+        );
+      });
+
+      it("returns correct positions for continuing the passage ", () => {
+        expect(board.getAvailablePositions()).toMatchSnapshot();
+      });
+    });
+
+    describe("when there is a passage formed", () => {
+      beforeEach(() => {
+        board.addCard(
+          new PassageCard([Sides.top, Sides.right, Sides.bottom]),
+          new Position(0, -1)
+        );
+        board.addCard(
+          new PassageCard([Sides.top, Sides.right, Sides.bottom, Sides.left]),
+          new Position(1, -1)
+        );
+        board.addCard(
+          new PassageCard([Sides.right, Sides.left]),
+          new Position(2, -1)
+        );
+        board.addCard(
+          new PassageCard([Sides.bottom, Sides.left]),
+          new Position(3, -1)
+        );
+        board.addCard(
+          new PassageCard([Sides.top, Sides.right]),
+          new Position(3, -2)
+        );
+        board.addCard(
+          new PassageCard([Sides.top, Sides.right, Sides.bottom, Sides.left]),
+          new Position(4, -2)
+        );
+        board.addCard(
+          new PassageCard([Sides.top, Sides.right, Sides.left]),
+          new Position(5, -2)
+        );
+        board.addCard(
+          new PassageCard([Sides.right, Sides.left]),
+          new Position(6, -2)
+        );
+      });
+
+      it("returns correct positions for continuing the passage ", () => {
+        expect(board.getAvailablePositions()).toMatchSnapshot();
+      });
+    });
+  });
 });

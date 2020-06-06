@@ -5,7 +5,7 @@ Array [
   Player {
     "age": 35,
     "hand": Object {},
-    "id": "test-id-181",
+    "id": "test-id-190",
     "isSaboteur": false,
     "name": "Alice",
     "tools": Object {
@@ -631,21 +631,21 @@ Object {
 `;
 
 exports[`Game can visualize the board 1`] = `
-"                                          ██  ██
-                                            !!  
-                                          ██  ██
-                                                
-                                                
-                                                
-██  ██                                    ██  ██
-  []                                      ██xx  
-██  ██                                    ██████
-                                                
-                                                
-                                                
-                                          ██  ██
-                                            xx██
-                                          ██████"
+"                                                ██  ██
+                                                  !!  
+                                                ██  ██
+      |‾‾‾‾|                                          
+      |    |                                          
+      |____|                                          
+|‾‾‾‾|██  ██|‾‾‾‾|                              ██  ██
+|    |  []  |    |                              ██xx  
+|____|██  ██|____|                              ██████
+      |‾‾‾‾|                                          
+      |    |                                          
+      |____|                                          
+                                                ██  ██
+                                                  xx██
+                                                ██████"
 `;
 
 exports[`Game discardCard when game is started card is in the players hand adds a new card to the players hand 1`] = `
@@ -788,7 +788,7 @@ Array [
 
 exports[`Game playCard when game is started card is in the players hand adds the card to the discard pile 1`] = `
 MapActionCard {
-  "id": "test-id-380",
+  "id": "test-id-389",
   "parameters": Object {
     "position": Position {
       "id": "test-id-69",
@@ -860,7 +860,7 @@ Array [
         "status": "unused",
       },
     },
-    "id": "test-id-255",
+    "id": "test-id-264",
     "isSaboteur": true,
     "name": "Player 1",
     "tools": Object {
@@ -929,7 +929,7 @@ Array [
         "status": "unused",
       },
     },
-    "id": "test-id-256",
+    "id": "test-id-265",
     "isSaboteur": false,
     "name": "Player 2",
     "tools": Object {
@@ -998,7 +998,7 @@ Array [
         "status": "unused",
       },
     },
-    "id": "test-id-257",
+    "id": "test-id-266",
     "isSaboteur": false,
     "name": "Player 3",
     "tools": Object {

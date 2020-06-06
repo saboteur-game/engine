@@ -7,7 +7,8 @@ import {
   PathCard,
   FinishPathCard,
 } from "./cards/path-cards";
-import { Status } from "./cards/card";
+import { Status, Sides } from "./cards/card";
+import { getOppositeSide } from "../utils/get-opposite-side";
 // import canCardsConnect from "../utils/can-cards-connect";
 
 interface IGrid {
@@ -40,7 +41,14 @@ class Board {
   }
 
   visualize(): string {
-    const dimensions = Object.keys(this.grid).reduce(
+    const availablePositions = this.getAvailablePositions();
+    const availablePositionKeys = availablePositions.map((availablePosition) =>
+      availablePosition.toString()
+    );
+    const markedPositions = Object.keys(this.grid).concat(
+      availablePositionKeys
+    );
+    const dimensions = markedPositions.reduce(
       ({ top, right, bottom, left }, positionKey) => {
         const [x, y] = positionKey
           .split(",")
@@ -48,20 +56,32 @@ class Board {
         return {
           top: y > 0 ? Math.max(top, y) : top,
           right: x > 0 ? Math.max(right, x) : right,
-          bottom: y < 0 ? Math.max(bottom, Math.abs(y)) * -1 : bottom,
-          left: x < 0 ? Math.max(left, Math.abs(x)) * -1 : left,
+          bottom: y < 0 ? Math.max(Math.abs(bottom), Math.abs(y)) * -1 : bottom,
+          left: x < 0 ? Math.max(Math.abs(left), Math.abs(x)) * -1 : left,
         };
       },
       { top: 0, right: 0, bottom: 0, left: 0 }
     );
 
-    const CARD_SPACE = "      \n      \n      \n";
+    const BLANK_SPACE = "      \n      \n      \n";
+    const AVAILABLE_SPACE = "|‾‾‾‾|\n|    |\n|____|";
     const rowGrid = [];
     for (let y = dimensions.top; y >= dimensions.bottom; y--) {
       rowGrid.push([] as string[]);
       for (let x = dimensions.left; x <= dimensions.right; x++) {
         const card = this.getCardAt(new Position(x, y));
-        rowGrid[dimensions.top - y].push(!card ? CARD_SPACE : card.visualize());
+        if (card) {
+          rowGrid[dimensions.top - y].push(card.visualize());
+          continue;
+        }
+
+        const isAvailablePosition = availablePositions.some(
+          (availablePosition) =>
+            availablePosition.x === x && availablePosition.y === y
+        );
+        rowGrid[dimensions.top - y].push(
+          isAvailablePosition ? AVAILABLE_SPACE : BLANK_SPACE
+        );
       }
     }
 
@@ -129,23 +149,49 @@ class Board {
     return this.grid[position.toString()];
   }
 
-  // getAvailablePositions(): Position[] {
-  //   // TODO: Implement
-  //   // We need a function which can provide all legal spaces that a card can be placed on
-  //   //   - and then we need to check that this position is one of those
-  //   //   - Start at the starting square and follow the paths outwards?
-  //   return [];
-  // }
+  getAvailablePositions(): Position[] {
+    const visitedPositions: { [key: string]: boolean } = {};
+    const availablePositions: Position[] = [];
+
+    const findAvailablePositionsFrom = (position: Position) => {
+      if (visitedPositions[position.toString()]) return;
+      visitedPositions[position.toString()] = true;
+
+      const card = this.getCardAt(position);
+      if (!card) return availablePositions.push(position);
+
+      // There are no available positions around dead-end cards as they don't
+      // continue the passage
+      if (card instanceof DeadendCard) return;
+
+      const cardConnectors = card.connectors.map((connector) =>
+        card.isUpsideDown ? getOppositeSide(connector) : connector
+      );
+      const connectsToTop = cardConnectors.includes(Sides.top);
+      const connectsToRight = cardConnectors.includes(Sides.right);
+      const connectsToBottom = cardConnectors.includes(Sides.bottom);
+      const connectsToLeft = cardConnectors.includes(Sides.left);
+
+      if (connectsToTop) findAvailablePositionsFrom(position.above());
+      if (connectsToRight) findAvailablePositionsFrom(position.right());
+      if (connectsToBottom) findAvailablePositionsFrom(position.below());
+      if (connectsToLeft) findAvailablePositionsFrom(position.left());
+    };
+
+    findAvailablePositionsFrom(startPosition);
+
+    return availablePositions;
+  }
 
   getAdjacentCards(position: Position): (PathCard | undefined)[] {
-    const top = this.getCardAt(new Position(position.x, position.y + 1));
-    const right = this.getCardAt(new Position(position.x + 1, position.y));
-    const bottom = this.getCardAt(new Position(position.x, position.y - 1));
-    const left = this.getCardAt(new Position(position.x - 1, position.y));
+    const top = this.getCardAt(position.above());
+    const right = this.getCardAt(position.right());
+    const bottom = this.getCardAt(position.below());
+    const left = this.getCardAt(position.left());
 
     return [top, right, bottom, left].map((card) =>
       // Consider finish path cards as blank spaces for connection purposes
-      // TODO: This is only the case when the finish card is face down - there's a ticket to cover this
+      // TODO: This is only the case when the finish card is face down
       card instanceof FinishPathCard ? undefined : card
     );
   }

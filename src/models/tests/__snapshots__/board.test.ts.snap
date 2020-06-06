@@ -58,7 +58,7 @@ Array [
       2,
       4,
     ],
-    "id": "test-id-284",
+    "id": "test-id-343",
     "isUpsideDown": false,
     "status": "played",
   },
@@ -82,7 +82,7 @@ Array [
       2,
       4,
     ],
-    "id": "test-id-272",
+    "id": "test-id-331",
     "isUpsideDown": false,
     "status": "played",
   },
@@ -94,7 +94,7 @@ Array [
       3,
       4,
     ],
-    "id": "test-id-268",
+    "id": "test-id-327",
     "isUpsideDown": false,
     "status": "played",
   },
@@ -110,7 +110,7 @@ Array [
       3,
       4,
     ],
-    "id": "test-id-310",
+    "id": "test-id-369",
     "isUpsideDown": false,
     "status": "played",
   },
@@ -121,7 +121,7 @@ Array [
       3,
       4,
     ],
-    "id": "test-id-314",
+    "id": "test-id-373",
     "isUpsideDown": false,
     "status": "played",
   },
@@ -132,7 +132,7 @@ Array [
       3,
       4,
     ],
-    "id": "test-id-318",
+    "id": "test-id-377",
     "isUpsideDown": false,
     "status": "played",
   },
@@ -143,45 +143,240 @@ Array [
       3,
       4,
     ],
-    "id": "test-id-304",
+    "id": "test-id-363",
     "isUpsideDown": false,
     "status": "played",
   },
 ]
 `;
 
+exports[`Board get available positions from the board initial board setup returns the four surrounding positions of the start position 1`] = `
+Array [
+  Position {
+    "id": "test-id-391",
+    "x": 0,
+    "y": 1,
+  },
+  Position {
+    "id": "test-id-392",
+    "x": 1,
+    "y": 0,
+  },
+  Position {
+    "id": "test-id-393",
+    "x": 0,
+    "y": -1,
+  },
+  Position {
+    "id": "test-id-394",
+    "x": -1,
+    "y": 0,
+  },
+]
+`;
+
+exports[`Board get available positions from the board when there is a circular passage returns correct positions 1`] = `
+Array [
+  Position {
+    "id": "test-id-477",
+    "x": 0,
+    "y": 1,
+  },
+  Position {
+    "id": "test-id-492",
+    "x": 0,
+    "y": -2,
+  },
+  Position {
+    "id": "test-id-497",
+    "x": -2,
+    "y": 0,
+  },
+]
+`;
+
+exports[`Board get available positions from the board when there is a passage formed returns correct positions for continuing the passage  1`] = `
+Array [
+  Position {
+    "id": "test-id-408",
+    "x": 0,
+    "y": 1,
+  },
+  Position {
+    "id": "test-id-412",
+    "x": 2,
+    "y": 2,
+  },
+  Position {
+    "id": "test-id-413",
+    "x": 3,
+    "y": 1,
+  },
+  Position {
+    "id": "test-id-416",
+    "x": 2,
+    "y": 0,
+  },
+  Position {
+    "id": "test-id-417",
+    "x": 1,
+    "y": -1,
+  },
+  Position {
+    "id": "test-id-422",
+    "x": 0,
+    "y": -2,
+  },
+  Position {
+    "id": "test-id-423",
+    "x": -1,
+    "y": 0,
+  },
+]
+`;
+
+exports[`Board get available positions from the board when there is a passage formed returns correct positions for continuing the passage  2`] = `
+Array [
+  Position {
+    "id": "test-id-581",
+    "x": 0,
+    "y": 1,
+  },
+  Position {
+    "id": "test-id-582",
+    "x": 1,
+    "y": 0,
+  },
+  Position {
+    "id": "test-id-592",
+    "x": 4,
+    "y": -1,
+  },
+  Position {
+    "id": "test-id-594",
+    "x": 5,
+    "y": -1,
+  },
+  Position {
+    "id": "test-id-597",
+    "x": 7,
+    "y": -1,
+  },
+  Position {
+    "id": "test-id-601",
+    "x": 4,
+    "y": -3,
+  },
+  Position {
+    "id": "test-id-605",
+    "x": 1,
+    "y": -2,
+  },
+  Position {
+    "id": "test-id-607",
+    "x": 0,
+    "y": -2,
+  },
+  Position {
+    "id": "test-id-608",
+    "x": -1,
+    "y": 0,
+  },
+]
+`;
+
+exports[`Board get available positions from the board when there is a passage formed with upside down cards returns correct positions for continuing the passage  1`] = `
+Array [
+  Position {
+    "id": "test-id-544",
+    "x": 0,
+    "y": 1,
+  },
+  Position {
+    "id": "test-id-546",
+    "x": 1,
+    "y": 1,
+  },
+  Position {
+    "id": "test-id-549",
+    "x": 3,
+    "y": 1,
+  },
+  Position {
+    "id": "test-id-553",
+    "x": 1,
+    "y": -1,
+  },
+  Position {
+    "id": "test-id-557",
+    "x": 0,
+    "y": -2,
+  },
+  Position {
+    "id": "test-id-558",
+    "x": -1,
+    "y": -1,
+  },
+  Position {
+    "id": "test-id-559",
+    "x": -1,
+    "y": 0,
+  },
+]
+`;
+
+exports[`Board get available positions from the board when there is a passage with dead-ends returns correct positions and does not put positions around dead ends 1`] = `
+Array [
+  Position {
+    "id": "test-id-443",
+    "x": 0,
+    "y": 1,
+  },
+  Position {
+    "id": "test-id-446",
+    "x": 2,
+    "y": 1,
+  },
+  Position {
+    "id": "test-id-454",
+    "x": 0,
+    "y": -2,
+  },
+]
+`;
+
 exports[`Board visualize returns displayable version of the board 1`] = `
-"                              ██████                                          
-                              ██████                                          
-                              ██  ██                                          
-                              ██  ██                                          
-                              ██  ██                                          
-                              ██  ██                                          
-                              ██  ██                                          
-                              ██  ██                                          
-                              ██  ██                                          
-                              ██  ██                        ██████████████  ██
-                              ██  ██                        ██            !!  
-                              ██  ██                        ██  ██████████  ██
-                              ██  ██                        ██  ██            
-                              ██  ██                        ██  ██            
-                              ██  ██                        ██  ██            
-████████████████████████████████  ████████████████████████████  ██      ██  ██
-████                            []                              ██      ██xx  
-████████████████████████████████  ████████████████████████████████      ██████
-                              ██  ██                                          
-                              ██  ██                                          
-                              ██  ██                                          
-                              ██  ██                                    ██  ██
-                              ██  ██                                      xx██
-                              ██  ██                                    ██████
-                              ██  ██                                          
-                              ██  ██                                          
-                              ██  ██                                          
-                              ██  ██                                          
-                              ██  ██                                          
-                              ██  ██                                          
-                              ██  ██                                          
-                              ██████                                          
-                              ██████                                          "
+"                              ██████                                                
+                              ██████                                                
+                              ██  ██                                                
+                              ██  ██                                                
+                              ██  ██                                                
+                              ██  ██                                                
+                              ██  ██                                    |‾‾‾‾|      
+                              ██  ██                                    |    |      
+                              ██  ██                                    |____|      
+                              ██  ██                        ██████████████  ██|‾‾‾‾|
+                              ██  ██                        ██            !!  |    |
+                              ██  ██                        ██  ██████████  ██|____|
+                              ██  ██                        ██  ██      |‾‾‾‾|      
+                              ██  ██                        ██  ██      |    |      
+                              ██  ██                        ██  ██      |____|      
+████████████████████████████████  ████████████████████████████  ██      ██  ██      
+████                            []                              ██      ██xx        
+████████████████████████████████  ████████████████████████████████      ██████      
+                              ██  ██                                                
+                              ██  ██                                                
+                              ██  ██                                                
+                              ██  ██                                    ██  ██      
+                              ██  ██                                      xx██      
+                              ██  ██                                    ██████      
+                              ██  ██                                                
+                              ██  ██                                                
+                              ██  ██                                                
+                              ██  ██                                                
+                              ██  ██                                                
+                              ██  ██                                                
+                              ██  ██                                                
+                              ██████                                                
+                              ██████                                                "
 `;
