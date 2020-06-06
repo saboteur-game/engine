@@ -26,6 +26,12 @@ This repository is a work in progress. Active tasks can be found on
    $  npm install
    ```
 
+### Running the example
+
+```
+$  npx ts-node ./example/index.ts
+```
+
 ### 🛠️ Tools
 
 #### 🧪 Testing

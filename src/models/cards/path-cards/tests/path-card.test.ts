@@ -18,6 +18,10 @@ describe("PathCard", () => {
     expect(pathCard.toJS()).toMatchSnapshot();
   });
 
+  it("does not implement visalization", () => {
+    expect(() => pathCard.visualize()).toThrow("Not implemented");
+  });
+
   it("can be rotated", () => {
     expect(pathCard.isUpsideDown).toBe(false);
     pathCard.rotate();

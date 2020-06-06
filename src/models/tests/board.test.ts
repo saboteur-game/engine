@@ -36,6 +36,105 @@ describe("Board", () => {
     expect(board.toJS()).toMatchSnapshot();
   });
 
+  describe("visualize", () => {
+    beforeEach(() => {
+      // Passage up
+      board.addCard(
+        new PassageCard([Sides.top, Sides.bottom]),
+        new Position(0, 1)
+      );
+      board.addCard(
+        new PassageCard([Sides.top, Sides.bottom]),
+        new Position(0, 2)
+      );
+      board.addCard(
+        new PassageCard([Sides.top, Sides.bottom]),
+        new Position(0, 3)
+      );
+      board.addCard(
+        new PassageCard([Sides.top, Sides.bottom]),
+        new Position(0, 4)
+      );
+      board.addCard(new DeadendCard([Sides.bottom]), new Position(0, 5));
+
+      // Passage right
+      board.addCard(
+        new PassageCard([Sides.right, Sides.left]),
+        new Position(1, 0)
+      );
+      board.addCard(
+        new PassageCard([Sides.right, Sides.left]),
+        new Position(2, 0)
+      );
+      board.addCard(
+        new PassageCard([Sides.right, Sides.left]),
+        new Position(3, 0)
+      );
+      board.addCard(
+        new PassageCard([Sides.right, Sides.left]),
+        new Position(4, 0)
+      );
+      board.addCard(
+        new PassageCard([Sides.top, Sides.left]),
+        new Position(5, 0)
+      );
+      board.addCard(
+        new PassageCard([Sides.top, Sides.bottom]),
+        new Position(5, 1)
+      );
+      board.addCard(
+        new PassageCard([Sides.right, Sides.bottom]),
+        new Position(5, 2)
+      );
+      board.addCard(
+        new PassageCard([Sides.right, Sides.left]),
+        new Position(6, 2)
+      );
+
+      // Passage down
+      board.addCard(
+        new PassageCard([Sides.top, Sides.bottom]),
+        new Position(0, -1)
+      );
+      board.addCard(
+        new PassageCard([Sides.top, Sides.bottom]),
+        new Position(0, -2)
+      );
+      board.addCard(
+        new PassageCard([Sides.top, Sides.bottom]),
+        new Position(0, -3)
+      );
+      board.addCard(
+        new PassageCard([Sides.top, Sides.bottom]),
+        new Position(0, -4)
+      );
+      board.addCard(new DeadendCard([Sides.top]), new Position(0, -5));
+
+      // Passage left
+      board.addCard(
+        new PassageCard([Sides.right, Sides.left]),
+        new Position(-1, 0)
+      );
+      board.addCard(
+        new PassageCard([Sides.right, Sides.left]),
+        new Position(-2, 0)
+      );
+      board.addCard(
+        new PassageCard([Sides.right, Sides.left]),
+        new Position(-3, 0)
+      );
+      board.addCard(
+        new PassageCard([Sides.right, Sides.left]),
+        new Position(-4, 0)
+      );
+      board.addCard(new DeadendCard([Sides.right]), new Position(-5, 0));
+    });
+
+    it("returns displayable version of the board", () => {
+      expect(board.visualize()).toMatchSnapshot();
+    });
+  });
+
   describe("get card from board", () => {
     describe("when start position provided", () => {
       it("returns start card", () => {

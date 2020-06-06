@@ -58,7 +58,7 @@ Array [
       2,
       4,
     ],
-    "id": "test-id-90",
+    "id": "test-id-284",
     "isUpsideDown": false,
     "status": "played",
   },
@@ -82,7 +82,7 @@ Array [
       2,
       4,
     ],
-    "id": "test-id-78",
+    "id": "test-id-272",
     "isUpsideDown": false,
     "status": "played",
   },
@@ -94,7 +94,7 @@ Array [
       3,
       4,
     ],
-    "id": "test-id-74",
+    "id": "test-id-268",
     "isUpsideDown": false,
     "status": "played",
   },
@@ -110,7 +110,7 @@ Array [
       3,
       4,
     ],
-    "id": "test-id-116",
+    "id": "test-id-310",
     "isUpsideDown": false,
     "status": "played",
   },
@@ -121,7 +121,7 @@ Array [
       3,
       4,
     ],
-    "id": "test-id-120",
+    "id": "test-id-314",
     "isUpsideDown": false,
     "status": "played",
   },
@@ -132,7 +132,7 @@ Array [
       3,
       4,
     ],
-    "id": "test-id-124",
+    "id": "test-id-318",
     "isUpsideDown": false,
     "status": "played",
   },
@@ -143,9 +143,45 @@ Array [
       3,
       4,
     ],
-    "id": "test-id-110",
+    "id": "test-id-304",
     "isUpsideDown": false,
     "status": "played",
   },
 ]
+`;
+
+exports[`Board visualize returns displayable version of the board 1`] = `
+"                              ██████                                          
+                              ██████                                          
+                              ██  ██                                          
+                              ██  ██                                          
+                              ██  ██                                          
+                              ██  ██                                          
+                              ██  ██                                          
+                              ██  ██                                          
+                              ██  ██                                          
+                              ██  ██                        ██████████████  ██
+                              ██  ██                        ██            !!  
+                              ██  ██                        ██  ██████████  ██
+                              ██  ██                        ██  ██            
+                              ██  ██                        ██  ██            
+                              ██  ██                        ██  ██            
+████████████████████████████████  ████████████████████████████  ██      ██  ██
+████                            []                              ██      ██xx  
+████████████████████████████████  ████████████████████████████████      ██████
+                              ██  ██                                          
+                              ██  ██                                          
+                              ██  ██                                          
+                              ██  ██                                    ██  ██
+                              ██  ██                                      xx██
+                              ██  ██                                    ██████
+                              ██  ██                                          
+                              ██  ██                                          
+                              ██  ██                                          
+                              ██  ██                                          
+                              ██  ██                                          
+                              ██  ██                                          
+                              ██  ██                                          
+                              ██████                                          
+                              ██████                                          "
 `;
