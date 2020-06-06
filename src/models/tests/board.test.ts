@@ -99,6 +99,30 @@ describe("Board", () => {
         });
       });
 
+      describe("and card is already discarded", () => {
+        beforeEach(() => {
+          passageCard.setDiscarded();
+        });
+
+        it("throws exception", () => {
+          expect(() => board.addCard(passageCard, PLAY_POSITION)).toThrow(
+            "This card has already been played or discarded"
+          );
+        });
+      });
+
+      describe("and card is already played", () => {
+        beforeEach(() => {
+          board.addCard(passageCard, new Position(-1, 0));
+        });
+
+        it("throws exception", () => {
+          expect(() => board.addCard(passageCard, PLAY_POSITION)).toThrow(
+            "This card has already been played or discarded"
+          );
+        });
+      });
+
       describe("and position is empty", () => {
         it("adds card", () => {
           expect(() => board.addCard(passageCard, PLAY_POSITION)).not.toThrow();
