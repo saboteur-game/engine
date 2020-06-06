@@ -15,6 +15,22 @@ class Position {
     return `${this.x},${this.y}`;
   }
 
+  above(): Position {
+    return new Position(this.x, this.y + 1);
+  }
+
+  below(): Position {
+    return new Position(this.x, this.y - 1);
+  }
+
+  left(): Position {
+    return new Position(this.x - 1, this.y);
+  }
+
+  right(): Position {
+    return new Position(this.x + 1, this.y);
+  }
+
   toJS(): Pojo {
     return {
       id: this.id,
