@@ -7,6 +7,7 @@ import {
   PathCard,
   FinishPathCard,
 } from "./cards/path-cards";
+import { Status } from "./cards/card";
 // import canCardsConnect from "../utils/can-cards-connect";
 
 interface IGrid {
@@ -43,7 +44,9 @@ class Board {
       throw new Error(`Invalid type of card provided`);
     }
 
-    // TODO: Should this check that the card being played is unused?
+    if (card.status !== Status.unused) {
+      throw new Error(`This card has already been played or discarded`);
+    }
 
     if (this.grid[position.toString()]) {
       throw new Error(`Position ${position} is already occupied`);
