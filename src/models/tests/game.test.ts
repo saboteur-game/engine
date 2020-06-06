@@ -49,6 +49,10 @@ describe("Game", () => {
     expect(game.toJS()).toMatchSnapshot();
   });
 
+  it("can visualize the board", () => {
+    expect(game.visualizeBoard()).toMatchSnapshot();
+  });
+
   describe("on event", () => {
     const mockEventHandler = jest.fn();
 

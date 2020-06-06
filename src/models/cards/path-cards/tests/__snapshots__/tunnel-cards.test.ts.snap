@@ -1,0 +1,193 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Tunnel Cards DeadendCard right side up with [1, 2, 3, 4] configuration can be visualized 1`] = `
+"██  ██
+  ██  
+██  ██"
+`;
+
+exports[`Tunnel Cards DeadendCard right side up with [1, 2, 3] configuration can be visualized 1`] = `
+"██  ██
+████  
+██  ██"
+`;
+
+exports[`Tunnel Cards DeadendCard right side up with [1, 2, 4] configuration can be visualized 1`] = `
+"██  ██
+  ██  
+██████"
+`;
+
+exports[`Tunnel Cards DeadendCard right side up with [1, 2] configuration can be visualized 1`] = `
+"██  ██
+████  
+██████"
+`;
+
+exports[`Tunnel Cards DeadendCard right side up with [1, 3] configuration can be visualized 1`] = `
+"██  ██
+██████
+██  ██"
+`;
+
+exports[`Tunnel Cards DeadendCard right side up with [1, 4] configuration can be visualized 1`] = `
+"██  ██
+  ████
+██████"
+`;
+
+exports[`Tunnel Cards DeadendCard right side up with [1] configuration can be visualized 1`] = `
+"██  ██
+██████
+██████"
+`;
+
+exports[`Tunnel Cards DeadendCard right side up with [2, 4] configuration can be visualized 1`] = `
+"██████
+  ██  
+██████"
+`;
+
+exports[`Tunnel Cards DeadendCard right side up with [2] configuration can be visualized 1`] = `
+"██████
+████  
+██████"
+`;
+
+exports[`Tunnel Cards DeadendCard upside down with [1, 2, 3, 4] configuration can be visualized 1`] = `
+"██  ██
+  ██  
+██  ██"
+`;
+
+exports[`Tunnel Cards DeadendCard upside down with [1, 2, 3] configuration can be visualized 1`] = `
+"██  ██
+  ████
+██  ██"
+`;
+
+exports[`Tunnel Cards DeadendCard upside down with [1, 2, 4] configuration can be visualized 1`] = `
+"██████
+  ██  
+██  ██"
+`;
+
+exports[`Tunnel Cards DeadendCard upside down with [1, 2] configuration can be visualized 1`] = `
+"██████
+  ████
+██  ██"
+`;
+
+exports[`Tunnel Cards DeadendCard upside down with [1, 3] configuration can be visualized 1`] = `
+"██  ██
+██████
+██  ██"
+`;
+
+exports[`Tunnel Cards DeadendCard upside down with [1, 4] configuration can be visualized 1`] = `
+"██████
+████  
+██  ██"
+`;
+
+exports[`Tunnel Cards DeadendCard upside down with [1] configuration can be visualized 1`] = `
+"██████
+██████
+██  ██"
+`;
+
+exports[`Tunnel Cards DeadendCard upside down with [2, 4] configuration can be visualized 1`] = `
+"██████
+  ██  
+██████"
+`;
+
+exports[`Tunnel Cards DeadendCard upside down with [2] configuration can be visualized 1`] = `
+"██████
+  ████
+██████"
+`;
+
+exports[`Tunnel Cards PassageCard right side up with [1, 2, 3, 4] configuration can be visualized 1`] = `
+"██  ██
+      
+██  ██"
+`;
+
+exports[`Tunnel Cards PassageCard right side up with [1, 2, 3] configuration can be visualized 1`] = `
+"██  ██
+██    
+██  ██"
+`;
+
+exports[`Tunnel Cards PassageCard right side up with [1, 2, 4] configuration can be visualized 1`] = `
+"██  ██
+      
+██████"
+`;
+
+exports[`Tunnel Cards PassageCard right side up with [1, 2] configuration can be visualized 1`] = `
+"██  ██
+██    
+██████"
+`;
+
+exports[`Tunnel Cards PassageCard right side up with [1, 3] configuration can be visualized 1`] = `
+"██  ██
+██  ██
+██  ██"
+`;
+
+exports[`Tunnel Cards PassageCard right side up with [1, 4] configuration can be visualized 1`] = `
+"██  ██
+    ██
+██████"
+`;
+
+exports[`Tunnel Cards PassageCard right side up with [2, 4] configuration can be visualized 1`] = `
+"██████
+      
+██████"
+`;
+
+exports[`Tunnel Cards PassageCard upside down with [1, 2, 3, 4] configuration can be visualized 1`] = `
+"██  ██
+      
+██  ██"
+`;
+
+exports[`Tunnel Cards PassageCard upside down with [1, 2, 3] configuration can be visualized 1`] = `
+"██  ██
+    ██
+██  ██"
+`;
+
+exports[`Tunnel Cards PassageCard upside down with [1, 2, 4] configuration can be visualized 1`] = `
+"██████
+      
+██  ██"
+`;
+
+exports[`Tunnel Cards PassageCard upside down with [1, 2] configuration can be visualized 1`] = `
+"██████
+    ██
+██  ██"
+`;
+
+exports[`Tunnel Cards PassageCard upside down with [1, 3] configuration can be visualized 1`] = `
+"██  ██
+██  ██
+██  ██"
+`;
+
+exports[`Tunnel Cards PassageCard upside down with [1, 4] configuration can be visualized 1`] = `
+"██████
+██    
+██  ██"
+`;
+
+exports[`Tunnel Cards PassageCard upside down with [2, 4] configuration can be visualized 1`] = `
+"██████
+      
+██████"
+`;

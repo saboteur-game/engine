@@ -24,6 +24,10 @@ class PathCard extends Card {
     return this;
   }
 
+  visualize(): string {
+    throw new Error("Not implemented");
+  }
+
   toJS(): Pojo {
     return {
       ...super.toJS(),

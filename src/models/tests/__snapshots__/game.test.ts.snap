@@ -5,7 +5,7 @@ Array [
   Player {
     "age": 35,
     "hand": Object {},
-    "id": "test-id-133",
+    "id": "test-id-181",
     "isSaboteur": false,
     "name": "Alice",
     "tools": Object {
@@ -630,6 +630,24 @@ Object {
 }
 `;
 
+exports[`Game can visualize the board 1`] = `
+"                                          ██  ██
+                                            !!  
+                                          ██  ██
+                                                
+                                                
+                                                
+██  ██                                    ██  ██
+  []                                      ██xx  
+██  ██                                    ██████
+                                                
+                                                
+                                                
+                                          ██  ██
+                                            xx██
+                                          ██████"
+`;
+
 exports[`Game discardCard when game is started card is in the players hand adds a new card to the players hand 1`] = `
 Array [
   PassageCard {
@@ -770,7 +788,7 @@ Array [
 
 exports[`Game playCard when game is started card is in the players hand adds the card to the discard pile 1`] = `
 MapActionCard {
-  "id": "test-id-332",
+  "id": "test-id-380",
   "parameters": Object {
     "position": Position {
       "id": "test-id-69",
@@ -842,7 +860,7 @@ Array [
         "status": "unused",
       },
     },
-    "id": "test-id-207",
+    "id": "test-id-255",
     "isSaboteur": true,
     "name": "Player 1",
     "tools": Object {
@@ -911,7 +929,7 @@ Array [
         "status": "unused",
       },
     },
-    "id": "test-id-208",
+    "id": "test-id-256",
     "isSaboteur": false,
     "name": "Player 2",
     "tools": Object {
@@ -980,7 +998,7 @@ Array [
         "status": "unused",
       },
     },
-    "id": "test-id-209",
+    "id": "test-id-257",
     "isSaboteur": false,
     "name": "Player 3",
     "tools": Object {

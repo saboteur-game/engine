@@ -1,0 +1,25 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Boundary Cards GoldFinishPathCard can be visualized 1`] = `
+"██  ██
+  !!  
+██  ██"
+`;
+
+exports[`Boundary Cards GoldFinishPathCard can be visualized right side up 1`] = `
+"██  ██
+██xx  
+██████"
+`;
+
+exports[`Boundary Cards GoldFinishPathCard can be visualized upside down 1`] = `
+"██████
+  xx██
+██  ██"
+`;
+
+exports[`Boundary Cards StartPathCard can be visualized 1`] = `
+"██  ██
+  []  
+██  ██"
+`;

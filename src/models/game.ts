@@ -171,6 +171,10 @@ class Game {
     return this.discard.getTopCard();
   }
 
+  visualizeBoard(): string {
+    return this.board.visualize();
+  }
+
   toJS(): Pojo {
     return {
       id: this.id,
