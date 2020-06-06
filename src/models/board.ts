@@ -1,18 +1,22 @@
 import { generateId, shuffle, Pojo } from "../utils";
 import Position from "./position";
-import Card from "./cards/card";
 import { getPlacedCards } from "./cards";
-import { PassageCard, DeadendCard } from "./cards/path-cards";
+import {
+  PassageCard,
+  DeadendCard,
+  PathCard,
+  FinishPathCard,
+} from "./cards/path-cards";
 // import canCardsConnect from "../utils/can-cards-connect";
 
 interface IGrid {
-  [key: string]: Card;
+  [key: string]: PathCard;
 }
 
 export const startPosition = new Position(0, 0);
-export const topFinishPosition = new Position(2, 7);
-export const middleFinishPosition = new Position(0, 7);
-export const bottomFinishPosition = new Position(-2, 7);
+export const topFinishPosition = new Position(7, 2);
+export const middleFinishPosition = new Position(7, 0);
+export const bottomFinishPosition = new Position(7, -2);
 
 class Board {
   id: string;
@@ -39,10 +43,13 @@ class Board {
       throw new Error(`Invalid type of card provided`);
     }
 
+    // TODO: Should this check that the card being played is unused?
+
     if (this.grid[position.toString()]) {
       throw new Error(`Position ${position} is already occupied`);
     }
 
+    // TODO: Uncomment when `getAvailablePositions` is available
     // const availablePositions = this.getAvailablePositions();
     // const matchingPosition = availablePositions.find(
     //   ({ x, y }) => position.x === x && position.y === y
@@ -76,21 +83,30 @@ class Board {
     return card;
   }
 
-  getCardAt(position: Position): Card | undefined {
+  getCardAt(position: Position): PathCard | undefined {
     return this.grid[position.toString()];
   }
 
   // getAvailablePositions(): Position[] {
-  //   // 1. We need a function which can provide all legal spaces that a card can be placed on
+  //   // TODO: Implement
+  //   // We need a function which can provide all legal spaces that a card can be placed on
   //   //   - and then we need to check that this position is one of those
   //   //   - Start at the starting square and follow the paths outwards?
   //   return [];
   // }
 
-  // getAdjacentCards(position: Position): TunnelCard[] {
-  //   // 2. We need to check what adjacent cards there are and the connectors they have
-  //   return [];
-  // }
+  getAdjacentCards(position: Position): (PathCard | undefined)[] {
+    const top = this.getCardAt(new Position(position.x, position.y + 1));
+    const right = this.getCardAt(new Position(position.x + 1, position.y));
+    const bottom = this.getCardAt(new Position(position.x, position.y - 1));
+    const left = this.getCardAt(new Position(position.x - 1, position.y));
+
+    return [top, right, bottom, left].map((card) =>
+      // Consider finish path cards as blank spaces for connection purposes
+      // TODO: This is only the case when the finish card is face down - there's a ticket to cover this
+      card instanceof FinishPathCard ? undefined : card
+    );
+  }
 
   toJS(): Pojo {
     return {
