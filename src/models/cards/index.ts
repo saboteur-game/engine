@@ -85,8 +85,6 @@ export interface IPlacedCards {
 export const getPlacedCards = (): IPlacedCards => {
   const start = new StartPathCard(randomBoolean());
   const gold = new GoldFinishPathCard(randomBoolean());
-  // TODO: Does it matter if someone connects to this on a path that isn't valid?
-  // The instructions say it doesn't matter, but anything we can do?
   const rock1 = new RockFinishPathCard(
     [Sides.top, Sides.right],
     randomBoolean()

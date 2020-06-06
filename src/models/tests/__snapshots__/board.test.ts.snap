@@ -3,15 +3,6 @@
 exports[`Board can be serialized 1`] = `
 Object {
   "grid": Object {
-    "-2,7": RockFinishPathCard {
-      "connectors": Array [
-        1,
-        4,
-      ],
-      "id": "test-id-9",
-      "isUpsideDown": false,
-      "status": "played",
-    },
     "0,0": StartPathCard {
       "connectors": Array [
         1,
@@ -23,7 +14,16 @@ Object {
       "isUpsideDown": false,
       "status": "played",
     },
-    "0,7": RockFinishPathCard {
+    "7,-2": RockFinishPathCard {
+      "connectors": Array [
+        1,
+        4,
+      ],
+      "id": "test-id-9",
+      "isUpsideDown": false,
+      "status": "played",
+    },
+    "7,0": RockFinishPathCard {
       "connectors": Array [
         1,
         2,
@@ -32,7 +32,7 @@ Object {
       "isUpsideDown": false,
       "status": "played",
     },
-    "2,7": GoldFinishPathCard {
+    "7,2": GoldFinishPathCard {
       "connectors": Array [
         1,
         2,
@@ -46,4 +46,106 @@ Object {
   },
   "id": "test-id-5",
 }
+`;
+
+exports[`Board get adjacent cards from the board when the position is beside a finish card returns surrounding cards but not the finish card 1`] = `
+Array [
+  undefined,
+  undefined,
+  undefined,
+  PassageCard {
+    "connectors": Array [
+      2,
+      4,
+    ],
+    "id": "test-id-77",
+    "isUpsideDown": false,
+    "status": "played",
+  },
+]
+`;
+
+exports[`Board get adjacent cards from the board when the position is beside nothing returns all empty spaces 1`] = `
+Array [
+  undefined,
+  undefined,
+  undefined,
+  undefined,
+]
+`;
+
+exports[`Board get adjacent cards from the board when the position is beside the start card returns the start card and other surrounding cards 1`] = `
+Array [
+  undefined,
+  PassageCard {
+    "connectors": Array [
+      2,
+      4,
+    ],
+    "id": "test-id-65",
+    "isUpsideDown": false,
+    "status": "played",
+  },
+  undefined,
+  StartPathCard {
+    "connectors": Array [
+      1,
+      2,
+      3,
+      4,
+    ],
+    "id": "test-id-61",
+    "isUpsideDown": false,
+    "status": "played",
+  },
+]
+`;
+
+exports[`Board get adjacent cards from the board when the position is surrounded returns surrounding cards 1`] = `
+Array [
+  PassageCard {
+    "connectors": Array [
+      1,
+      2,
+      3,
+      4,
+    ],
+    "id": "test-id-103",
+    "isUpsideDown": false,
+    "status": "played",
+  },
+  PassageCard {
+    "connectors": Array [
+      1,
+      2,
+      3,
+      4,
+    ],
+    "id": "test-id-107",
+    "isUpsideDown": false,
+    "status": "played",
+  },
+  PassageCard {
+    "connectors": Array [
+      1,
+      2,
+      3,
+      4,
+    ],
+    "id": "test-id-111",
+    "isUpsideDown": false,
+    "status": "played",
+  },
+  StartPathCard {
+    "connectors": Array [
+      1,
+      2,
+      3,
+      4,
+    ],
+    "id": "test-id-97",
+    "isUpsideDown": false,
+    "status": "played",
+  },
+]
 `;

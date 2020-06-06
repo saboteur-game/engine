@@ -5,6 +5,7 @@ import {
   FinishPathCard,
   StartPathCard,
   PassageCard,
+  DeadendCard,
 } from "../cards/path-cards";
 import { Sides } from "../cards/card";
 
@@ -134,6 +135,66 @@ describe("Board", () => {
           expect(() => board.removeCard(PLAY_POSITION)).not.toThrow();
           expect(board.getCardAt(PLAY_POSITION)).toBe(undefined);
         });
+      });
+    });
+  });
+
+  describe("get adjacent cards from the board", () => {
+    let passageCard: PassageCard;
+
+    describe("when the position is beside the start card", () => {
+      beforeEach(() => {
+        passageCard = new PassageCard([Sides.right, Sides.left]);
+        board.addCard(passageCard, new Position(2, 0));
+      });
+
+      it("returns the start card and other surrounding cards", () => {
+        expect(board.getAdjacentCards(new Position(1, 0))).toMatchSnapshot();
+      });
+    });
+
+    describe("when the position is beside a finish card", () => {
+      beforeEach(() => {
+        passageCard = new PassageCard([Sides.right, Sides.left]);
+        board.addCard(passageCard, new Position(5, 0));
+      });
+
+      it("returns surrounding cards but not the finish card", () => {
+        expect(board.getAdjacentCards(new Position(6, 0))).toMatchSnapshot();
+      });
+    });
+
+    describe("when the position is beside nothing", () => {
+      beforeEach(() => {
+        passageCard = new PassageCard([Sides.right, Sides.left]);
+        board.addCard(passageCard, new Position(1, 0));
+      });
+
+      it("returns all empty spaces", () => {
+        expect(board.getAdjacentCards(new Position(3, 0))).toMatchSnapshot();
+      });
+    });
+
+    describe("when the position is surrounded", () => {
+      const getDeadendCrossroads = () =>
+        new DeadendCard([Sides.top, Sides.right, Sides.bottom, Sides.left]);
+
+      const getPassageCrossroads = () =>
+        new PassageCard([Sides.top, Sides.right, Sides.bottom, Sides.left]);
+
+      beforeEach(() => {
+        board.addCard(getDeadendCrossroads(), new Position(0, 1));
+        board.addCard(getPassageCrossroads(), new Position(1, 1));
+        board.addCard(getDeadendCrossroads(), new Position(2, 1));
+        // 0,0 is starting point and 1,0 is the position querying adjacent to
+        board.addCard(getPassageCrossroads(), new Position(2, 0));
+        board.addCard(getDeadendCrossroads(), new Position(0, -1));
+        board.addCard(getPassageCrossroads(), new Position(1, -1));
+        board.addCard(getDeadendCrossroads(), new Position(2, -1));
+      });
+
+      it("returns surrounding cards", () => {
+        expect(board.getAdjacentCards(new Position(1, 0))).toMatchSnapshot();
       });
     });
   });

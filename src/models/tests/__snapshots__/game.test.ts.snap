@@ -22,15 +22,6 @@ exports[`Game can be serialized 1`] = `
 Object {
   "board": Board {
     "grid": Object {
-      "-2,7": RockFinishPathCard {
-        "connectors": Array [
-          1,
-          4,
-        ],
-        "id": "test-id-78",
-        "isUpsideDown": false,
-        "status": "played",
-      },
       "0,0": StartPathCard {
         "connectors": Array [
           1,
@@ -42,7 +33,16 @@ Object {
         "isUpsideDown": false,
         "status": "played",
       },
-      "0,7": RockFinishPathCard {
+      "7,-2": RockFinishPathCard {
+        "connectors": Array [
+          1,
+          4,
+        ],
+        "id": "test-id-78",
+        "isUpsideDown": false,
+        "status": "played",
+      },
+      "7,0": RockFinishPathCard {
         "connectors": Array [
           1,
           2,
@@ -51,7 +51,7 @@ Object {
         "isUpsideDown": false,
         "status": "played",
       },
-      "2,7": GoldFinishPathCard {
+      "7,2": GoldFinishPathCard {
         "connectors": Array [
           1,
           2,
@@ -774,8 +774,8 @@ MapActionCard {
   "parameters": Object {
     "position": Position {
       "id": "test-id-69",
-      "x": 0,
-      "y": 7,
+      "x": 7,
+      "y": 0,
     },
   },
   "status": "played",
