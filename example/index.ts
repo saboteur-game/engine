@@ -23,13 +23,15 @@ players.forEach((player) => {
 
 game.start();
 
-for (let i = 1; i <= 5; i++) {
+for (let i = 1; i <= 7; i++) {
   const player = game.getActivePlayer() as Player;
   const playableCard = player
     .getHand()
     .find(
       (card) =>
-        card instanceof PassageCard && card.connectors.includes(Sides.left)
+        card instanceof PassageCard &&
+        card.connectors.includes(Sides.left) &&
+        card.connectors.includes(Sides.right)
     );
 
   if (playableCard) {

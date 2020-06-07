@@ -16,9 +16,9 @@ interface IGrid {
 }
 
 export const startPosition = new Position(0, 0);
-export const topFinishPosition = new Position(7, 2);
-export const middleFinishPosition = new Position(7, 0);
-export const bottomFinishPosition = new Position(7, -2);
+export const topFinishPosition = new Position(8, 2);
+export const middleFinishPosition = new Position(8, 0);
+export const bottomFinishPosition = new Position(8, -2);
 
 class Board {
   id: string;

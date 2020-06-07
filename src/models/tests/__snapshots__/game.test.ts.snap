@@ -33,7 +33,7 @@ Object {
         "isUpsideDown": false,
         "status": "played",
       },
-      "7,-2": RockFinishPathCard {
+      "8,-2": RockFinishPathCard {
         "connectors": Array [
           1,
           4,
@@ -42,7 +42,7 @@ Object {
         "isUpsideDown": false,
         "status": "played",
       },
-      "7,0": RockFinishPathCard {
+      "8,0": RockFinishPathCard {
         "connectors": Array [
           1,
           2,
@@ -51,7 +51,7 @@ Object {
         "isUpsideDown": false,
         "status": "played",
       },
-      "7,2": GoldFinishPathCard {
+      "8,2": GoldFinishPathCard {
         "connectors": Array [
           1,
           2,
@@ -631,21 +631,21 @@ Object {
 `;
 
 exports[`Game can visualize the board 1`] = `
-"                                                ██  ██
-                                                  !!  
-                                                ██  ██
-      |‾‾‾‾|                                          
-      |    |                                          
-      |____|                                          
-|‾‾‾‾|██  ██|‾‾‾‾|                              ██  ██
-|    |  []  |    |                              ██xx  
-|____|██  ██|____|                              ██████
-      |‾‾‾‾|                                          
-      |    |                                          
-      |____|                                          
-                                                ██  ██
-                                                  xx██
-                                                ██████"
+"                                                      ██  ██
+                                                        !!  
+                                                      ██  ██
+      |‾‾‾‾|                                                
+      |    |                                                
+      |____|                                                
+|‾‾‾‾|██  ██|‾‾‾‾|                                    ██  ██
+|    |  []  |    |                                    ██xx  
+|____|██  ██|____|                                    ██████
+      |‾‾‾‾|                                                
+      |    |                                                
+      |____|                                                
+                                                      ██  ██
+                                                        xx██
+                                                      ██████"
 `;
 
 exports[`Game discardCard when game is started card is in the players hand adds a new card to the players hand 1`] = `
@@ -792,7 +792,7 @@ MapActionCard {
   "parameters": Object {
     "position": Position {
       "id": "test-id-69",
-      "x": 7,
+      "x": 8,
       "y": 0,
     },
   },
