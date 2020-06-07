@@ -1,4 +1,6 @@
 import { generateId, shuffle, Pojo } from "../utils";
+import { getOppositeSide } from "../utils/get-opposite-side";
+import canCardsConnect from "../utils/can-cards-connect";
 import Position from "./position";
 import { getPlacedCards } from "./cards";
 import {
@@ -8,8 +10,6 @@ import {
   FinishPathCard,
 } from "./cards/path-cards";
 import { Status, Sides } from "./cards/card";
-import { getOppositeSide } from "../utils/get-opposite-side";
-// import canCardsConnect from "../utils/can-cards-connect";
 
 interface IGrid {
   [key: string]: PathCard;
@@ -111,22 +111,23 @@ class Board {
       throw new Error(`Position ${position} is already occupied`);
     }
 
-    // TODO: Uncomment when `getAvailablePositions` is available
-    // const availablePositions = this.getAvailablePositions();
-    // const matchingPosition = availablePositions.find(
-    //   ({ x, y }) => position.x === x && position.y === y
-    // );
-    // if (!matchingPosition) {
-    //   throw new Error(`Position ${position} is not available`);
-    // }
+    const availablePositions = this.getAvailablePositions();
+    const matchingPosition = availablePositions.find(
+      ({ x, y }) => position.x === x && position.y === y
+    );
+    if (!matchingPosition) {
+      throw new Error(`Position ${position} is not available`);
+    }
 
-    // const adjacentCards = this.getAdjacentCards(position);
-    // const cardFits = adjacentCards.every((adjacentCard, index) =>
-    //   canCardsConnect(index + 1, adjacentCard, card)
-    // );
-    // if (!cardFits) {
-    //   throw new Error(`Selected cannot cannot fit in ${position}`);
-    // }
+    const adjacentCards = this.getAdjacentCards(position);
+    const cardFits = adjacentCards.every((adjacentCard, index) =>
+      canCardsConnect(index + 1, adjacentCard, card)
+    );
+    if (!cardFits) {
+      throw new Error(
+        `Selected card cannot cannot fit in position ${position}`
+      );
+    }
 
     card.setPlayed();
     this.grid[position.toString()] = card;
@@ -191,7 +192,7 @@ class Board {
 
     return [top, right, bottom, left].map((card) =>
       // Consider finish path cards as blank spaces for connection purposes
-      // TODO: This is only the case when the finish card is face down
+      // TODO: This is only the case when the finish card is face down - there's a ticket to cover this
       card instanceof FinishPathCard ? undefined : card
     );
   }

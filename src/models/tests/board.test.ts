@@ -222,6 +222,25 @@ describe("Board", () => {
         });
       });
 
+      describe("and the position is not available", () => {
+        it("throws exception", () => {
+          expect(() => board.addCard(passageCard, new Position(0, 2))).toThrow(
+            "Position 0,2 is not available"
+          );
+        });
+      });
+
+      describe("and the position is not available", () => {
+        it("throws exception", () => {
+          expect(() =>
+            board.addCard(
+              new PassageCard([Sides.top, Sides.right, Sides.left]),
+              PLAY_POSITION
+            )
+          ).toThrow("Selected card cannot cannot fit in position 0,1");
+        });
+      });
+
       describe("and position is empty", () => {
         it("adds card", () => {
           expect(() => board.addCard(passageCard, PLAY_POSITION)).not.toThrow();
@@ -263,12 +282,16 @@ describe("Board", () => {
   });
 
   describe("get adjacent cards from the board", () => {
-    let passageCard: PassageCard;
-
     describe("when the position is beside the start card", () => {
       beforeEach(() => {
-        passageCard = new PassageCard([Sides.right, Sides.left]);
-        board.addCard(passageCard, new Position(2, 0));
+        board.addCard(
+          new PassageCard([Sides.right, Sides.left]),
+          new Position(1, 0)
+        );
+        board.addCard(
+          new PassageCard([Sides.right, Sides.left]),
+          new Position(2, 0)
+        );
       });
 
       it("returns the start card and other surrounding cards", () => {
@@ -278,8 +301,26 @@ describe("Board", () => {
 
     describe("when the position is beside a finish card", () => {
       beforeEach(() => {
-        passageCard = new PassageCard([Sides.right, Sides.left]);
-        board.addCard(passageCard, new Position(5, 0));
+        board.addCard(
+          new PassageCard([Sides.right, Sides.left]),
+          new Position(1, 0)
+        );
+        board.addCard(
+          new PassageCard([Sides.right, Sides.left]),
+          new Position(2, 0)
+        );
+        board.addCard(
+          new PassageCard([Sides.right, Sides.left]),
+          new Position(3, 0)
+        );
+        board.addCard(
+          new PassageCard([Sides.right, Sides.left]),
+          new Position(4, 0)
+        );
+        board.addCard(
+          new PassageCard([Sides.right, Sides.left]),
+          new Position(5, 0)
+        );
       });
 
       it("returns surrounding cards but not the finish card", () => {
@@ -289,8 +330,10 @@ describe("Board", () => {
 
     describe("when the position is beside nothing", () => {
       beforeEach(() => {
-        passageCard = new PassageCard([Sides.right, Sides.left]);
-        board.addCard(passageCard, new Position(1, 0));
+        board.addCard(
+          new PassageCard([Sides.right, Sides.left]),
+          new Position(1, 0)
+        );
       });
 
       it("returns all empty spaces", () => {
@@ -307,12 +350,12 @@ describe("Board", () => {
 
       beforeEach(() => {
         board.addCard(getDeadendCrossroads(), new Position(0, 1));
-        board.addCard(getPassageCrossroads(), new Position(1, 1));
-        board.addCard(getDeadendCrossroads(), new Position(2, 1));
-        // 0,0 is starting point and 1,0 is the position querying adjacent to
-        board.addCard(getPassageCrossroads(), new Position(2, 0));
         board.addCard(getDeadendCrossroads(), new Position(0, -1));
+        board.addCard(getPassageCrossroads(), new Position(1, 0));
+        board.addCard(getPassageCrossroads(), new Position(1, 1));
         board.addCard(getPassageCrossroads(), new Position(1, -1));
+        board.addCard(getPassageCrossroads(), new Position(2, 0));
+        board.addCard(getDeadendCrossroads(), new Position(2, 1));
         board.addCard(getDeadendCrossroads(), new Position(2, -1));
       });
 
