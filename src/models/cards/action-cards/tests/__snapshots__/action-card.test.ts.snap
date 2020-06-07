@@ -2,7 +2,7 @@
 
 exports[`ActionCard can be serialized 1`] = `
 Object {
-  "id": "test-id-1",
+  "id": "test-id-0",
   "parameters": undefined,
   "status": "unused",
 }
