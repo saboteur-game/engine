@@ -1,5 +1,5 @@
 import { Sides } from "../../models/cards/card";
-import { TunnelCard } from "../../models/cards/path-cards";
+import { TunnelCard, FinishPathCard } from "../../models/cards/path-cards";
 import { getOppositeSide } from "../get-opposite-side";
 
 function canCardsConnect(
@@ -8,6 +8,11 @@ function canCardsConnect(
   card: TunnelCard
 ): boolean {
   if (!adjacentCard) return true;
+
+  // Finish paths can always be connected to when face down
+  if (adjacentCard instanceof FinishPathCard && adjacentCard.isFaceDown) {
+    return true;
+  }
 
   const cardConnectors = card.connectors.map((connector) =>
     card.isUpsideDown ? getOppositeSide(connector) : connector

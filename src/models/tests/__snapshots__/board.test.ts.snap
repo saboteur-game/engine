@@ -20,6 +20,7 @@ Object {
         4,
       ],
       "id": "test-id-4",
+      "isFaceDown": true,
       "isUpsideDown": false,
       "status": "played",
     },
@@ -29,6 +30,7 @@ Object {
         2,
       ],
       "id": "test-id-3",
+      "isFaceDown": true,
       "isUpsideDown": false,
       "status": "played",
     },
@@ -40,6 +42,7 @@ Object {
         4,
       ],
       "id": "test-id-2",
+      "isFaceDown": true,
       "isUpsideDown": false,
       "status": "played",
     },
@@ -48,7 +51,7 @@ Object {
 }
 `;
 
-exports[`Board get adjacent cards from the board when the position is beside a finish card returns surrounding cards but not the finish card 1`] = `
+exports[`Board get adjacent cards from the board when the position is beside a finish card returns surrounding cards including finish card 1`] = `
 Array [
   undefined,
   undefined,
@@ -352,18 +355,18 @@ exports[`Board visualize returns displayable version of the board 1`] = `
                               ██  ██                                                      
                               ██  ██                                                      
                               ██  ██                                                      
-                              ██  ██                                          |‾‾‾‾|      
-                              ██  ██                                          |    |      
-                              ██  ██                                          |____|      
-                              ██  ██                              ██████████████  ██|‾‾‾‾|
-                              ██  ██                              ██            !!  |    |
-                              ██  ██                              ██  ██████████  ██|____|
-                              ██  ██                              ██  ██      |‾‾‾‾|      
-                              ██  ██                              ██  ██      |    |      
-                              ██  ██                              ██  ██      |____|      
-████████████████████████████████  ██████████████████████████████████  ██      ██  ██      
-████                            []                                    ██      ██xx        
-████████████████████████████████  ██████████████████████████████████████      ██████      
+                              ██  ██                                          ╭┄┄┄┄╮      
+                              ██  ██                                          │    │      
+                              ██  ██                                          ╰┄┄┄┄╯      
+                              ██  ██                              ██████████████  ██╭┄┄┄┄╮
+                              ██  ██                              ██            !!  │    │
+                              ██  ██                              ██  ██████████  ██╰┄┄┄┄╯
+                              ██  ██                              ██  ██      ╭┄┄┄┄╮      
+                              ██  ██                              ██  ██      │    │      
+                              ██  ██                              ██  ██      ╰┄┄┄┄╯      
+████████████████████████████████  ██████████████████████████████████  ██      ██████      
+████                            []                                    ██        xx██      
+████████████████████████████████  ██████████████████████████████████████      ██  ██      
                               ██  ██                                                      
                               ██  ██                                                      
                               ██  ██                                                      

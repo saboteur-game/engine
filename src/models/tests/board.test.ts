@@ -1,4 +1,9 @@
-import Board, { startPosition, middleFinishPosition } from "../board";
+import Board, {
+  startPosition,
+  middleFinishPosition,
+  topFinishPosition,
+  bottomFinishPosition,
+} from "../board";
 import Position from "../position";
 import {
   PathCard,
@@ -14,6 +19,18 @@ jest.spyOn(global.Math, "random").mockReturnValue(0.5);
 const START_POSITION = startPosition;
 const FINISH_POSITION = middleFinishPosition;
 const PLAY_POSITION = new Position(0, 1);
+
+const traverseBoard = (board: Board) => {
+  board.addCard(new PassageCard([Sides.right, Sides.left]), new Position(1, 0));
+  board.addCard(new PassageCard([Sides.right, Sides.left]), new Position(2, 0));
+  board.addCard(new PassageCard([Sides.right, Sides.left]), new Position(3, 0));
+  board.addCard(new PassageCard([Sides.right, Sides.left]), new Position(4, 0));
+  board.addCard(new PassageCard([Sides.right, Sides.left]), new Position(5, 0));
+  board.addCard(new PassageCard([Sides.right, Sides.left]), new Position(6, 0));
+};
+
+const isFaceDown = (board: Board, position: Position) =>
+  (board.getCardAt(position) as FinishPathCard).isFaceDown;
 
 const playPassage = (board: Board): void => {
   const passageCard = new PassageCard([
@@ -251,6 +268,82 @@ describe("Board", () => {
           expect(board.getCardAt(PLAY_POSITION)).toBe(passageCard);
         });
       });
+
+      describe("and card connects to finish card", () => {
+        beforeEach(() => {
+          traverseBoard(board);
+        });
+
+        it("turns over just that finish card", () => {
+          expect(isFaceDown(board, topFinishPosition)).toBe(true);
+          expect(isFaceDown(board, middleFinishPosition)).toBe(true);
+          expect(isFaceDown(board, bottomFinishPosition)).toBe(true);
+          board.addCard(
+            new PassageCard([Sides.right, Sides.left]),
+            new Position(7, 0)
+          );
+          expect(isFaceDown(board, topFinishPosition)).toBe(true);
+          expect(isFaceDown(board, middleFinishPosition)).toBe(false);
+          expect(isFaceDown(board, bottomFinishPosition)).toBe(true);
+          expect(board.isComplete).toBe(false);
+        });
+      });
+
+      describe("and card connects to two finish cards", () => {
+        beforeEach(() => {
+          traverseBoard(board);
+          board.addCard(
+            new PassageCard([Sides.bottom, Sides.left]),
+            new Position(7, 0)
+          );
+          board.addCard(
+            new PassageCard([Sides.top, Sides.right]),
+            new Position(7, -1)
+          );
+        });
+
+        it("turns over both connected finish card", () => {
+          expect(isFaceDown(board, topFinishPosition)).toBe(true);
+          expect(isFaceDown(board, middleFinishPosition)).toBe(true);
+          expect(isFaceDown(board, bottomFinishPosition)).toBe(true);
+          board.addCard(
+            new PassageCard([Sides.top, Sides.bottom, Sides.left]),
+            new Position(8, -1)
+          );
+          expect(isFaceDown(board, topFinishPosition)).toBe(true);
+          expect(isFaceDown(board, middleFinishPosition)).toBe(false);
+          expect(isFaceDown(board, bottomFinishPosition)).toBe(false);
+          expect(board.isComplete).toBe(false);
+        });
+      });
+
+      describe("and card connects to gold finish card", () => {
+        beforeEach(() => {
+          traverseBoard(board);
+          board.addCard(
+            new PassageCard([Sides.top, Sides.left]),
+            new Position(7, 0)
+          );
+          board.addCard(
+            new PassageCard([Sides.top, Sides.bottom]),
+            new Position(7, 1)
+          );
+        });
+
+        it("turns over all finish cards and completes the board", () => {
+          expect(isFaceDown(board, topFinishPosition)).toBe(true);
+          expect(isFaceDown(board, middleFinishPosition)).toBe(true);
+          expect(isFaceDown(board, bottomFinishPosition)).toBe(true);
+          board.addCard(
+            new PassageCard([Sides.right, Sides.bottom]),
+            new Position(7, 2)
+          );
+          expect(isFaceDown(board, topFinishPosition)).toBe(false);
+          expect(isFaceDown(board, middleFinishPosition)).toBe(false);
+          expect(isFaceDown(board, bottomFinishPosition)).toBe(false);
+          expect(board.isComplete).toBe(true);
+        });
+      });
     });
   });
 
@@ -327,7 +420,7 @@ describe("Board", () => {
         );
       });
 
-      it("returns surrounding cards but not the finish card", () => {
+      it("returns surrounding cards including finish card", () => {
         expect(board.getAdjacentCards(new Position(6, 0))).toMatchSnapshot();
       });
     });

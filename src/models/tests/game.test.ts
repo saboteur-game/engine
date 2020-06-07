@@ -1,12 +1,14 @@
 import { mocked } from "ts-jest/utils";
 import eventEmitter from "../../event-emitter";
 import Player from "../player";
-import { PathCard } from "../cards/path-cards";
+import { PathCard, PassageCard } from "../cards/path-cards";
 import { MapActionCard, ActionCard } from "../cards/action-cards";
 import CardParameters from "../cards/card-parameters";
 import { getShuffledDeck } from "../cards";
 import { middleFinishPosition } from "../board";
 import Game from "../game";
+import { Sides } from "../cards/card";
+import Position from "../position";
 
 jest.mock("../../event-emitter");
 jest.mock("../cards", () => {
@@ -22,6 +24,17 @@ const mockedGetSuffledDeck = mocked(getShuffledDeck);
 
 describe("Game", () => {
   let game: Game;
+
+  const playCardForPlayer = (
+    sides: Sides[],
+    position: Position
+  ): PassageCard => {
+    const player = game.getActivePlayer() as Player;
+    const card = new PassageCard(sides);
+    player.addToHand(card);
+    game.playCard(player, card.id, { position });
+    return card;
+  };
 
   const addPlayersToGame = (count: number): Player[] => {
     const players = Array(count)
@@ -208,8 +221,27 @@ describe("Game", () => {
         game.start();
       });
 
-      it("returns undefined", () => {
+      it("returns active player", () => {
         expect(game.getActivePlayer()).toBe(players[0]);
+      });
+    });
+
+    describe("when game is ended", () => {
+      beforeEach(() => {
+        game.start();
+        new Array(6).fill(undefined).forEach((value, index) => {
+          playCardForPlayer(
+            [Sides.right, Sides.left],
+            new Position(index + 1, 0)
+          );
+        });
+        playCardForPlayer([Sides.top, Sides.left], new Position(7, 0));
+        playCardForPlayer([Sides.bottom, Sides.right], new Position(7, 1));
+        playCardForPlayer([Sides.top, Sides.left], new Position(8, 1));
+      });
+
+      it("returns undefined", () => {
+        expect(game.getActivePlayer()).toBe(undefined);
       });
     });
   });
@@ -317,6 +349,42 @@ describe("Game", () => {
             "start-turn",
             players[1]
           );
+        });
+      });
+
+      describe("card finishes the game", () => {
+        beforeEach(() => {
+          game.start();
+          new Array(6).fill(undefined).forEach((value, index) => {
+            playCardForPlayer(
+              [Sides.right, Sides.left],
+              new Position(index + 1, 0)
+            );
+          });
+          playCardForPlayer([Sides.top, Sides.left], new Position(7, 0));
+          playCardForPlayer([Sides.bottom, Sides.right], new Position(7, 1));
+          jest.clearAllMocks();
+        });
+
+        it("ends the players turn and does not start the next players turn", () => {
+          playCardForPlayer([Sides.top, Sides.left], new Position(8, 1));
+          expect(game.getActivePlayer()).toBe(undefined);
+        });
+
+        it("emits play-card, end-turn and end-game events", () => {
+          const player = game.getActivePlayer();
+          const card = playCardForPlayer(
+            [Sides.top, Sides.left],
+            new Position(8, 1)
+          );
+          expect(eventEmitter.emit).toHaveBeenCalledTimes(3);
+          expect(eventEmitter.emit).toHaveBeenCalledWith(
+            "play-card",
+            player,
+            card
+          );
+          expect(eventEmitter.emit).toHaveBeenCalledWith("end-turn", player);
+          expect(eventEmitter.emit).toHaveBeenCalledWith("end-game");
         });
       });
     });
