@@ -75,20 +75,24 @@ describe("Board", () => {
         new Position(4, 0)
       );
       board.addCard(
-        new PassageCard([Sides.top, Sides.left]),
+        new PassageCard([Sides.right, Sides.left]),
         new Position(5, 0)
       );
       board.addCard(
+        new PassageCard([Sides.top, Sides.left]),
+        new Position(6, 0)
+      );
+      board.addCard(
         new PassageCard([Sides.top, Sides.bottom]),
-        new Position(5, 1)
+        new Position(6, 1)
       );
       board.addCard(
         new PassageCard([Sides.right, Sides.bottom]),
-        new Position(5, 2)
+        new Position(6, 2)
       );
       board.addCard(
         new PassageCard([Sides.right, Sides.left]),
-        new Position(6, 2)
+        new Position(7, 2)
       );
 
       // Passage down
@@ -529,7 +533,7 @@ describe("Board", () => {
       });
     });
 
-    describe("when there is a passage formed", () => {
+    describe("when there is a passage formed to a finish path card", () => {
       beforeEach(() => {
         board.addCard(
           new PassageCard([Sides.top, Sides.right, Sides.bottom]),
@@ -562,6 +566,10 @@ describe("Board", () => {
         board.addCard(
           new PassageCard([Sides.right, Sides.left]),
           new Position(6, -2)
+        );
+        board.addCard(
+          new PassageCard([Sides.right, Sides.left]),
+          new Position(7, -2)
         );
       });
 
