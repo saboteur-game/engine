@@ -8,6 +8,7 @@ import {
   DeadendCard,
   PathCard,
   FinishPathCard,
+  GoldFinishPathCard,
 } from "./cards/path-cards";
 import { Status, Sides } from "./cards/card";
 
@@ -22,10 +23,12 @@ export const bottomFinishPosition = new Position(8, -2);
 
 class Board {
   id: string;
+  isComplete: boolean;
   private grid: IGrid;
 
   constructor() {
     this.id = generateId();
+    this.isComplete = false;
     const placedCards = getPlacedCards();
     const [top, middle, bottom] = shuffle([
       placedCards.gold,
@@ -64,7 +67,7 @@ class Board {
     );
 
     const BLANK_SPACE = "      \n      \n      \n";
-    const AVAILABLE_SPACE = "|‾‾‾‾|\n|    |\n|____|";
+    const AVAILABLE_SPACE = "╭┄┄┄┄╮\n│    │\n╰┄┄┄┄╯";
     const rowGrid = [];
     for (let y = dimensions.top; y >= dimensions.bottom; y--) {
       rowGrid.push([] as string[]);
@@ -131,6 +134,33 @@ class Board {
 
     card.setPlayed();
     this.grid[position.toString()] = card;
+
+    const adjacentFinishPathCards = adjacentCards.filter(
+      (adjacentCard) => adjacentCard instanceof FinishPathCard
+    );
+    (adjacentFinishPathCards as FinishPathCard[]).forEach(
+      (adjacentFinishPathCard) => {
+        const side = adjacentCards.indexOf(adjacentFinishPathCard) + 1;
+
+        // Check we are actually trying to connect to the finish path card
+        // and not just placing a card beside it
+        if (!card.connectors.includes(side)) return;
+
+        adjacentFinishPathCard.turnOver(getOppositeSide(side));
+
+        if (adjacentFinishPathCard instanceof GoldFinishPathCard) {
+          this.isComplete = true;
+          ([
+            this.getCardAt(topFinishPosition),
+            this.getCardAt(middleFinishPosition),
+            this.getCardAt(bottomFinishPosition),
+          ] as FinishPathCard[]).forEach((finishCard) => {
+            if (finishCard === adjacentFinishPathCard) return;
+            finishCard.turnOver(Sides.left);
+          });
+        }
+      }
+    );
   }
 
   removeCard(position: Position): PassageCard | DeadendCard {
@@ -190,11 +220,7 @@ class Board {
     const bottom = this.getCardAt(position.below());
     const left = this.getCardAt(position.left());
 
-    return [top, right, bottom, left].map((card) =>
-      // Consider finish path cards as blank spaces for connection purposes
-      // TODO: This is only the case when the finish card is face down - there's a ticket to cover this
-      card instanceof FinishPathCard ? undefined : card
-    );
+    return [top, right, bottom, left];
   }
 
   toJS(): Pojo {

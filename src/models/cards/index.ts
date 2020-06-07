@@ -83,16 +83,10 @@ export interface IPlacedCards {
 }
 
 export const getPlacedCards = (): IPlacedCards => {
-  const start = new StartPathCard(randomBoolean());
-  const gold = new GoldFinishPathCard(randomBoolean());
-  const rock1 = new RockFinishPathCard(
-    [Sides.top, Sides.right],
-    randomBoolean()
-  );
-  const rock2 = new RockFinishPathCard(
-    [Sides.top, Sides.left],
-    randomBoolean()
-  );
+  const start = new StartPathCard();
+  const gold = new GoldFinishPathCard();
+  const rock1 = new RockFinishPathCard([Sides.top, Sides.right]);
+  const rock2 = new RockFinishPathCard([Sides.top, Sides.left]);
 
   [start, gold, rock1, rock2].forEach((card) => card.setPlayed());
 

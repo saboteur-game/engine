@@ -39,6 +39,7 @@ Object {
           4,
         ],
         "id": "test-id-7",
+        "isFaceDown": true,
         "isUpsideDown": false,
         "status": "played",
       },
@@ -48,6 +49,7 @@ Object {
           2,
         ],
         "id": "test-id-6",
+        "isFaceDown": true,
         "isUpsideDown": false,
         "status": "played",
       },
@@ -59,11 +61,13 @@ Object {
           4,
         ],
         "id": "test-id-5",
+        "isFaceDown": true,
         "isUpsideDown": false,
         "status": "played",
       },
     },
     "id": "test-id-3",
+    "isComplete": false,
   },
   "deck": Deck {
     "drawPile": Array [
@@ -631,21 +635,21 @@ Object {
 `;
 
 exports[`Game can visualize the board 1`] = `
-"                                                      ██  ██
-                                                        !!  
-                                                      ██  ██
-      |‾‾‾‾|                                                
-      |    |                                                
-      |____|                                                
-|‾‾‾‾|██  ██|‾‾‾‾|                                    ██  ██
-|    |  []  |    |                                    ██xx  
-|____|██  ██|____|                                    ██████
-      |‾‾‾‾|                                                
-      |    |                                                
-      |____|                                                
-                                                      ██  ██
-                                                        xx██
-                                                      ██████"
+"                                                      ▕▔▔▔▔▏
+                                                      ▕ ?? ▏
+                                                      ▕▁▁▁▁▏
+      ╭┄┄┄┄╮                                                
+      │    │                                                
+      ╰┄┄┄┄╯                                                
+╭┄┄┄┄╮██  ██╭┄┄┄┄╮                                    ▕▔▔▔▔▏
+│    │  []  │    │                                    ▕ ?? ▏
+╰┄┄┄┄╯██  ██╰┄┄┄┄╯                                    ▕▁▁▁▁▏
+      ╭┄┄┄┄╮                                                
+      │    │                                                
+      ╰┄┄┄┄╯                                                
+                                                      ▕▔▔▔▔▏
+                                                      ▕ ?? ▏
+                                                      ▕▁▁▁▁▏"
 `;
 
 exports[`Game discardCard when game is started card is in the players hand adds a new card to the players hand 1`] = `

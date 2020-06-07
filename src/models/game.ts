@@ -102,12 +102,16 @@ class Game {
 
   private endTurn(): void {
     eventEmitter.emit("end-turn", this.getActivePlayer());
+    if (this.board.isComplete) return;
+
     this.turn += 1;
     eventEmitter.emit("start-turn", this.getActivePlayer());
   }
 
   getActivePlayer(): Player | undefined {
-    if (!this.isStarted) return undefined;
+    if (!this.isStarted || this.isFinished) {
+      return undefined;
+    }
 
     const playerIndex = this.turn % this.playOrder.length;
     const activePlayerId = this.playOrder[playerIndex];
@@ -141,6 +145,12 @@ class Game {
     if (drawnCard) player.addToHand(drawnCard);
 
     this.endTurn();
+
+    if (this.board.isComplete) {
+      this.isFinished = true;
+      // TODO: allocate points, set the round to complete, reset board, reset the deck, reshuffle the finish cards, reshuffle saboteurs, etc.
+      eventEmitter.emit("end-game");
+    }
   }
 
   discardCard(player: Player, cardId?: string): void {

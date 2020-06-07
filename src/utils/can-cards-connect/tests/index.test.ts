@@ -2,6 +2,7 @@ import {
   PassageCard,
   DeadendCard,
   TunnelCard,
+  RockFinishPathCard,
 } from "../../../models/cards/path-cards";
 import { Sides } from "../../../models/cards/card";
 import canCardsConnect from "..";
@@ -173,4 +174,38 @@ describe("check two cards can connect", () => {
       });
     }
   );
+
+  describe("connecting to a final card", () => {
+    let adjacentCard: RockFinishPathCard;
+    let card: PassageCard;
+
+    beforeEach(() => {
+      adjacentCard = new RockFinishPathCard([Sides.top, Sides.right]);
+      card = new PassageCard([Sides.right, Sides.left]);
+    });
+
+    describe("when the final card is face down", () => {
+      it("connects when connectors match", () => {
+        expect(canCardsConnect(Sides.left, adjacentCard, card)).toBe(true);
+      });
+
+      it("connects when connectors don't match", () => {
+        expect(canCardsConnect(Sides.right, adjacentCard, card)).toBe(true);
+      });
+    });
+
+    describe("when the final card is face up", () => {
+      beforeEach(() => {
+        adjacentCard.turnOver(Sides.top);
+      });
+
+      it("connects when connectors match", () => {
+        expect(canCardsConnect(Sides.left, adjacentCard, card)).toBe(true);
+      });
+
+      it("connects when connectors don't match", () => {
+        expect(canCardsConnect(Sides.right, adjacentCard, card)).toBe(false);
+      });
+    });
+  });
 });
