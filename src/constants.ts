@@ -4,6 +4,8 @@ export const MIN_PLAYERS = 3;
 
 export const SPACE_SIDES = 4;
 
+export const NUMBER_OF_ROUNDS = 3;
+
 export enum Tools {
   pick = "pick",
   lamp = "lamp",

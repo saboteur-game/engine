@@ -25,6 +25,8 @@ const mockedGetSuffledDeck = mocked(getShuffledDeck);
 describe("Game", () => {
   let game: Game;
 
+  const rounds = [0, 1, 2];
+
   const playCardForPlayer = (
     sides: Sides[],
     position: Position
@@ -34,6 +36,18 @@ describe("Game", () => {
     player.addToHand(card);
     game.playCard(player, card.id, { position });
     return card;
+  };
+
+  const completeRound = (shouldComplete = true) => {
+    const horizontalCards = [0, 1, 2, 3, 4, 5];
+    horizontalCards.forEach((value, index) => {
+      playCardForPlayer([Sides.right, Sides.left], new Position(index + 1, 0));
+    });
+    playCardForPlayer([Sides.top, Sides.left], new Position(7, 0));
+    playCardForPlayer([Sides.bottom, Sides.right], new Position(7, 1));
+    if (shouldComplete) {
+      playCardForPlayer([Sides.top, Sides.left], new Position(8, 1));
+    }
   };
 
   const addPlayersToGame = (count: number): Player[] => {
@@ -193,8 +207,9 @@ describe("Game", () => {
       it("emits start-game and start-turn events", () => {
         jest.clearAllMocks();
         game.start();
-        expect(eventEmitter.emit).toHaveBeenCalledTimes(2);
+        expect(eventEmitter.emit).toHaveBeenCalledTimes(3);
         expect(eventEmitter.emit).toHaveBeenCalledWith("start-game");
+        expect(eventEmitter.emit).toHaveBeenCalledWith("start-round", 0);
         expect(eventEmitter.emit).toHaveBeenCalledWith(
           "start-turn",
           players[0]
@@ -229,15 +244,7 @@ describe("Game", () => {
     describe("when game is ended", () => {
       beforeEach(() => {
         game.start();
-        new Array(6).fill(undefined).forEach((value, index) => {
-          playCardForPlayer(
-            [Sides.right, Sides.left],
-            new Position(index + 1, 0)
-          );
-        });
-        playCardForPlayer([Sides.top, Sides.left], new Position(7, 0));
-        playCardForPlayer([Sides.bottom, Sides.right], new Position(7, 1));
-        playCardForPlayer([Sides.top, Sides.left], new Position(8, 1));
+        rounds.forEach(() => completeRound());
       });
 
       it("returns undefined", () => {
@@ -352,26 +359,19 @@ describe("Game", () => {
         });
       });
 
-      describe("card finishes the game", () => {
+      describe("card finishes the round", () => {
         beforeEach(() => {
           game.start();
-          new Array(6).fill(undefined).forEach((value, index) => {
-            playCardForPlayer(
-              [Sides.right, Sides.left],
-              new Position(index + 1, 0)
-            );
-          });
-          playCardForPlayer([Sides.top, Sides.left], new Position(7, 0));
-          playCardForPlayer([Sides.bottom, Sides.right], new Position(7, 1));
+          completeRound(false);
           jest.clearAllMocks();
         });
 
-        it("ends the players turn and does not start the next players turn", () => {
+        it("ends the players turn and starts the round with the next players turn", () => {
           playCardForPlayer([Sides.top, Sides.left], new Position(8, 1));
-          expect(game.getActivePlayer()).toBe(undefined);
+          expect(game.getActivePlayer()).toBe(players[2]);
         });
 
-        it("emits play-card, end-turn and end-game events", () => {
+        it("emits play-card, end-turn and end-round events", () => {
           const player = game.getActivePlayer();
           const card = playCardForPlayer(
             [Sides.top, Sides.left],
@@ -384,6 +384,40 @@ describe("Game", () => {
             card
           );
           expect(eventEmitter.emit).toHaveBeenCalledWith("end-turn", player);
+          expect(eventEmitter.emit).toHaveBeenCalledWith("end-round", 0, {
+            todo: true,
+          });
+        });
+      });
+
+      describe("card finishes the game", () => {
+        beforeEach(() => {
+          game.start();
+          rounds.forEach((index) => completeRound(index !== 2));
+          jest.clearAllMocks();
+        });
+
+        it("ends the players turn and does not start the next players turn", () => {
+          playCardForPlayer([Sides.top, Sides.left], new Position(8, 1));
+          expect(game.getActivePlayer()).toBe(undefined);
+        });
+
+        it("emits play-card, end-turn, end-round and end-game events", () => {
+          const player = game.getActivePlayer();
+          const card = playCardForPlayer(
+            [Sides.top, Sides.left],
+            new Position(8, 1)
+          );
+          expect(eventEmitter.emit).toHaveBeenCalledTimes(4);
+          expect(eventEmitter.emit).toHaveBeenCalledWith(
+            "play-card",
+            player,
+            card
+          );
+          expect(eventEmitter.emit).toHaveBeenCalledWith("end-turn", player);
+          expect(eventEmitter.emit).toHaveBeenCalledWith("end-round", 2, {
+            todo: true,
+          });
           expect(eventEmitter.emit).toHaveBeenCalledWith("end-game");
         });
       });
@@ -464,8 +498,8 @@ describe("Game", () => {
             expect(game.getTopOfDiscardPile()).toBe(undefined);
           });
 
-          it("does not add cards to the players hand", () => {
-            expect(players[0].getHandCardCount()).toBe(0);
+          it("add cards to the players hand from the deck", () => {
+            expect(players[0].getHandCardCount()).toBe(1);
           });
 
           it("ends the players turn and starts the next players turn", () => {
@@ -528,6 +562,34 @@ describe("Game", () => {
           );
         });
       });
+
+      describe("when all players discard", () => {
+        beforeEach(() => {
+          players.slice(0, -1).forEach((player) => {
+            const card = player.getHand()[0];
+            game.discardCard(player, card.id);
+          });
+          jest.clearAllMocks();
+        });
+
+        it("emits end-turn but does not end the round", () => {
+          const player = game.getActivePlayer() as Player;
+          const card = player.getHand()[0];
+          game.discardCard(player, card.id);
+
+          expect(eventEmitter.emit).toHaveBeenCalledTimes(3);
+          expect(eventEmitter.emit).toHaveBeenCalledWith(
+            "discard-card",
+            player,
+            card
+          );
+          expect(eventEmitter.emit).toHaveBeenCalledWith("end-turn", player);
+          expect(eventEmitter.emit).toHaveBeenCalledWith(
+            "start-turn",
+            game.getActivePlayer()
+          );
+        });
+      });
     });
   });
 
@@ -536,7 +598,7 @@ describe("Game", () => {
 
     beforeEach(() => {
       jest.clearAllMocks();
-      mockedGetSuffledDeck.mockReturnValue([
+      mockedGetSuffledDeck.mockImplementation(() => [
         new MapActionCard(),
         new MapActionCard(),
         new MapActionCard(),
@@ -570,8 +632,35 @@ describe("Game", () => {
         game.discardCard(players[0], card.id);
       });
 
-      it("does not add a new card to the players hand", () => {
+      it("does not add a new card to the players hand as the deck is empty", () => {
         expect(players[0].getHand().length).toBe(0);
+      });
+    });
+
+    describe("when all players discard", () => {
+      beforeEach(() => {
+        players.slice(0, -1).forEach((player) => {
+          const card = player.getHand()[0];
+          game.discardCard(player, card.id);
+        });
+        jest.clearAllMocks();
+      });
+
+      it("emits end-turn and end-round events", () => {
+        const player = game.getActivePlayer() as Player;
+        const card = player.getHand()[0];
+        game.discardCard(player, card.id);
+
+        expect(eventEmitter.emit).toHaveBeenCalledTimes(3);
+        expect(eventEmitter.emit).toHaveBeenCalledWith(
+          "discard-card",
+          player,
+          card
+        );
+        expect(eventEmitter.emit).toHaveBeenCalledWith("end-turn", player);
+        expect(eventEmitter.emit).toHaveBeenCalledWith("end-round", 0, {
+          todo: true,
+        });
       });
     });
   });
