@@ -188,14 +188,55 @@ describe("Player", () => {
     });
   });
 
-  describe("setAllegiance", () => {
-    it("sets player to saboteur", () => {
-      player.setAllegiance(true);
+  describe("setup", () => {
+    let finishCard: RockFinishPathCard;
+
+    beforeEach(() => {
+      finishCard = new RockFinishPathCard([Sides.top]);
+      player.viewFinishCard(finishCard);
+      player.addToHand(card);
+      player.breakTool(Tools.pick);
+      player.breakTool(Tools.lamp);
+      player.breakTool(Tools.wagon);
+    });
+
+    it("resets the players hand", () => {
+      expect(player.getHand()).toEqual([card]);
+      player.setup(false);
+      expect(player.getHand()).toEqual([]);
+    });
+
+    it("resets broken tools", () => {
+      expect(player.getTools()).toMatchInlineSnapshot(`
+        Object {
+          "lamp": false,
+          "pick": false,
+          "wagon": false,
+        }
+      `);
+      player.setup(false);
+      expect(player.getTools()).toMatchInlineSnapshot(`
+        Object {
+          "lamp": true,
+          "pick": true,
+          "wagon": true,
+        }
+      `);
+    });
+
+    it("resets any viewed finish cards", () => {
+      expect(player.getViewedFinishCards()).toEqual([finishCard]);
+      player.setup(false);
+      expect(player.getViewedFinishCards()).toEqual([]);
+    });
+
+    it("sets player to saboteur when provided true", () => {
+      player.setup(true);
       expect(player.isSaboteur).toBe(true);
     });
 
-    it("sets player to gold digger", () => {
-      player.setAllegiance(false);
+    it("sets player to gold digger when provided false", () => {
+      player.setup(false);
       expect(player.isSaboteur).toBe(false);
     });
   });

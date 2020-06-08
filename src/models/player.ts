@@ -11,23 +11,16 @@ class Player {
   id: string;
   name: string;
   age: number;
-  private hand: { [key: string]: ActionCard | PathCard };
-  private viewedFinishCards: { [key: string]: FinishPathCard };
-  isSaboteur: boolean;
-  private tools: { [key in Tools]: boolean };
+  private hand!: { [key: string]: ActionCard | PathCard };
+  private viewedFinishCards!: { [key: string]: FinishPathCard };
+  isSaboteur!: boolean;
+  private tools!: { [key in Tools]: boolean };
 
   constructor(name: string, age?: number) {
     this.id = generateId();
     this.name = name;
     this.age = age || randomAge();
-    this.hand = {};
-    this.tools = {
-      [Tools.pick]: true,
-      [Tools.lamp]: true,
-      [Tools.wagon]: true,
-    };
-    this.viewedFinishCards = {};
-    this.isSaboteur = false;
+    this.setup(false);
   }
 
   addToHand(card: ActionCard | PathCard): void {
@@ -86,7 +79,14 @@ class Player {
     return { ...this.tools };
   }
 
-  setAllegiance(isSaboteur: boolean): void {
+  setup(isSaboteur: boolean): void {
+    this.hand = {};
+    this.tools = {
+      [Tools.pick]: true,
+      [Tools.lamp]: true,
+      [Tools.wagon]: true,
+    };
+    this.viewedFinishCards = {};
     this.isSaboteur = isSaboteur;
   }
 
