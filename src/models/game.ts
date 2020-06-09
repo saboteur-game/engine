@@ -144,6 +144,12 @@ class Game {
     return this.players[playerId];
   }
 
+  private areAllHandsEmpty() {
+    return this.playOrder.every(
+      (playerId) => this.players[playerId].getHand().length === 0
+    );
+  }
+
   private finishRound(): void {
     this.endTurn(true);
 
@@ -182,7 +188,7 @@ class Game {
     const drawnCard = this.deck.drawCard();
     if (drawnCard) player.addToHand(drawnCard);
 
-    if (this.board.isComplete) {
+    if (this.board.isComplete || this.areAllHandsEmpty()) {
       this.finishRound();
       return;
     }
@@ -210,7 +216,10 @@ class Game {
 
     if (this.deck.getCardCount() === 0) {
       this.discardSequence.push(player);
-      if (this.discardSequence.length === this.playOrder.length) {
+      if (
+        this.discardSequence.length === this.playOrder.length ||
+        this.areAllHandsEmpty()
+      ) {
         this.finishRound();
         return;
       }
