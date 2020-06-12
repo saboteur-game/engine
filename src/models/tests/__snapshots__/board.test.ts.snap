@@ -10,7 +10,7 @@ Object {
         3,
         4,
       ],
-      "id": "test-id-1",
+      "id": "test-id-6",
       "isUpsideDown": false,
       "status": "played",
     },
@@ -19,7 +19,7 @@ Object {
         1,
         4,
       ],
-      "id": "test-id-4",
+      "id": "test-id-9",
       "isFaceDown": true,
       "isUpsideDown": false,
       "status": "played",
@@ -29,7 +29,7 @@ Object {
         1,
         2,
       ],
-      "id": "test-id-3",
+      "id": "test-id-8",
       "isFaceDown": true,
       "isUpsideDown": false,
       "status": "played",
@@ -41,13 +41,13 @@ Object {
         3,
         4,
       ],
-      "id": "test-id-2",
+      "id": "test-id-7",
       "isFaceDown": true,
       "isUpsideDown": false,
       "status": "played",
     },
   },
-  "id": "test-id-0",
+  "id": "test-id-5",
 }
 `;
 
@@ -61,7 +61,7 @@ Array [
       2,
       4,
     ],
-    "id": "test-id-57",
+    "id": "test-id-62",
     "isUpsideDown": false,
     "status": "played",
   },
@@ -85,7 +85,7 @@ Array [
       2,
       4,
     ],
-    "id": "test-id-15",
+    "id": "test-id-20",
     "isUpsideDown": false,
     "status": "played",
   },
@@ -97,7 +97,7 @@ Array [
       3,
       4,
     ],
-    "id": "test-id-1",
+    "id": "test-id-6",
     "isUpsideDown": false,
     "status": "played",
   },
@@ -113,7 +113,7 @@ Array [
       3,
       4,
     ],
-    "id": "test-id-35",
+    "id": "test-id-40",
     "isUpsideDown": false,
     "status": "played",
   },
@@ -124,7 +124,7 @@ Array [
       3,
       4,
     ],
-    "id": "test-id-67",
+    "id": "test-id-72",
     "isUpsideDown": false,
     "status": "played",
   },
@@ -135,7 +135,7 @@ Array [
       3,
       4,
     ],
-    "id": "test-id-49",
+    "id": "test-id-54",
     "isUpsideDown": false,
     "status": "played",
   },
@@ -146,7 +146,7 @@ Array [
       3,
       4,
     ],
-    "id": "test-id-1",
+    "id": "test-id-6",
     "isUpsideDown": false,
     "status": "played",
   },
@@ -156,22 +156,22 @@ Array [
 exports[`Board get available positions from the board initial board setup returns the four surrounding positions of the start position 1`] = `
 Array [
   Position {
-    "id": "test-id-5",
+    "id": "test-id-10",
     "x": 0,
     "y": 1,
   },
   Position {
-    "id": "test-id-6",
+    "id": "test-id-11",
     "x": 1,
     "y": 0,
   },
   Position {
-    "id": "test-id-7",
+    "id": "test-id-12",
     "x": 0,
     "y": -1,
   },
   Position {
-    "id": "test-id-8",
+    "id": "test-id-13",
     "x": -1,
     "y": 0,
   },
@@ -181,17 +181,17 @@ Array [
 exports[`Board get available positions from the board when there is a circular passage returns correct positions 1`] = `
 Array [
   Position {
-    "id": "test-id-130",
+    "id": "test-id-135",
     "x": 0,
     "y": 1,
   },
   Position {
-    "id": "test-id-145",
+    "id": "test-id-150",
     "x": 0,
     "y": -2,
   },
   Position {
-    "id": "test-id-150",
+    "id": "test-id-155",
     "x": -2,
     "y": 0,
   },
@@ -201,37 +201,37 @@ Array [
 exports[`Board get available positions from the board when there is a passage formed returns correct positions for continuing the passage  1`] = `
 Array [
   Position {
-    "id": "test-id-64",
+    "id": "test-id-69",
     "x": 0,
     "y": 1,
   },
   Position {
-    "id": "test-id-68",
+    "id": "test-id-73",
     "x": 2,
     "y": 2,
   },
   Position {
-    "id": "test-id-69",
+    "id": "test-id-74",
     "x": 3,
     "y": 1,
   },
   Position {
-    "id": "test-id-72",
+    "id": "test-id-77",
     "x": 2,
     "y": 0,
   },
   Position {
-    "id": "test-id-73",
+    "id": "test-id-78",
     "x": 1,
     "y": -1,
   },
   Position {
-    "id": "test-id-78",
+    "id": "test-id-83",
     "x": 0,
     "y": -2,
   },
   Position {
-    "id": "test-id-79",
+    "id": "test-id-84",
     "x": -1,
     "y": 0,
   },
@@ -241,47 +241,47 @@ Array [
 exports[`Board get available positions from the board when there is a passage formed to a finish path card returns correct positions for continuing the passage  1`] = `
 Array [
   Position {
-    "id": "test-id-197",
+    "id": "test-id-202",
     "x": 0,
     "y": 1,
   },
   Position {
-    "id": "test-id-198",
+    "id": "test-id-203",
     "x": 1,
     "y": 0,
   },
   Position {
-    "id": "test-id-208",
+    "id": "test-id-213",
     "x": 4,
     "y": -1,
   },
   Position {
-    "id": "test-id-210",
+    "id": "test-id-215",
     "x": 5,
     "y": -1,
   },
   Position {
-    "id": "test-id-214",
+    "id": "test-id-219",
     "x": 8,
     "y": -1,
   },
   Position {
-    "id": "test-id-219",
+    "id": "test-id-224",
     "x": 4,
     "y": -3,
   },
   Position {
-    "id": "test-id-223",
+    "id": "test-id-228",
     "x": 1,
     "y": -2,
   },
   Position {
-    "id": "test-id-225",
+    "id": "test-id-230",
     "x": 0,
     "y": -2,
   },
   Position {
-    "id": "test-id-226",
+    "id": "test-id-231",
     "x": -1,
     "y": 0,
   },
@@ -291,37 +291,37 @@ Array [
 exports[`Board get available positions from the board when there is a passage formed with upside down cards returns correct positions for continuing the passage  1`] = `
 Array [
   Position {
-    "id": "test-id-64",
+    "id": "test-id-69",
     "x": 0,
     "y": 1,
   },
   Position {
-    "id": "test-id-66",
+    "id": "test-id-71",
     "x": 1,
     "y": 1,
   },
   Position {
-    "id": "test-id-69",
+    "id": "test-id-74",
     "x": 3,
     "y": 1,
   },
   Position {
-    "id": "test-id-73",
+    "id": "test-id-78",
     "x": 1,
     "y": -1,
   },
   Position {
-    "id": "test-id-77",
+    "id": "test-id-82",
     "x": 0,
     "y": -2,
   },
   Position {
-    "id": "test-id-78",
+    "id": "test-id-83",
     "x": -1,
     "y": -1,
   },
   Position {
-    "id": "test-id-79",
+    "id": "test-id-84",
     "x": -1,
     "y": 0,
   },
@@ -331,17 +331,17 @@ Array [
 exports[`Board get available positions from the board when there is a passage with dead-ends returns correct positions and does not put positions around dead ends 1`] = `
 Array [
   Position {
-    "id": "test-id-115",
+    "id": "test-id-120",
     "x": 0,
     "y": 1,
   },
   Position {
-    "id": "test-id-118",
+    "id": "test-id-123",
     "x": 2,
     "y": 1,
   },
   Position {
-    "id": "test-id-126",
+    "id": "test-id-131",
     "x": 0,
     "y": -2,
   },
