@@ -384,9 +384,13 @@ describe("Game", () => {
             card
           );
           expect(eventEmitter.emit).toHaveBeenCalledWith("end-turn", player);
-          expect(eventEmitter.emit).toHaveBeenCalledWith("end-round", 0, {
-            todo: true,
-          });
+          expect(eventEmitter.emit).toHaveBeenCalledWith(
+            "end-round",
+            0,
+            expect.anything()
+          );
+          const mockEmit = mocked(eventEmitter.emit);
+          expect(mockEmit.mock.calls[2][2]).toMatchSnapshot();
         });
       });
 
@@ -403,6 +407,7 @@ describe("Game", () => {
         });
 
         it("emits play-card, end-turn, end-round and end-game events", () => {
+          const mockEmit = mocked(eventEmitter.emit);
           const player = game.getActivePlayer();
           const card = playCardForPlayer(
             [Sides.top, Sides.left],
@@ -415,10 +420,17 @@ describe("Game", () => {
             card
           );
           expect(eventEmitter.emit).toHaveBeenCalledWith("end-turn", player);
-          expect(eventEmitter.emit).toHaveBeenCalledWith("end-round", 2, {
-            todo: true,
-          });
-          expect(eventEmitter.emit).toHaveBeenCalledWith("end-game");
+          expect(eventEmitter.emit).toHaveBeenCalledWith(
+            "end-round",
+            2,
+            expect.anything()
+          );
+          expect(mockEmit.mock.calls[2][2]).toMatchSnapshot();
+          expect(eventEmitter.emit).toHaveBeenCalledWith(
+            "end-game",
+            expect.anything()
+          );
+          expect(mockEmit.mock.calls[3][1]).toMatchSnapshot();
         });
       });
     });
@@ -737,9 +749,13 @@ describe("Game", () => {
           card
         );
         expect(eventEmitter.emit).toHaveBeenCalledWith("end-turn", player);
-        expect(eventEmitter.emit).toHaveBeenCalledWith("end-round", 0, {
-          todo: true,
-        });
+        expect(eventEmitter.emit).toHaveBeenCalledWith(
+          "end-round",
+          0,
+          expect.anything()
+        );
+        const mockEmit = mocked(eventEmitter.emit);
+        expect(mockEmit.mock.calls[2][2]).toMatchSnapshot();
       });
     });
   });
@@ -784,9 +800,13 @@ describe("Game", () => {
           card
         );
         expect(eventEmitter.emit).toHaveBeenCalledWith("end-turn", player);
-        expect(eventEmitter.emit).toHaveBeenCalledWith("end-round", 0, {
-          todo: true,
-        });
+        expect(eventEmitter.emit).toHaveBeenCalledWith(
+          "end-round",
+          0,
+          expect.anything()
+        );
+        const mockEmit = mocked(eventEmitter.emit);
+        expect(mockEmit.mock.calls[2][2]).toMatchSnapshot();
       });
     });
 
@@ -811,9 +831,13 @@ describe("Game", () => {
           card
         );
         expect(eventEmitter.emit).toHaveBeenCalledWith("end-turn", player);
-        expect(eventEmitter.emit).toHaveBeenCalledWith("end-round", 0, {
-          todo: true,
-        });
+        expect(eventEmitter.emit).toHaveBeenCalledWith(
+          "end-round",
+          0,
+          expect.anything()
+        );
+        const mockEmit = mocked(eventEmitter.emit);
+        expect(mockEmit.mock.calls[2][2]).toMatchSnapshot();
       });
     });
 
@@ -838,9 +862,13 @@ describe("Game", () => {
           card
         );
         expect(eventEmitter.emit).toHaveBeenCalledWith("end-turn", player);
-        expect(eventEmitter.emit).toHaveBeenCalledWith("end-round", 0, {
-          todo: true,
-        });
+        expect(eventEmitter.emit).toHaveBeenCalledWith(
+          "end-round",
+          0,
+          expect.anything()
+        );
+        const mockEmit = mocked(eventEmitter.emit);
+        expect(mockEmit.mock.calls[2][2]).toMatchSnapshot();
       });
     });
   });

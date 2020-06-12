@@ -5,7 +5,7 @@ Array [
   Player {
     "age": 35,
     "hand": Object {},
-    "id": "test-id-79",
+    "id": "test-id-108",
     "isSaboteur": false,
     "name": "Alice",
     "tools": Object {
@@ -632,6 +632,21 @@ Object {
   "players": Object {},
   "roundResults": Array [],
   "turn": 0,
+  "visual": "                                                      ▕▔▔▔▔▏
+                                                      ▕ ?? ▏
+                                                      ▕▁▁▁▁▏
+      ╭┄┄┄┄╮                                                
+      │    │                                                
+      ╰┄┄┄┄╯                                                
+╭┄┄┄┄╮██  ██╭┄┄┄┄╮                                    ▕▔▔▔▔▏
+│    │  []  │    │                                    ▕ ?? ▏
+╰┄┄┄┄╯██  ██╰┄┄┄┄╯                                    ▕▁▁▁▁▏
+      ╭┄┄┄┄╮                                                
+      │    │                                                
+      ╰┄┄┄┄╯                                                
+                                                      ▕▔▔▔▔▏
+                                                      ▕ ?? ▏
+                                                      ▕▁▁▁▁▏",
 }
 `;
 
@@ -722,6 +737,1669 @@ Array [
 ]
 `;
 
+exports[`Game playCard when game is started card finishes the game emits play-card, end-turn, end-round and end-game events 1`] = `
+Object {
+  "didGoldDiggersWin": true,
+  "gameState": Object {
+    "board": Board {
+      "grid": Object {
+        "0,0": StartPathCard {
+          "connectors": Array [
+            1,
+            2,
+            3,
+            4,
+          ],
+          "id": "test-id-630",
+          "isUpsideDown": false,
+          "status": "played",
+        },
+        "1,0": PassageCard {
+          "connectors": Array [
+            2,
+            4,
+          ],
+          "id": "test-id-635",
+          "isUpsideDown": false,
+          "parameters": Object {
+            "position": Position {
+              "id": "test-id-634",
+              "x": 1,
+              "y": 0,
+            },
+          },
+          "status": "played",
+        },
+        "2,0": PassageCard {
+          "connectors": Array [
+            2,
+            4,
+          ],
+          "id": "test-id-645",
+          "isUpsideDown": false,
+          "parameters": Object {
+            "position": Position {
+              "id": "test-id-644",
+              "x": 2,
+              "y": 0,
+            },
+          },
+          "status": "played",
+        },
+        "3,0": PassageCard {
+          "connectors": Array [
+            2,
+            4,
+          ],
+          "id": "test-id-657",
+          "isUpsideDown": false,
+          "parameters": Object {
+            "position": Position {
+              "id": "test-id-656",
+              "x": 3,
+              "y": 0,
+            },
+          },
+          "status": "played",
+        },
+        "4,0": PassageCard {
+          "connectors": Array [
+            2,
+            4,
+          ],
+          "id": "test-id-671",
+          "isUpsideDown": false,
+          "parameters": Object {
+            "position": Position {
+              "id": "test-id-670",
+              "x": 4,
+              "y": 0,
+            },
+          },
+          "status": "played",
+        },
+        "5,0": PassageCard {
+          "connectors": Array [
+            2,
+            4,
+          ],
+          "id": "test-id-687",
+          "isUpsideDown": false,
+          "parameters": Object {
+            "position": Position {
+              "id": "test-id-686",
+              "x": 5,
+              "y": 0,
+            },
+          },
+          "status": "played",
+        },
+        "6,0": PassageCard {
+          "connectors": Array [
+            2,
+            4,
+          ],
+          "id": "test-id-705",
+          "isUpsideDown": false,
+          "parameters": Object {
+            "position": Position {
+              "id": "test-id-704",
+              "x": 6,
+              "y": 0,
+            },
+          },
+          "status": "played",
+        },
+        "7,0": PassageCard {
+          "connectors": Array [
+            1,
+            4,
+          ],
+          "id": "test-id-725",
+          "isUpsideDown": false,
+          "parameters": Object {
+            "position": Position {
+              "id": "test-id-724",
+              "x": 7,
+              "y": 0,
+            },
+          },
+          "status": "played",
+        },
+        "7,1": PassageCard {
+          "connectors": Array [
+            3,
+            2,
+          ],
+          "id": "test-id-747",
+          "isUpsideDown": false,
+          "parameters": Object {
+            "position": Position {
+              "id": "test-id-746",
+              "x": 7,
+              "y": 1,
+            },
+          },
+          "status": "played",
+        },
+        "8,-2": RockFinishPathCard {
+          "connectors": Array [
+            1,
+            4,
+          ],
+          "id": "test-id-633",
+          "isFaceDown": false,
+          "isUpsideDown": false,
+          "status": "played",
+        },
+        "8,0": RockFinishPathCard {
+          "connectors": Array [
+            1,
+            2,
+          ],
+          "id": "test-id-632",
+          "isFaceDown": false,
+          "isUpsideDown": true,
+          "status": "played",
+        },
+        "8,1": PassageCard {
+          "connectors": Array [
+            1,
+            4,
+          ],
+          "id": "test-id-771",
+          "isUpsideDown": false,
+          "parameters": Object {
+            "position": Position {
+              "id": "test-id-770",
+              "x": 8,
+              "y": 1,
+            },
+          },
+          "status": "played",
+        },
+        "8,2": GoldFinishPathCard {
+          "connectors": Array [
+            1,
+            2,
+            3,
+            4,
+          ],
+          "id": "test-id-631",
+          "isFaceDown": false,
+          "isUpsideDown": false,
+          "status": "played",
+        },
+      },
+      "id": "test-id-629",
+      "isComplete": true,
+    },
+    "deck": Deck {
+      "drawPile": Array [
+        PassageCard {
+          "connectors": Array [
+            1,
+            2,
+            3,
+            4,
+          ],
+          "id": "test-id-27",
+          "isUpsideDown": false,
+          "status": "unused",
+        },
+        PassageCard {
+          "connectors": Array [
+            1,
+            2,
+            3,
+            4,
+          ],
+          "id": "test-id-28",
+          "isUpsideDown": false,
+          "status": "unused",
+        },
+        PassageCard {
+          "connectors": Array [
+            1,
+            2,
+            3,
+            4,
+          ],
+          "id": "test-id-29",
+          "isUpsideDown": false,
+          "status": "unused",
+        },
+        PassageCard {
+          "connectors": Array [
+            1,
+            2,
+            3,
+            4,
+          ],
+          "id": "test-id-30",
+          "isUpsideDown": false,
+          "status": "unused",
+        },
+        DeadendCard {
+          "connectors": Array [
+            1,
+          ],
+          "id": "test-id-31",
+          "isUpsideDown": false,
+          "status": "unused",
+        },
+        DeadendCard {
+          "connectors": Array [
+            2,
+          ],
+          "id": "test-id-32",
+          "isUpsideDown": false,
+          "status": "unused",
+        },
+        DeadendCard {
+          "connectors": Array [
+            1,
+            2,
+          ],
+          "id": "test-id-33",
+          "isUpsideDown": false,
+          "status": "unused",
+        },
+        DeadendCard {
+          "connectors": Array [
+            1,
+            3,
+          ],
+          "id": "test-id-34",
+          "isUpsideDown": false,
+          "status": "unused",
+        },
+        DeadendCard {
+          "connectors": Array [
+            1,
+            4,
+          ],
+          "id": "test-id-35",
+          "isUpsideDown": false,
+          "status": "unused",
+        },
+        DeadendCard {
+          "connectors": Array [
+            2,
+            4,
+          ],
+          "id": "test-id-36",
+          "isUpsideDown": false,
+          "status": "unused",
+        },
+        DeadendCard {
+          "connectors": Array [
+            1,
+            2,
+            3,
+          ],
+          "id": "test-id-37",
+          "isUpsideDown": false,
+          "status": "unused",
+        },
+        DeadendCard {
+          "connectors": Array [
+            1,
+            2,
+            4,
+          ],
+          "id": "test-id-38",
+          "isUpsideDown": false,
+          "status": "unused",
+        },
+        DeadendCard {
+          "connectors": Array [
+            1,
+            2,
+            3,
+            4,
+          ],
+          "id": "test-id-39",
+          "isUpsideDown": false,
+          "status": "unused",
+        },
+        MapActionCard {
+          "id": "test-id-40",
+          "status": "unused",
+        },
+        MapActionCard {
+          "id": "test-id-41",
+          "status": "unused",
+        },
+        MapActionCard {
+          "id": "test-id-42",
+          "status": "unused",
+        },
+        MapActionCard {
+          "id": "test-id-43",
+          "status": "unused",
+        },
+        MapActionCard {
+          "id": "test-id-44",
+          "status": "unused",
+        },
+        MapActionCard {
+          "id": "test-id-45",
+          "status": "unused",
+        },
+        RockfallActionCard {
+          "id": "test-id-46",
+          "status": "unused",
+        },
+        RockfallActionCard {
+          "id": "test-id-47",
+          "status": "unused",
+        },
+        RockfallActionCard {
+          "id": "test-id-48",
+          "status": "unused",
+        },
+        BreakActionCard {
+          "appliesTo": Array [
+            "pick",
+          ],
+          "id": "test-id-49",
+          "status": "unused",
+        },
+        BreakActionCard {
+          "appliesTo": Array [
+            "pick",
+          ],
+          "id": "test-id-50",
+          "status": "unused",
+        },
+        BreakActionCard {
+          "appliesTo": Array [
+            "pick",
+          ],
+          "id": "test-id-51",
+          "status": "unused",
+        },
+        BreakActionCard {
+          "appliesTo": Array [
+            "lamp",
+          ],
+          "id": "test-id-52",
+          "status": "unused",
+        },
+        BreakActionCard {
+          "appliesTo": Array [
+            "lamp",
+          ],
+          "id": "test-id-53",
+          "status": "unused",
+        },
+        BreakActionCard {
+          "appliesTo": Array [
+            "lamp",
+          ],
+          "id": "test-id-54",
+          "status": "unused",
+        },
+        BreakActionCard {
+          "appliesTo": Array [
+            "wagon",
+          ],
+          "id": "test-id-55",
+          "status": "unused",
+        },
+        BreakActionCard {
+          "appliesTo": Array [
+            "wagon",
+          ],
+          "id": "test-id-56",
+          "status": "unused",
+        },
+        BreakActionCard {
+          "appliesTo": Array [
+            "wagon",
+          ],
+          "id": "test-id-57",
+          "status": "unused",
+        },
+        RepairActionCard {
+          "appliesTo": Array [
+            "pick",
+          ],
+          "id": "test-id-58",
+          "status": "unused",
+        },
+        RepairActionCard {
+          "appliesTo": Array [
+            "pick",
+          ],
+          "id": "test-id-59",
+          "status": "unused",
+        },
+        RepairActionCard {
+          "appliesTo": Array [
+            "lamp",
+          ],
+          "id": "test-id-60",
+          "status": "unused",
+        },
+        RepairActionCard {
+          "appliesTo": Array [
+            "lamp",
+          ],
+          "id": "test-id-61",
+          "status": "unused",
+        },
+        RepairActionCard {
+          "appliesTo": Array [
+            "wagon",
+          ],
+          "id": "test-id-62",
+          "status": "unused",
+        },
+        RepairActionCard {
+          "appliesTo": Array [
+            "wagon",
+          ],
+          "id": "test-id-63",
+          "status": "unused",
+        },
+        RepairActionCard {
+          "appliesTo": Array [
+            "pick",
+            "lamp",
+          ],
+          "id": "test-id-64",
+          "status": "unused",
+        },
+        RepairActionCard {
+          "appliesTo": Array [
+            "pick",
+            "wagon",
+          ],
+          "id": "test-id-65",
+          "status": "unused",
+        },
+        RepairActionCard {
+          "appliesTo": Array [
+            "lamp",
+            "wagon",
+          ],
+          "id": "test-id-66",
+          "status": "unused",
+        },
+      ],
+      "id": "test-id-627",
+    },
+    "discard": Discard {
+      "discardPile": Array [],
+      "id": "test-id-628",
+    },
+    "id": "test-id-71",
+    "isFinished": false,
+    "isStarted": true,
+    "playOrder": Array [
+      "test-id-108",
+      "test-id-109",
+      "test-id-110",
+    ],
+    "players": Object {
+      "test-id-108": Player {
+        "age": 20,
+        "hand": Object {
+          "test-id-0": PassageCard {
+            "connectors": Array [
+              2,
+              4,
+            ],
+            "id": "test-id-0",
+            "isUpsideDown": false,
+            "status": "unused",
+          },
+          "test-id-12": PassageCard {
+            "connectors": Array [
+              1,
+              2,
+            ],
+            "id": "test-id-12",
+            "isUpsideDown": false,
+            "status": "unused",
+          },
+          "test-id-15": PassageCard {
+            "connectors": Array [
+              1,
+              2,
+            ],
+            "id": "test-id-15",
+            "isUpsideDown": false,
+            "status": "unused",
+          },
+          "test-id-20": PassageCard {
+            "connectors": Array [
+              1,
+              2,
+              4,
+            ],
+            "id": "test-id-20",
+            "isUpsideDown": false,
+            "status": "unused",
+          },
+          "test-id-23": PassageCard {
+            "connectors": Array [
+              1,
+              2,
+              3,
+            ],
+            "id": "test-id-23",
+            "isUpsideDown": false,
+            "status": "unused",
+          },
+          "test-id-26": PassageCard {
+            "connectors": Array [
+              1,
+              2,
+              3,
+              4,
+            ],
+            "id": "test-id-26",
+            "isUpsideDown": false,
+            "status": "unused",
+          },
+          "test-id-3": PassageCard {
+            "connectors": Array [
+              1,
+              3,
+            ],
+            "id": "test-id-3",
+            "isUpsideDown": false,
+            "status": "unused",
+          },
+          "test-id-6": PassageCard {
+            "connectors": Array [
+              1,
+              3,
+            ],
+            "id": "test-id-6",
+            "isUpsideDown": false,
+            "status": "unused",
+          },
+          "test-id-9": PassageCard {
+            "connectors": Array [
+              1,
+              4,
+            ],
+            "id": "test-id-9",
+            "isUpsideDown": false,
+            "status": "unused",
+          },
+        },
+        "id": "test-id-108",
+        "isSaboteur": true,
+        "name": "Player 1",
+        "tools": Object {
+          "lamp": true,
+          "pick": true,
+          "wagon": true,
+        },
+        "viewedFinishCards": Object {},
+      },
+      "test-id-109": Player {
+        "age": 21,
+        "hand": Object {
+          "test-id-1": PassageCard {
+            "connectors": Array [
+              2,
+              4,
+            ],
+            "id": "test-id-1",
+            "isUpsideDown": false,
+            "status": "unused",
+          },
+          "test-id-10": PassageCard {
+            "connectors": Array [
+              1,
+              4,
+            ],
+            "id": "test-id-10",
+            "isUpsideDown": false,
+            "status": "unused",
+          },
+          "test-id-13": PassageCard {
+            "connectors": Array [
+              1,
+              2,
+            ],
+            "id": "test-id-13",
+            "isUpsideDown": false,
+            "status": "unused",
+          },
+          "test-id-16": PassageCard {
+            "connectors": Array [
+              1,
+              2,
+              4,
+            ],
+            "id": "test-id-16",
+            "isUpsideDown": false,
+            "status": "unused",
+          },
+          "test-id-18": PassageCard {
+            "connectors": Array [
+              1,
+              2,
+              4,
+            ],
+            "id": "test-id-18",
+            "isUpsideDown": false,
+            "status": "unused",
+          },
+          "test-id-21": PassageCard {
+            "connectors": Array [
+              1,
+              2,
+              3,
+            ],
+            "id": "test-id-21",
+            "isUpsideDown": false,
+            "status": "unused",
+          },
+          "test-id-24": PassageCard {
+            "connectors": Array [
+              1,
+              2,
+              3,
+            ],
+            "id": "test-id-24",
+            "isUpsideDown": false,
+            "status": "unused",
+          },
+          "test-id-4": PassageCard {
+            "connectors": Array [
+              1,
+              3,
+            ],
+            "id": "test-id-4",
+            "isUpsideDown": false,
+            "status": "unused",
+          },
+          "test-id-7": PassageCard {
+            "connectors": Array [
+              1,
+              4,
+            ],
+            "id": "test-id-7",
+            "isUpsideDown": false,
+            "status": "unused",
+          },
+        },
+        "id": "test-id-109",
+        "isSaboteur": false,
+        "name": "Player 2",
+        "tools": Object {
+          "lamp": true,
+          "pick": true,
+          "wagon": true,
+        },
+        "viewedFinishCards": Object {},
+      },
+      "test-id-110": Player {
+        "age": 22,
+        "hand": Object {
+          "test-id-11": PassageCard {
+            "connectors": Array [
+              1,
+              2,
+            ],
+            "id": "test-id-11",
+            "isUpsideDown": false,
+            "status": "unused",
+          },
+          "test-id-14": PassageCard {
+            "connectors": Array [
+              1,
+              2,
+            ],
+            "id": "test-id-14",
+            "isUpsideDown": false,
+            "status": "unused",
+          },
+          "test-id-17": PassageCard {
+            "connectors": Array [
+              1,
+              2,
+              4,
+            ],
+            "id": "test-id-17",
+            "isUpsideDown": false,
+            "status": "unused",
+          },
+          "test-id-19": PassageCard {
+            "connectors": Array [
+              1,
+              2,
+              4,
+            ],
+            "id": "test-id-19",
+            "isUpsideDown": false,
+            "status": "unused",
+          },
+          "test-id-2": PassageCard {
+            "connectors": Array [
+              2,
+              4,
+            ],
+            "id": "test-id-2",
+            "isUpsideDown": false,
+            "status": "unused",
+          },
+          "test-id-22": PassageCard {
+            "connectors": Array [
+              1,
+              2,
+              3,
+            ],
+            "id": "test-id-22",
+            "isUpsideDown": false,
+            "status": "unused",
+          },
+          "test-id-25": PassageCard {
+            "connectors": Array [
+              1,
+              2,
+              3,
+            ],
+            "id": "test-id-25",
+            "isUpsideDown": false,
+            "status": "unused",
+          },
+          "test-id-5": PassageCard {
+            "connectors": Array [
+              1,
+              3,
+            ],
+            "id": "test-id-5",
+            "isUpsideDown": false,
+            "status": "unused",
+          },
+          "test-id-8": PassageCard {
+            "connectors": Array [
+              1,
+              4,
+            ],
+            "id": "test-id-8",
+            "isUpsideDown": false,
+            "status": "unused",
+          },
+        },
+        "id": "test-id-110",
+        "isSaboteur": false,
+        "name": "Player 3",
+        "tools": Object {
+          "lamp": true,
+          "pick": true,
+          "wagon": true,
+        },
+        "viewedFinishCards": Object {},
+      },
+    },
+    "turn": 24,
+    "visual": "                                                      ╭┄┄┄┄╮      
+                                                      │    │      
+                                                      ╰┄┄┄┄╯      
+                                                ╭┄┄┄┄╮██  ██╭┄┄┄┄╮
+                                                │    │  !!  │    │
+                                                ╰┄┄┄┄╯██  ██╰┄┄┄┄╯
+      ╭┄┄┄┄╮                                    ████████  ██      
+      │    │                                    ██        ██      
+      ╰┄┄┄┄╯                                    ██  ████████      
+╭┄┄┄┄╮██  ████████████████████████████████████████  ████████      
+│    │  []                                          ██  xx██      
+╰┄┄┄┄╯██  ██████████████████████████████████████████████  ██      
+      ╭┄┄┄┄╮                                                      
+      │    │                                                      
+      ╰┄┄┄┄╯                                                      
+                                                      ██  ██      
+                                                        xx██      
+                                                      ██████      ",
+  },
+  "goldAllocation": Object {
+    "test-id-109": Array [
+      GoldRewardCard {
+        "id": "test-id-86",
+        "value": 2,
+      },
+    ],
+    "test-id-110": Array [
+      GoldRewardCard {
+        "id": "test-id-87",
+        "value": 2,
+      },
+      GoldRewardCard {
+        "id": "test-id-88",
+        "value": 2,
+      },
+    ],
+  },
+}
+`;
+
+exports[`Game playCard when game is started card finishes the game emits play-card, end-turn, end-round and end-game events 2`] = `
+Array [
+  Object {
+    "player": Player {
+      "age": 22,
+      "hand": Object {
+        "test-id-11": PassageCard {
+          "connectors": Array [
+            1,
+            2,
+          ],
+          "id": "test-id-11",
+          "isUpsideDown": false,
+          "status": "unused",
+        },
+        "test-id-14": PassageCard {
+          "connectors": Array [
+            1,
+            2,
+          ],
+          "id": "test-id-14",
+          "isUpsideDown": false,
+          "status": "unused",
+        },
+        "test-id-17": PassageCard {
+          "connectors": Array [
+            1,
+            2,
+            4,
+          ],
+          "id": "test-id-17",
+          "isUpsideDown": false,
+          "status": "unused",
+        },
+        "test-id-19": PassageCard {
+          "connectors": Array [
+            1,
+            2,
+            4,
+          ],
+          "id": "test-id-19",
+          "isUpsideDown": false,
+          "status": "unused",
+        },
+        "test-id-2": PassageCard {
+          "connectors": Array [
+            2,
+            4,
+          ],
+          "id": "test-id-2",
+          "isUpsideDown": false,
+          "status": "unused",
+        },
+        "test-id-22": PassageCard {
+          "connectors": Array [
+            1,
+            2,
+            3,
+          ],
+          "id": "test-id-22",
+          "isUpsideDown": false,
+          "status": "unused",
+        },
+        "test-id-25": PassageCard {
+          "connectors": Array [
+            1,
+            2,
+            3,
+          ],
+          "id": "test-id-25",
+          "isUpsideDown": false,
+          "status": "unused",
+        },
+        "test-id-5": PassageCard {
+          "connectors": Array [
+            1,
+            3,
+          ],
+          "id": "test-id-5",
+          "isUpsideDown": false,
+          "status": "unused",
+        },
+        "test-id-8": PassageCard {
+          "connectors": Array [
+            1,
+            4,
+          ],
+          "id": "test-id-8",
+          "isUpsideDown": false,
+          "status": "unused",
+        },
+      },
+      "id": "test-id-110",
+      "isSaboteur": false,
+      "name": "Player 3",
+      "tools": Object {
+        "lamp": true,
+        "pick": true,
+        "wagon": true,
+      },
+      "viewedFinishCards": Object {},
+    },
+    "totalGold": 14,
+  },
+  Object {
+    "player": Player {
+      "age": 21,
+      "hand": Object {
+        "test-id-1": PassageCard {
+          "connectors": Array [
+            2,
+            4,
+          ],
+          "id": "test-id-1",
+          "isUpsideDown": false,
+          "status": "unused",
+        },
+        "test-id-10": PassageCard {
+          "connectors": Array [
+            1,
+            4,
+          ],
+          "id": "test-id-10",
+          "isUpsideDown": false,
+          "status": "unused",
+        },
+        "test-id-13": PassageCard {
+          "connectors": Array [
+            1,
+            2,
+          ],
+          "id": "test-id-13",
+          "isUpsideDown": false,
+          "status": "unused",
+        },
+        "test-id-16": PassageCard {
+          "connectors": Array [
+            1,
+            2,
+            4,
+          ],
+          "id": "test-id-16",
+          "isUpsideDown": false,
+          "status": "unused",
+        },
+        "test-id-18": PassageCard {
+          "connectors": Array [
+            1,
+            2,
+            4,
+          ],
+          "id": "test-id-18",
+          "isUpsideDown": false,
+          "status": "unused",
+        },
+        "test-id-21": PassageCard {
+          "connectors": Array [
+            1,
+            2,
+            3,
+          ],
+          "id": "test-id-21",
+          "isUpsideDown": false,
+          "status": "unused",
+        },
+        "test-id-24": PassageCard {
+          "connectors": Array [
+            1,
+            2,
+            3,
+          ],
+          "id": "test-id-24",
+          "isUpsideDown": false,
+          "status": "unused",
+        },
+        "test-id-4": PassageCard {
+          "connectors": Array [
+            1,
+            3,
+          ],
+          "id": "test-id-4",
+          "isUpsideDown": false,
+          "status": "unused",
+        },
+        "test-id-7": PassageCard {
+          "connectors": Array [
+            1,
+            4,
+          ],
+          "id": "test-id-7",
+          "isUpsideDown": false,
+          "status": "unused",
+        },
+      },
+      "id": "test-id-109",
+      "isSaboteur": false,
+      "name": "Player 2",
+      "tools": Object {
+        "lamp": true,
+        "pick": true,
+        "wagon": true,
+      },
+      "viewedFinishCards": Object {},
+    },
+    "totalGold": 8,
+  },
+]
+`;
+
+exports[`Game playCard when game is started card finishes the round emits play-card, end-turn and end-round events 1`] = `
+Object {
+  "didGoldDiggersWin": true,
+  "gameState": Object {
+    "board": Board {
+      "grid": Object {
+        "0,0": StartPathCard {
+          "connectors": Array [
+            1,
+            2,
+            3,
+            4,
+          ],
+          "id": "test-id-75",
+          "isUpsideDown": false,
+          "status": "played",
+        },
+        "1,0": PassageCard {
+          "connectors": Array [
+            2,
+            4,
+          ],
+          "id": "test-id-113",
+          "isUpsideDown": false,
+          "parameters": Object {
+            "position": Position {
+              "id": "test-id-112",
+              "x": 1,
+              "y": 0,
+            },
+          },
+          "status": "played",
+        },
+        "2,0": PassageCard {
+          "connectors": Array [
+            2,
+            4,
+          ],
+          "id": "test-id-123",
+          "isUpsideDown": false,
+          "parameters": Object {
+            "position": Position {
+              "id": "test-id-122",
+              "x": 2,
+              "y": 0,
+            },
+          },
+          "status": "played",
+        },
+        "3,0": PassageCard {
+          "connectors": Array [
+            2,
+            4,
+          ],
+          "id": "test-id-135",
+          "isUpsideDown": false,
+          "parameters": Object {
+            "position": Position {
+              "id": "test-id-134",
+              "x": 3,
+              "y": 0,
+            },
+          },
+          "status": "played",
+        },
+        "4,0": PassageCard {
+          "connectors": Array [
+            2,
+            4,
+          ],
+          "id": "test-id-149",
+          "isUpsideDown": false,
+          "parameters": Object {
+            "position": Position {
+              "id": "test-id-148",
+              "x": 4,
+              "y": 0,
+            },
+          },
+          "status": "played",
+        },
+        "5,0": PassageCard {
+          "connectors": Array [
+            2,
+            4,
+          ],
+          "id": "test-id-165",
+          "isUpsideDown": false,
+          "parameters": Object {
+            "position": Position {
+              "id": "test-id-164",
+              "x": 5,
+              "y": 0,
+            },
+          },
+          "status": "played",
+        },
+        "6,0": PassageCard {
+          "connectors": Array [
+            2,
+            4,
+          ],
+          "id": "test-id-183",
+          "isUpsideDown": false,
+          "parameters": Object {
+            "position": Position {
+              "id": "test-id-182",
+              "x": 6,
+              "y": 0,
+            },
+          },
+          "status": "played",
+        },
+        "7,0": PassageCard {
+          "connectors": Array [
+            1,
+            4,
+          ],
+          "id": "test-id-203",
+          "isUpsideDown": false,
+          "parameters": Object {
+            "position": Position {
+              "id": "test-id-202",
+              "x": 7,
+              "y": 0,
+            },
+          },
+          "status": "played",
+        },
+        "7,1": PassageCard {
+          "connectors": Array [
+            3,
+            2,
+          ],
+          "id": "test-id-225",
+          "isUpsideDown": false,
+          "parameters": Object {
+            "position": Position {
+              "id": "test-id-224",
+              "x": 7,
+              "y": 1,
+            },
+          },
+          "status": "played",
+        },
+        "8,-2": RockFinishPathCard {
+          "connectors": Array [
+            1,
+            4,
+          ],
+          "id": "test-id-78",
+          "isFaceDown": false,
+          "isUpsideDown": false,
+          "status": "played",
+        },
+        "8,0": RockFinishPathCard {
+          "connectors": Array [
+            1,
+            2,
+          ],
+          "id": "test-id-77",
+          "isFaceDown": false,
+          "isUpsideDown": true,
+          "status": "played",
+        },
+        "8,1": PassageCard {
+          "connectors": Array [
+            1,
+            4,
+          ],
+          "id": "test-id-249",
+          "isUpsideDown": false,
+          "parameters": Object {
+            "position": Position {
+              "id": "test-id-248",
+              "x": 8,
+              "y": 1,
+            },
+          },
+          "status": "played",
+        },
+        "8,2": GoldFinishPathCard {
+          "connectors": Array [
+            1,
+            2,
+            3,
+            4,
+          ],
+          "id": "test-id-76",
+          "isFaceDown": false,
+          "isUpsideDown": false,
+          "status": "played",
+        },
+      },
+      "id": "test-id-74",
+      "isComplete": true,
+    },
+    "deck": Deck {
+      "drawPile": Array [
+        MapActionCard {
+          "id": "test-id-45",
+          "status": "unused",
+        },
+        RockfallActionCard {
+          "id": "test-id-46",
+          "status": "unused",
+        },
+        RockfallActionCard {
+          "id": "test-id-47",
+          "status": "unused",
+        },
+        RockfallActionCard {
+          "id": "test-id-48",
+          "status": "unused",
+        },
+        BreakActionCard {
+          "appliesTo": Array [
+            "pick",
+          ],
+          "id": "test-id-49",
+          "status": "unused",
+        },
+        BreakActionCard {
+          "appliesTo": Array [
+            "pick",
+          ],
+          "id": "test-id-50",
+          "status": "unused",
+        },
+        BreakActionCard {
+          "appliesTo": Array [
+            "pick",
+          ],
+          "id": "test-id-51",
+          "status": "unused",
+        },
+        BreakActionCard {
+          "appliesTo": Array [
+            "lamp",
+          ],
+          "id": "test-id-52",
+          "status": "unused",
+        },
+        BreakActionCard {
+          "appliesTo": Array [
+            "lamp",
+          ],
+          "id": "test-id-53",
+          "status": "unused",
+        },
+        BreakActionCard {
+          "appliesTo": Array [
+            "lamp",
+          ],
+          "id": "test-id-54",
+          "status": "unused",
+        },
+        BreakActionCard {
+          "appliesTo": Array [
+            "wagon",
+          ],
+          "id": "test-id-55",
+          "status": "unused",
+        },
+        BreakActionCard {
+          "appliesTo": Array [
+            "wagon",
+          ],
+          "id": "test-id-56",
+          "status": "unused",
+        },
+        BreakActionCard {
+          "appliesTo": Array [
+            "wagon",
+          ],
+          "id": "test-id-57",
+          "status": "unused",
+        },
+        RepairActionCard {
+          "appliesTo": Array [
+            "pick",
+          ],
+          "id": "test-id-58",
+          "status": "unused",
+        },
+        RepairActionCard {
+          "appliesTo": Array [
+            "pick",
+          ],
+          "id": "test-id-59",
+          "status": "unused",
+        },
+        RepairActionCard {
+          "appliesTo": Array [
+            "lamp",
+          ],
+          "id": "test-id-60",
+          "status": "unused",
+        },
+        RepairActionCard {
+          "appliesTo": Array [
+            "lamp",
+          ],
+          "id": "test-id-61",
+          "status": "unused",
+        },
+        RepairActionCard {
+          "appliesTo": Array [
+            "wagon",
+          ],
+          "id": "test-id-62",
+          "status": "unused",
+        },
+        RepairActionCard {
+          "appliesTo": Array [
+            "wagon",
+          ],
+          "id": "test-id-63",
+          "status": "unused",
+        },
+        RepairActionCard {
+          "appliesTo": Array [
+            "pick",
+            "lamp",
+          ],
+          "id": "test-id-64",
+          "status": "unused",
+        },
+        RepairActionCard {
+          "appliesTo": Array [
+            "pick",
+            "wagon",
+          ],
+          "id": "test-id-65",
+          "status": "unused",
+        },
+        RepairActionCard {
+          "appliesTo": Array [
+            "lamp",
+            "wagon",
+          ],
+          "id": "test-id-66",
+          "status": "unused",
+        },
+      ],
+      "id": "test-id-72",
+    },
+    "discard": Discard {
+      "discardPile": Array [],
+      "id": "test-id-73",
+    },
+    "id": "test-id-71",
+    "isFinished": false,
+    "isStarted": true,
+    "playOrder": Array [
+      "test-id-108",
+      "test-id-109",
+      "test-id-110",
+    ],
+    "players": Object {
+      "test-id-108": Player {
+        "age": 20,
+        "hand": Object {
+          "test-id-0": PassageCard {
+            "connectors": Array [
+              2,
+              4,
+            ],
+            "id": "test-id-0",
+            "isUpsideDown": false,
+            "status": "unused",
+          },
+          "test-id-12": PassageCard {
+            "connectors": Array [
+              1,
+              2,
+            ],
+            "id": "test-id-12",
+            "isUpsideDown": false,
+            "status": "unused",
+          },
+          "test-id-15": PassageCard {
+            "connectors": Array [
+              1,
+              2,
+            ],
+            "id": "test-id-15",
+            "isUpsideDown": false,
+            "status": "unused",
+          },
+          "test-id-3": PassageCard {
+            "connectors": Array [
+              1,
+              3,
+            ],
+            "id": "test-id-3",
+            "isUpsideDown": false,
+            "status": "unused",
+          },
+          "test-id-6": PassageCard {
+            "connectors": Array [
+              1,
+              3,
+            ],
+            "id": "test-id-6",
+            "isUpsideDown": false,
+            "status": "unused",
+          },
+          "test-id-9": PassageCard {
+            "connectors": Array [
+              1,
+              4,
+            ],
+            "id": "test-id-9",
+            "isUpsideDown": false,
+            "status": "unused",
+          },
+        },
+        "id": "test-id-108",
+        "isSaboteur": true,
+        "name": "Player 1",
+        "tools": Object {
+          "lamp": true,
+          "pick": true,
+          "wagon": true,
+        },
+        "viewedFinishCards": Object {},
+      },
+      "test-id-109": Player {
+        "age": 21,
+        "hand": Object {
+          "test-id-1": PassageCard {
+            "connectors": Array [
+              2,
+              4,
+            ],
+            "id": "test-id-1",
+            "isUpsideDown": false,
+            "status": "unused",
+          },
+          "test-id-10": PassageCard {
+            "connectors": Array [
+              1,
+              4,
+            ],
+            "id": "test-id-10",
+            "isUpsideDown": false,
+            "status": "unused",
+          },
+          "test-id-13": PassageCard {
+            "connectors": Array [
+              1,
+              2,
+            ],
+            "id": "test-id-13",
+            "isUpsideDown": false,
+            "status": "unused",
+          },
+          "test-id-16": PassageCard {
+            "connectors": Array [
+              1,
+              2,
+              4,
+            ],
+            "id": "test-id-16",
+            "isUpsideDown": false,
+            "status": "unused",
+          },
+          "test-id-4": PassageCard {
+            "connectors": Array [
+              1,
+              3,
+            ],
+            "id": "test-id-4",
+            "isUpsideDown": false,
+            "status": "unused",
+          },
+          "test-id-7": PassageCard {
+            "connectors": Array [
+              1,
+              4,
+            ],
+            "id": "test-id-7",
+            "isUpsideDown": false,
+            "status": "unused",
+          },
+        },
+        "id": "test-id-109",
+        "isSaboteur": false,
+        "name": "Player 2",
+        "tools": Object {
+          "lamp": true,
+          "pick": true,
+          "wagon": true,
+        },
+        "viewedFinishCards": Object {},
+      },
+      "test-id-110": Player {
+        "age": 22,
+        "hand": Object {
+          "test-id-11": PassageCard {
+            "connectors": Array [
+              1,
+              2,
+            ],
+            "id": "test-id-11",
+            "isUpsideDown": false,
+            "status": "unused",
+          },
+          "test-id-14": PassageCard {
+            "connectors": Array [
+              1,
+              2,
+            ],
+            "id": "test-id-14",
+            "isUpsideDown": false,
+            "status": "unused",
+          },
+          "test-id-17": PassageCard {
+            "connectors": Array [
+              1,
+              2,
+              4,
+            ],
+            "id": "test-id-17",
+            "isUpsideDown": false,
+            "status": "unused",
+          },
+          "test-id-2": PassageCard {
+            "connectors": Array [
+              2,
+              4,
+            ],
+            "id": "test-id-2",
+            "isUpsideDown": false,
+            "status": "unused",
+          },
+          "test-id-5": PassageCard {
+            "connectors": Array [
+              1,
+              3,
+            ],
+            "id": "test-id-5",
+            "isUpsideDown": false,
+            "status": "unused",
+          },
+          "test-id-8": PassageCard {
+            "connectors": Array [
+              1,
+              4,
+            ],
+            "id": "test-id-8",
+            "isUpsideDown": false,
+            "status": "unused",
+          },
+        },
+        "id": "test-id-110",
+        "isSaboteur": false,
+        "name": "Player 3",
+        "tools": Object {
+          "lamp": true,
+          "pick": true,
+          "wagon": true,
+        },
+        "viewedFinishCards": Object {},
+      },
+    },
+    "turn": 8,
+    "visual": "                                                      ╭┄┄┄┄╮      
+                                                      │    │      
+                                                      ╰┄┄┄┄╯      
+                                                ╭┄┄┄┄╮██  ██╭┄┄┄┄╮
+                                                │    │  !!  │    │
+                                                ╰┄┄┄┄╯██  ██╰┄┄┄┄╯
+      ╭┄┄┄┄╮                                    ████████  ██      
+      │    │                                    ██        ██      
+      ╰┄┄┄┄╯                                    ██  ████████      
+╭┄┄┄┄╮██  ████████████████████████████████████████  ████████      
+│    │  []                                          ██  xx██      
+╰┄┄┄┄╯██  ██████████████████████████████████████████████  ██      
+      ╭┄┄┄┄╮                                                      
+      │    │                                                      
+      ╰┄┄┄┄╯                                                      
+                                                      ██  ██      
+                                                        xx██      
+                                                      ██████      ",
+  },
+  "goldAllocation": Object {
+    "test-id-109": Array [
+      GoldRewardCard {
+        "id": "test-id-81",
+        "value": 3,
+      },
+    ],
+    "test-id-110": Array [
+      GoldRewardCard {
+        "id": "test-id-80",
+        "value": 3,
+      },
+      GoldRewardCard {
+        "id": "test-id-82",
+        "value": 3,
+      },
+    ],
+  },
+}
+`;
+
 exports[`Game playCard when game is started card is in the players hand adds a new card to the players hand 1`] = `
 Array [
   PassageCard {
@@ -793,7 +2471,7 @@ Array [
 
 exports[`Game playCard when game is started card is in the players hand adds the card to the discard pile 1`] = `
 MapActionCard {
-  "id": "test-id-82",
+  "id": "test-id-111",
   "parameters": Object {
     "position": Position {
       "id": "test-id-69",
@@ -865,7 +2543,7 @@ Array [
         "status": "unused",
       },
     },
-    "id": "test-id-79",
+    "id": "test-id-108",
     "isSaboteur": true,
     "name": "Player 1",
     "tools": Object {
@@ -934,7 +2612,7 @@ Array [
         "status": "unused",
       },
     },
-    "id": "test-id-80",
+    "id": "test-id-109",
     "isSaboteur": false,
     "name": "Player 2",
     "tools": Object {
@@ -1003,7 +2681,7 @@ Array [
         "status": "unused",
       },
     },
-    "id": "test-id-81",
+    "id": "test-id-110",
     "isSaboteur": false,
     "name": "Player 3",
     "tools": Object {
@@ -1014,4 +2692,724 @@ Array [
     "viewedFinishCards": Object {},
   },
 ]
+`;
+
+exports[`Game when the deck is empty and players have multiple cards in their hand when all players discard a card emits end-turn and ends the round 1`] = `
+Object {
+  "didGoldDiggersWin": false,
+  "gameState": Object {
+    "board": Board {
+      "grid": Object {
+        "0,0": StartPathCard {
+          "connectors": Array [
+            1,
+            2,
+            3,
+            4,
+          ],
+          "id": "test-id-124",
+          "isUpsideDown": false,
+          "status": "played",
+        },
+        "8,-2": RockFinishPathCard {
+          "connectors": Array [
+            1,
+            4,
+          ],
+          "id": "test-id-127",
+          "isFaceDown": true,
+          "isUpsideDown": false,
+          "status": "played",
+        },
+        "8,0": RockFinishPathCard {
+          "connectors": Array [
+            1,
+            2,
+          ],
+          "id": "test-id-126",
+          "isFaceDown": true,
+          "isUpsideDown": false,
+          "status": "played",
+        },
+        "8,2": GoldFinishPathCard {
+          "connectors": Array [
+            1,
+            2,
+            3,
+            4,
+          ],
+          "id": "test-id-125",
+          "isFaceDown": true,
+          "isUpsideDown": false,
+          "status": "played",
+        },
+      },
+      "id": "test-id-123",
+      "isComplete": false,
+    },
+    "deck": Deck {
+      "drawPile": Array [],
+      "id": "test-id-115",
+    },
+    "discard": Discard {
+      "discardPile": Array [
+        MapActionCard {
+          "id": "test-id-118",
+          "status": "discarded",
+        },
+        MapActionCard {
+          "id": "test-id-117",
+          "status": "discarded",
+        },
+        MapActionCard {
+          "id": "test-id-116",
+          "status": "discarded",
+        },
+      ],
+      "id": "test-id-122",
+    },
+    "id": "test-id-114",
+    "isFinished": false,
+    "isStarted": true,
+    "playOrder": Array [
+      "test-id-157",
+      "test-id-158",
+      "test-id-159",
+    ],
+    "players": Object {
+      "test-id-157": Player {
+        "age": 20,
+        "hand": Object {
+          "test-id-215": MapActionCard {
+            "id": "test-id-215",
+            "status": "unused",
+          },
+          "test-id-218": MapActionCard {
+            "id": "test-id-218",
+            "status": "unused",
+          },
+        },
+        "id": "test-id-157",
+        "isSaboteur": true,
+        "name": "Player 1",
+        "tools": Object {
+          "lamp": true,
+          "pick": true,
+          "wagon": true,
+        },
+        "viewedFinishCards": Object {},
+      },
+      "test-id-158": Player {
+        "age": 21,
+        "hand": Object {
+          "test-id-216": MapActionCard {
+            "id": "test-id-216",
+            "status": "unused",
+          },
+          "test-id-219": MapActionCard {
+            "id": "test-id-219",
+            "status": "unused",
+          },
+        },
+        "id": "test-id-158",
+        "isSaboteur": false,
+        "name": "Player 2",
+        "tools": Object {
+          "lamp": true,
+          "pick": true,
+          "wagon": true,
+        },
+        "viewedFinishCards": Object {},
+      },
+      "test-id-159": Player {
+        "age": 22,
+        "hand": Object {
+          "test-id-217": MapActionCard {
+            "id": "test-id-217",
+            "status": "unused",
+          },
+          "test-id-220": MapActionCard {
+            "id": "test-id-220",
+            "status": "unused",
+          },
+        },
+        "id": "test-id-159",
+        "isSaboteur": false,
+        "name": "Player 3",
+        "tools": Object {
+          "lamp": true,
+          "pick": true,
+          "wagon": true,
+        },
+        "viewedFinishCards": Object {},
+      },
+    },
+    "turn": 2,
+    "visual": "                                                      ▕▔▔▔▔▏
+                                                      ▕ ?? ▏
+                                                      ▕▁▁▁▁▏
+      ╭┄┄┄┄╮                                                
+      │    │                                                
+      ╰┄┄┄┄╯                                                
+╭┄┄┄┄╮██  ██╭┄┄┄┄╮                                    ▕▔▔▔▔▏
+│    │  []  │    │                                    ▕ ?? ▏
+╰┄┄┄┄╯██  ██╰┄┄┄┄╯                                    ▕▁▁▁▁▏
+      ╭┄┄┄┄╮                                                
+      │    │                                                
+      ╰┄┄┄┄╯                                                
+                                                      ▕▔▔▔▔▏
+                                                      ▕ ?? ▏
+                                                      ▕▁▁▁▁▏",
+  },
+  "goldAllocation": Object {
+    "test-id-157": Array [
+      GoldRewardCard {
+        "id": "test-id-129",
+        "value": 3,
+      },
+      GoldRewardCard {
+        "id": "test-id-141",
+        "value": 1,
+      },
+    ],
+  },
+}
+`;
+
+exports[`Game when the deck is empty and players have one card in their hand when all players discard a card emits end-turn and ends the round 1`] = `
+Object {
+  "didGoldDiggersWin": false,
+  "gameState": Object {
+    "board": Board {
+      "grid": Object {
+        "0,0": StartPathCard {
+          "connectors": Array [
+            1,
+            2,
+            3,
+            4,
+          ],
+          "id": "test-id-118",
+          "isUpsideDown": false,
+          "status": "played",
+        },
+        "8,-2": RockFinishPathCard {
+          "connectors": Array [
+            1,
+            4,
+          ],
+          "id": "test-id-121",
+          "isFaceDown": true,
+          "isUpsideDown": false,
+          "status": "played",
+        },
+        "8,0": RockFinishPathCard {
+          "connectors": Array [
+            1,
+            2,
+          ],
+          "id": "test-id-120",
+          "isFaceDown": true,
+          "isUpsideDown": false,
+          "status": "played",
+        },
+        "8,2": GoldFinishPathCard {
+          "connectors": Array [
+            1,
+            2,
+            3,
+            4,
+          ],
+          "id": "test-id-119",
+          "isFaceDown": true,
+          "isUpsideDown": false,
+          "status": "played",
+        },
+      },
+      "id": "test-id-117",
+      "isComplete": false,
+    },
+    "deck": Deck {
+      "drawPile": Array [],
+      "id": "test-id-112",
+    },
+    "discard": Discard {
+      "discardPile": Array [
+        MapActionCard {
+          "id": "test-id-115",
+          "status": "discarded",
+        },
+        MapActionCard {
+          "id": "test-id-114",
+          "status": "discarded",
+        },
+        MapActionCard {
+          "id": "test-id-113",
+          "status": "discarded",
+        },
+      ],
+      "id": "test-id-116",
+    },
+    "id": "test-id-111",
+    "isFinished": false,
+    "isStarted": true,
+    "playOrder": Array [
+      "test-id-151",
+      "test-id-152",
+      "test-id-153",
+    ],
+    "players": Object {
+      "test-id-151": Player {
+        "age": 20,
+        "hand": Object {
+          "test-id-209": MapActionCard {
+            "id": "test-id-209",
+            "status": "unused",
+          },
+        },
+        "id": "test-id-151",
+        "isSaboteur": true,
+        "name": "Player 1",
+        "tools": Object {
+          "lamp": true,
+          "pick": true,
+          "wagon": true,
+        },
+        "viewedFinishCards": Object {},
+      },
+      "test-id-152": Player {
+        "age": 21,
+        "hand": Object {
+          "test-id-210": MapActionCard {
+            "id": "test-id-210",
+            "status": "unused",
+          },
+        },
+        "id": "test-id-152",
+        "isSaboteur": false,
+        "name": "Player 2",
+        "tools": Object {
+          "lamp": true,
+          "pick": true,
+          "wagon": true,
+        },
+        "viewedFinishCards": Object {},
+      },
+      "test-id-153": Player {
+        "age": 22,
+        "hand": Object {
+          "test-id-211": MapActionCard {
+            "id": "test-id-211",
+            "status": "unused",
+          },
+        },
+        "id": "test-id-153",
+        "isSaboteur": false,
+        "name": "Player 3",
+        "tools": Object {
+          "lamp": true,
+          "pick": true,
+          "wagon": true,
+        },
+        "viewedFinishCards": Object {},
+      },
+    },
+    "turn": 2,
+    "visual": "                                                      ▕▔▔▔▔▏
+                                                      ▕ ?? ▏
+                                                      ▕▁▁▁▁▏
+      ╭┄┄┄┄╮                                                
+      │    │                                                
+      ╰┄┄┄┄╯                                                
+╭┄┄┄┄╮██  ██╭┄┄┄┄╮                                    ▕▔▔▔▔▏
+│    │  []  │    │                                    ▕ ?? ▏
+╰┄┄┄┄╯██  ██╰┄┄┄┄╯                                    ▕▁▁▁▁▏
+      ╭┄┄┄┄╮                                                
+      │    │                                                
+      ╰┄┄┄┄╯                                                
+                                                      ▕▔▔▔▔▏
+                                                      ▕ ?? ▏
+                                                      ▕▁▁▁▁▏",
+  },
+  "goldAllocation": Object {
+    "test-id-151": Array [
+      GoldRewardCard {
+        "id": "test-id-123",
+        "value": 3,
+      },
+      GoldRewardCard {
+        "id": "test-id-135",
+        "value": 1,
+      },
+    ],
+  },
+}
+`;
+
+exports[`Game when the deck is empty and players have one card in their hand when all players play a card emits end-turn and ends the round 1`] = `
+Object {
+  "didGoldDiggersWin": false,
+  "gameState": Object {
+    "board": Board {
+      "grid": Object {
+        "0,0": StartPathCard {
+          "connectors": Array [
+            1,
+            2,
+            3,
+            4,
+          ],
+          "id": "test-id-118",
+          "isUpsideDown": false,
+          "status": "played",
+        },
+        "8,-2": RockFinishPathCard {
+          "connectors": Array [
+            1,
+            4,
+          ],
+          "id": "test-id-121",
+          "isFaceDown": true,
+          "isUpsideDown": false,
+          "status": "played",
+        },
+        "8,0": RockFinishPathCard {
+          "connectors": Array [
+            1,
+            2,
+          ],
+          "id": "test-id-120",
+          "isFaceDown": true,
+          "isUpsideDown": false,
+          "status": "played",
+        },
+        "8,2": GoldFinishPathCard {
+          "connectors": Array [
+            1,
+            2,
+            3,
+            4,
+          ],
+          "id": "test-id-119",
+          "isFaceDown": true,
+          "isUpsideDown": false,
+          "status": "played",
+        },
+      },
+      "id": "test-id-117",
+      "isComplete": false,
+    },
+    "deck": Deck {
+      "drawPile": Array [],
+      "id": "test-id-112",
+    },
+    "discard": Discard {
+      "discardPile": Array [
+        MapActionCard {
+          "id": "test-id-115",
+          "parameters": Object {
+            "position": Position {
+              "id": "test-id-69",
+              "x": 8,
+              "y": 0,
+            },
+          },
+          "status": "played",
+        },
+        MapActionCard {
+          "id": "test-id-114",
+          "parameters": Object {
+            "position": Position {
+              "id": "test-id-69",
+              "x": 8,
+              "y": 0,
+            },
+          },
+          "status": "played",
+        },
+        MapActionCard {
+          "id": "test-id-113",
+          "parameters": Object {
+            "position": Position {
+              "id": "test-id-69",
+              "x": 8,
+              "y": 0,
+            },
+          },
+          "status": "played",
+        },
+      ],
+      "id": "test-id-116",
+    },
+    "id": "test-id-111",
+    "isFinished": false,
+    "isStarted": true,
+    "playOrder": Array [
+      "test-id-151",
+      "test-id-152",
+      "test-id-153",
+    ],
+    "players": Object {
+      "test-id-151": Player {
+        "age": 20,
+        "hand": Object {
+          "test-id-209": MapActionCard {
+            "id": "test-id-209",
+            "status": "unused",
+          },
+        },
+        "id": "test-id-151",
+        "isSaboteur": true,
+        "name": "Player 1",
+        "tools": Object {
+          "lamp": true,
+          "pick": true,
+          "wagon": true,
+        },
+        "viewedFinishCards": Object {},
+      },
+      "test-id-152": Player {
+        "age": 21,
+        "hand": Object {
+          "test-id-210": MapActionCard {
+            "id": "test-id-210",
+            "status": "unused",
+          },
+        },
+        "id": "test-id-152",
+        "isSaboteur": false,
+        "name": "Player 2",
+        "tools": Object {
+          "lamp": true,
+          "pick": true,
+          "wagon": true,
+        },
+        "viewedFinishCards": Object {},
+      },
+      "test-id-153": Player {
+        "age": 22,
+        "hand": Object {
+          "test-id-211": MapActionCard {
+            "id": "test-id-211",
+            "status": "unused",
+          },
+        },
+        "id": "test-id-153",
+        "isSaboteur": false,
+        "name": "Player 3",
+        "tools": Object {
+          "lamp": true,
+          "pick": true,
+          "wagon": true,
+        },
+        "viewedFinishCards": Object {},
+      },
+    },
+    "turn": 2,
+    "visual": "                                                      ▕▔▔▔▔▏
+                                                      ▕ ?? ▏
+                                                      ▕▁▁▁▁▏
+      ╭┄┄┄┄╮                                                
+      │    │                                                
+      ╰┄┄┄┄╯                                                
+╭┄┄┄┄╮██  ██╭┄┄┄┄╮                                    ▕▔▔▔▔▏
+│    │  []  │    │                                    ▕ ?? ▏
+╰┄┄┄┄╯██  ██╰┄┄┄┄╯                                    ▕▁▁▁▁▏
+      ╭┄┄┄┄╮                                                
+      │    │                                                
+      ╰┄┄┄┄╯                                                
+                                                      ▕▔▔▔▔▏
+                                                      ▕ ?? ▏
+                                                      ▕▁▁▁▁▏",
+  },
+  "goldAllocation": Object {
+    "test-id-151": Array [
+      GoldRewardCard {
+        "id": "test-id-123",
+        "value": 3,
+      },
+      GoldRewardCard {
+        "id": "test-id-135",
+        "value": 1,
+      },
+    ],
+  },
+}
+`;
+
+exports[`Game when the deck is empty and players have one card in their hand when all players play or discard a card emits end-turn and ends the round 1`] = `
+Object {
+  "didGoldDiggersWin": false,
+  "gameState": Object {
+    "board": Board {
+      "grid": Object {
+        "0,0": StartPathCard {
+          "connectors": Array [
+            1,
+            2,
+            3,
+            4,
+          ],
+          "id": "test-id-121",
+          "isUpsideDown": false,
+          "status": "played",
+        },
+        "8,-2": RockFinishPathCard {
+          "connectors": Array [
+            1,
+            4,
+          ],
+          "id": "test-id-124",
+          "isFaceDown": true,
+          "isUpsideDown": false,
+          "status": "played",
+        },
+        "8,0": RockFinishPathCard {
+          "connectors": Array [
+            1,
+            2,
+          ],
+          "id": "test-id-123",
+          "isFaceDown": true,
+          "isUpsideDown": false,
+          "status": "played",
+        },
+        "8,2": GoldFinishPathCard {
+          "connectors": Array [
+            1,
+            2,
+            3,
+            4,
+          ],
+          "id": "test-id-122",
+          "isFaceDown": true,
+          "isUpsideDown": false,
+          "status": "played",
+        },
+      },
+      "id": "test-id-120",
+      "isComplete": false,
+    },
+    "deck": Deck {
+      "drawPile": Array [],
+      "id": "test-id-115",
+    },
+    "discard": Discard {
+      "discardPile": Array [
+        MapActionCard {
+          "id": "test-id-118",
+          "status": "discarded",
+        },
+        MapActionCard {
+          "id": "test-id-117",
+          "status": "discarded",
+        },
+        MapActionCard {
+          "id": "test-id-116",
+          "parameters": Object {
+            "position": Position {
+              "id": "test-id-69",
+              "x": 8,
+              "y": 0,
+            },
+          },
+          "status": "played",
+        },
+      ],
+      "id": "test-id-119",
+    },
+    "id": "test-id-114",
+    "isFinished": false,
+    "isStarted": true,
+    "playOrder": Array [
+      "test-id-154",
+      "test-id-155",
+      "test-id-156",
+    ],
+    "players": Object {
+      "test-id-154": Player {
+        "age": 20,
+        "hand": Object {
+          "test-id-212": MapActionCard {
+            "id": "test-id-212",
+            "status": "unused",
+          },
+        },
+        "id": "test-id-154",
+        "isSaboteur": true,
+        "name": "Player 1",
+        "tools": Object {
+          "lamp": true,
+          "pick": true,
+          "wagon": true,
+        },
+        "viewedFinishCards": Object {},
+      },
+      "test-id-155": Player {
+        "age": 21,
+        "hand": Object {
+          "test-id-213": MapActionCard {
+            "id": "test-id-213",
+            "status": "unused",
+          },
+        },
+        "id": "test-id-155",
+        "isSaboteur": false,
+        "name": "Player 2",
+        "tools": Object {
+          "lamp": true,
+          "pick": true,
+          "wagon": true,
+        },
+        "viewedFinishCards": Object {},
+      },
+      "test-id-156": Player {
+        "age": 22,
+        "hand": Object {
+          "test-id-214": MapActionCard {
+            "id": "test-id-214",
+            "status": "unused",
+          },
+        },
+        "id": "test-id-156",
+        "isSaboteur": false,
+        "name": "Player 3",
+        "tools": Object {
+          "lamp": true,
+          "pick": true,
+          "wagon": true,
+        },
+        "viewedFinishCards": Object {},
+      },
+    },
+    "turn": 2,
+    "visual": "                                                      ▕▔▔▔▔▏
+                                                      ▕ ?? ▏
+                                                      ▕▁▁▁▁▏
+      ╭┄┄┄┄╮                                                
+      │    │                                                
+      ╰┄┄┄┄╯                                                
+╭┄┄┄┄╮██  ██╭┄┄┄┄╮                                    ▕▔▔▔▔▏
+│    │  []  │    │                                    ▕ ?? ▏
+╰┄┄┄┄╯██  ██╰┄┄┄┄╯                                    ▕▁▁▁▁▏
+      ╭┄┄┄┄╮                                                
+      │    │                                                
+      ╰┄┄┄┄╯                                                
+                                                      ▕▔▔▔▔▏
+                                                      ▕ ?? ▏
+                                                      ▕▁▁▁▁▏",
+  },
+  "goldAllocation": Object {
+    "test-id-154": Array [
+      GoldRewardCard {
+        "id": "test-id-126",
+        "value": 3,
+      },
+      GoldRewardCard {
+        "id": "test-id-138",
+        "value": 1,
+      },
+    ],
+  },
+}
 `;

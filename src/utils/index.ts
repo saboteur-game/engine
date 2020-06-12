@@ -24,4 +24,15 @@ interface Pojo {
   [key: string]: unknown;
 }
 
-export { generateId, shuffle, Pojo };
+const multiply = <T>(length: number, getValue: () => T): T[] =>
+  new Array(length).fill(undefined).map(() => getValue());
+
+const randomBoolean = (): boolean => Math.random() < 0.5;
+
+const wrapIndexAt = (max: number) => (index: number): number => {
+  if (index > max) return index % max;
+  if (index < 0) return max + (index % max);
+  return index;
+};
+
+export { generateId, shuffle, multiply, randomBoolean, wrapIndexAt, Pojo };

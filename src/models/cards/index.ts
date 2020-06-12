@@ -1,6 +1,6 @@
-import { shuffle } from "../../utils";
+import { shuffle, multiply, randomBoolean } from "../../utils";
 import { Tools } from "../../constants";
-import Card, { Sides } from "./card";
+import { Sides } from "./card";
 import {
   StartPathCard,
   GoldFinishPathCard,
@@ -16,10 +16,6 @@ import {
   RepairActionCard,
   ActionCard,
 } from "./action-cards";
-
-const multiply = (length: number, getValue: () => Card) =>
-  new Array(length).fill(undefined).map(() => getValue());
-const randomBoolean = () => Math.random() < 0.5;
 
 /*
  * Saboteur cards

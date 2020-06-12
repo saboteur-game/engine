@@ -1,0 +1,315 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Gold allocation allocateGoldToGoldDiggers when the saboteur is the active player allocates gold to the gold diggers 1`] = `
+Object {
+  "test-id-29": Array [
+    GoldRewardCard {
+      "id": "test-id-2",
+      "value": 3,
+    },
+  ],
+  "test-id-30": Array [
+    GoldRewardCard {
+      "id": "test-id-1",
+      "value": 3,
+    },
+    GoldRewardCard {
+      "id": "test-id-4",
+      "value": 3,
+    },
+  ],
+  "test-id-32": Array [
+    GoldRewardCard {
+      "id": "test-id-3",
+      "value": 3,
+    },
+    GoldRewardCard {
+      "id": "test-id-6",
+      "value": 2,
+    },
+  ],
+  "test-id-34": Array [
+    GoldRewardCard {
+      "id": "test-id-5",
+      "value": 2,
+    },
+  ],
+}
+`;
+
+exports[`Gold allocation allocateGoldToGoldDiggers when there are 2 saboteurs allocates gold to the gold diggers 1`] = `
+Object {
+  "test-id-29": Array [
+    GoldRewardCard {
+      "id": "test-id-1",
+      "value": 3,
+    },
+  ],
+  "test-id-30": Array [
+    GoldRewardCard {
+      "id": "test-id-3",
+      "value": 3,
+    },
+    GoldRewardCard {
+      "id": "test-id-6",
+      "value": 2,
+    },
+  ],
+  "test-id-32": Array [
+    GoldRewardCard {
+      "id": "test-id-2",
+      "value": 3,
+    },
+    GoldRewardCard {
+      "id": "test-id-5",
+      "value": 2,
+    },
+  ],
+  "test-id-34": Array [
+    GoldRewardCard {
+      "id": "test-id-4",
+      "value": 3,
+    },
+  ],
+}
+`;
+
+exports[`Gold allocation allocateGoldToGoldDiggers when there are 3 saboteurs allocates gold to the gold diggers 1`] = `
+Object {
+  "test-id-29": Array [
+    GoldRewardCard {
+      "id": "test-id-1",
+      "value": 3,
+    },
+  ],
+  "test-id-30": Array [
+    GoldRewardCard {
+      "id": "test-id-3",
+      "value": 3,
+    },
+    GoldRewardCard {
+      "id": "test-id-6",
+      "value": 2,
+    },
+  ],
+  "test-id-32": Array [
+    GoldRewardCard {
+      "id": "test-id-2",
+      "value": 3,
+    },
+    GoldRewardCard {
+      "id": "test-id-5",
+      "value": 2,
+    },
+  ],
+  "test-id-34": Array [
+    GoldRewardCard {
+      "id": "test-id-4",
+      "value": 3,
+    },
+    GoldRewardCard {
+      "id": "test-id-7",
+      "value": 2,
+    },
+  ],
+}
+`;
+
+exports[`Gold allocation allocateGoldToGoldDiggers when there are 4 saboteurs allocates gold to the gold diggers 1`] = `
+Object {
+  "test-id-29": Array [
+    GoldRewardCard {
+      "id": "test-id-1",
+      "value": 3,
+    },
+  ],
+  "test-id-30": Array [
+    GoldRewardCard {
+      "id": "test-id-5",
+      "value": 2,
+    },
+  ],
+  "test-id-32": Array [
+    GoldRewardCard {
+      "id": "test-id-4",
+      "value": 3,
+    },
+    GoldRewardCard {
+      "id": "test-id-9",
+      "value": 2,
+    },
+  ],
+  "test-id-34": Array [
+    GoldRewardCard {
+      "id": "test-id-3",
+      "value": 3,
+    },
+    GoldRewardCard {
+      "id": "test-id-8",
+      "value": 2,
+    },
+  ],
+  "test-id-36": Array [
+    GoldRewardCard {
+      "id": "test-id-2",
+      "value": 3,
+    },
+    GoldRewardCard {
+      "id": "test-id-7",
+      "value": 2,
+    },
+  ],
+  "test-id-38": Array [
+    GoldRewardCard {
+      "id": "test-id-6",
+      "value": 2,
+    },
+  ],
+}
+`;
+
+exports[`Gold allocation allocateGoldToGoldDiggers when there are no saboteurs allocates gold to the gold diggers 1`] = `
+Object {
+  "test-id-29": Array [
+    GoldRewardCard {
+      "id": "test-id-1",
+      "value": 3,
+    },
+  ],
+  "test-id-30": Array [
+    GoldRewardCard {
+      "id": "test-id-3",
+      "value": 3,
+    },
+  ],
+  "test-id-31": Array [
+    GoldRewardCard {
+      "id": "test-id-2",
+      "value": 3,
+    },
+  ],
+  "test-id-32": Array [
+    GoldRewardCard {
+      "id": "test-id-4",
+      "value": 3,
+    },
+  ],
+}
+`;
+
+exports[`Gold allocation allocateGoldToGoldDiggers when there is 1 saboteur allocates gold to the gold diggers 1`] = `
+Object {
+  "test-id-29": Array [
+    GoldRewardCard {
+      "id": "test-id-1",
+      "value": 3,
+    },
+  ],
+  "test-id-30": Array [
+    GoldRewardCard {
+      "id": "test-id-3",
+      "value": 3,
+    },
+  ],
+  "test-id-32": Array [
+    GoldRewardCard {
+      "id": "test-id-2",
+      "value": 3,
+    },
+    GoldRewardCard {
+      "id": "test-id-5",
+      "value": 2,
+    },
+  ],
+  "test-id-33": Array [
+    GoldRewardCard {
+      "id": "test-id-4",
+      "value": 3,
+    },
+  ],
+}
+`;
+
+exports[`Gold allocation allocateGoldToSaboteurs when there are 2 saboteurs allocates gold to the saboteurs 1`] = `
+Object {
+  "test-id-31": Array [
+    GoldRewardCard {
+      "id": "test-id-1",
+      "value": 3,
+    },
+  ],
+  "test-id-33": Array [
+    GoldRewardCard {
+      "id": "test-id-2",
+      "value": 3,
+    },
+  ],
+}
+`;
+
+exports[`Gold allocation allocateGoldToSaboteurs when there are 3 saboteurs allocates gold to the saboteurs 1`] = `
+Object {
+  "test-id-31": Array [
+    GoldRewardCard {
+      "id": "test-id-1",
+      "value": 3,
+    },
+  ],
+  "test-id-33": Array [
+    GoldRewardCard {
+      "id": "test-id-2",
+      "value": 3,
+    },
+  ],
+  "test-id-35": Array [
+    GoldRewardCard {
+      "id": "test-id-3",
+      "value": 3,
+    },
+  ],
+}
+`;
+
+exports[`Gold allocation allocateGoldToSaboteurs when there are 4 saboteurs allocates gold to the saboteurs 1`] = `
+Object {
+  "test-id-31": Array [
+    GoldRewardCard {
+      "id": "test-id-5",
+      "value": 2,
+    },
+  ],
+  "test-id-33": Array [
+    GoldRewardCard {
+      "id": "test-id-6",
+      "value": 2,
+    },
+  ],
+  "test-id-35": Array [
+    GoldRewardCard {
+      "id": "test-id-7",
+      "value": 2,
+    },
+  ],
+  "test-id-37": Array [
+    GoldRewardCard {
+      "id": "test-id-8",
+      "value": 2,
+    },
+  ],
+}
+`;
+
+exports[`Gold allocation allocateGoldToSaboteurs when there is 1 saboteur allocates gold to the saboteurs 1`] = `
+Object {
+  "test-id-31": Array [
+    GoldRewardCard {
+      "id": "test-id-1",
+      "value": 3,
+    },
+    GoldRewardCard {
+      "id": "test-id-13",
+      "value": 1,
+    },
+  ],
+}
+`;
