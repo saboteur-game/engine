@@ -1,9 +1,21 @@
 let count = 0;
-jest.mock("../src/utils", () => ({
-  generateId: () => `test-id-${count++}`,
-  shuffle: <T>(value: T): T => value,
-}));
+let resetValue: number;
+
+global.beforeAll(() => {
+  // Some models will have had instances created in mocks before the tests have
+  // been set up. If we reset back to 0, then there's a possibility that we'll
+  // get an ID collision with one of these instances. Instead, this will be our
+  // new baseline value and we'll increment from here for each test.
+  resetValue = count;
+});
+
+jest.mock("../src/utils", () =>
+  Object.assign(jest.requireActual("../src/utils"), {
+    generateId: () => `test-id-${count++}`,
+    shuffle: <T>(value: T): T => value,
+  })
+);
 
 global.beforeEach(() => {
-  count = 0;
+  count = resetValue;
 });

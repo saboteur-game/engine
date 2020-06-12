@@ -3,7 +3,7 @@
 exports[`Player addToHand when there are cards in the players hand returns populated array 1`] = `
 Array [
   MapActionCard {
-    "id": "test-id-0",
+    "id": "test-id-1",
     "status": "unused",
   },
 ]
@@ -13,7 +13,7 @@ exports[`Player can be serialized 1`] = `
 Object {
   "age": 35,
   "hand": Object {},
-  "id": "test-id-1",
+  "id": "test-id-2",
   "isSaboteur": false,
   "name": "Alice",
   "viewedFinishCards": Object {},
