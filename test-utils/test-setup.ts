@@ -12,7 +12,7 @@ global.beforeAll(() => {
 jest.mock("../src/utils", () =>
   Object.assign(jest.requireActual("../src/utils"), {
     generateId: () => `test-id-${count++}`,
-    shuffle: <T>(value: T): T => value,
+    shuffle: jest.fn().mockImplementation(<T>(value: T): T => value),
   })
 );
 

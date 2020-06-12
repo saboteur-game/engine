@@ -1,0 +1,8 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`GoldRewardCard can be serialized 1`] = `
+Object {
+  "id": "test-id-0",
+  "value": 2,
+}
+`;

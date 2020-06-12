@@ -11,17 +11,22 @@ import performPlay from "../perform-play";
 import Board from "./board";
 import Card from "./cards/card";
 import CardParameters from "./cards/card-parameters";
+import GoldRewardCard from "./cards/gold-reward-cards";
 import Deck from "./deck";
 import Discard from "./discard";
 import Player from "./player";
-
-interface IPlayers {
-  [key: string]: Player;
-}
+import RewardDeck from "./reward-deck";
+import {
+  IPlayers,
+  IGoldAllocation,
+  allocateGoldToGoldDiggers,
+  allocateGoldToSaboteurs,
+} from "../utils/gold-allocation";
 
 interface RoundResult {
-  // TODO: implement RoundResult
-  todo: boolean;
+  didGoldDiggersWin: boolean;
+  goldAllocation: IGoldAllocation;
+  gameState: Pojo;
 }
 
 class Game {
@@ -34,6 +39,7 @@ class Game {
   private playOrder: string[];
   private discardSequence: Player[];
   private turn: number;
+  private rewardDeck: RewardDeck;
   private roundResults: RoundResult[];
 
   constructor() {
@@ -46,6 +52,7 @@ class Game {
     this.playOrder = [];
     this.discardSequence = [];
     this.turn = 0;
+    this.rewardDeck = new RewardDeck();
     this.roundResults = [];
   }
 
@@ -150,17 +157,62 @@ class Game {
     );
   }
 
+  private allocateGold(didGoldDiggersWin: boolean): IGoldAllocation {
+    if (didGoldDiggersWin) {
+      return allocateGoldToGoldDiggers(
+        this.rewardDeck,
+        this.playOrder,
+        this.players,
+        this.getActivePlayer() as Player
+      );
+    }
+    return allocateGoldToSaboteurs(
+      this.rewardDeck,
+      this.playOrder,
+      this.players
+    );
+  }
+
   private finishRound(): void {
     this.endTurn(true);
 
-    // TODO: Generate round results
-    const roundResults = { todo: true };
+    const didGoldDiggersWin = this.board.isComplete;
+    // eslint-disable-next-line @typescript-eslint/no-unused-vars
+    const { roundResults: ignore, ...gameState } = this.toJS();
+    const roundResults = {
+      didGoldDiggersWin,
+      goldAllocation: this.allocateGold(didGoldDiggersWin),
+      gameState,
+    };
+
     eventEmitter.emit("end-round", this.roundResults.length, roundResults);
     this.roundResults.push(roundResults);
 
     if (this.isFinished()) {
-      eventEmitter.emit("end-game");
-      // TODO: Emit player scores, winners, etc.
+      const combinedResults = this.roundResults.reduce(
+        (mapping, { goldAllocation }) => {
+          const playerIds = Object.keys(goldAllocation);
+          playerIds.forEach((playerId) => {
+            mapping[playerId] = (mapping[playerId] || []).concat(
+              goldAllocation[playerId]
+            );
+          });
+          return mapping;
+        },
+        {} as { [key: string]: GoldRewardCard[] }
+      );
+
+      const scoreboard = Object.keys(combinedResults)
+        .map((playerId) => {
+          const totalGold = combinedResults[playerId].reduce(
+            (total, { value }) => total + value,
+            0
+          );
+          return { player: this.players[playerId], totalGold };
+        })
+        .sort((a, b) => b.totalGold - a.totalGold);
+
+      eventEmitter.emit("end-game", scoreboard);
     } else {
       this.deck = new Deck();
       this.discard = new Discard();
@@ -248,6 +300,7 @@ class Game {
       playOrder: this.playOrder,
       turn: this.turn,
       roundResults: this.roundResults,
+      visual: this.visualizeBoard(),
     };
   }
 }

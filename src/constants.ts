@@ -6,6 +6,8 @@ export const SPACE_SIDES = 4;
 
 export const NUMBER_OF_ROUNDS = 3;
 
+export const MAX_REWARD_CARDS = 9;
+
 export enum Tools {
   pick = "pick",
   lamp = "lamp",
@@ -30,11 +32,19 @@ export const roleRatio: IRoleRatio = {
   10: { saboteurs: 4, goldDiggers: 7 },
 };
 
-interface IInitialHandSizes {
+interface IPlayerMapping {
   [key: number]: number;
 }
 
-export const initialHandSizes: IInitialHandSizes = {
+export const saboteurGoldAllocation: IPlayerMapping = {
+  0: 0,
+  1: 4,
+  2: 3,
+  3: 3,
+  4: 2,
+};
+
+export const initialHandSizes: IPlayerMapping = {
   3: 6,
   4: 6,
   5: 6,
