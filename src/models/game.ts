@@ -201,9 +201,9 @@ class Game {
         {} as IGoldAllocation
       );
 
-      const scoreboard = Object.keys(combinedResults)
+      const scoreboard = this.playOrder
         .map((playerId) => {
-          const totalGold = combinedResults[playerId].reduce(
+          const totalGold = (combinedResults[playerId] || []).reduce(
             (total, { value }) => total + value,
             0
           );

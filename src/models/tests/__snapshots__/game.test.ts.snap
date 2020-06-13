@@ -1958,6 +1958,117 @@ Array [
     },
     "totalGold": 8,
   },
+  Object {
+    "player": Object {
+      "age": 20,
+      "hand": Object {
+        "test-id-0": Object {
+          "connectors": Array [
+            2,
+            4,
+          ],
+          "id": "test-id-0",
+          "isUpsideDown": false,
+          "parameters": undefined,
+          "status": "unused",
+        },
+        "test-id-12": Object {
+          "connectors": Array [
+            1,
+            2,
+          ],
+          "id": "test-id-12",
+          "isUpsideDown": false,
+          "parameters": undefined,
+          "status": "unused",
+        },
+        "test-id-15": Object {
+          "connectors": Array [
+            1,
+            2,
+          ],
+          "id": "test-id-15",
+          "isUpsideDown": false,
+          "parameters": undefined,
+          "status": "unused",
+        },
+        "test-id-20": Object {
+          "connectors": Array [
+            1,
+            2,
+            4,
+          ],
+          "id": "test-id-20",
+          "isUpsideDown": false,
+          "parameters": undefined,
+          "status": "unused",
+        },
+        "test-id-23": Object {
+          "connectors": Array [
+            1,
+            2,
+            3,
+          ],
+          "id": "test-id-23",
+          "isUpsideDown": false,
+          "parameters": undefined,
+          "status": "unused",
+        },
+        "test-id-26": Object {
+          "connectors": Array [
+            1,
+            2,
+            3,
+            4,
+          ],
+          "id": "test-id-26",
+          "isUpsideDown": false,
+          "parameters": undefined,
+          "status": "unused",
+        },
+        "test-id-3": Object {
+          "connectors": Array [
+            1,
+            3,
+          ],
+          "id": "test-id-3",
+          "isUpsideDown": false,
+          "parameters": undefined,
+          "status": "unused",
+        },
+        "test-id-6": Object {
+          "connectors": Array [
+            1,
+            3,
+          ],
+          "id": "test-id-6",
+          "isUpsideDown": false,
+          "parameters": undefined,
+          "status": "unused",
+        },
+        "test-id-9": Object {
+          "connectors": Array [
+            1,
+            4,
+          ],
+          "id": "test-id-9",
+          "isUpsideDown": false,
+          "parameters": undefined,
+          "status": "unused",
+        },
+      },
+      "id": "test-id-108",
+      "isSaboteur": true,
+      "name": "Player 1",
+      "tools": Object {
+        "lamp": true,
+        "pick": true,
+        "wagon": true,
+      },
+      "viewedFinishCards": Object {},
+    },
+    "totalGold": 0,
+  },
 ]
 `;
 
