@@ -144,7 +144,13 @@ class Board {
 
         // Check we are actually trying to connect to the finish path card
         // and not just placing a card beside it
-        if (!card.connectors.includes(side)) return;
+        if (
+          (!card.isUpsideDown && !card.connectors.includes(side)) ||
+          (card.isUpsideDown &&
+            !card.connectors.includes(getOppositeSide(side)))
+        ) {
+          return;
+        }
 
         adjacentFinishPathCard.turnOver(getOppositeSide(side));
 
