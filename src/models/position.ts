@@ -31,7 +31,7 @@ class Position {
     return new Position(this.x + 1, this.y);
   }
 
-  toJS(): Pojo {
+  toJSON(): Pojo {
     return {
       id: this.id,
       x: this.x,

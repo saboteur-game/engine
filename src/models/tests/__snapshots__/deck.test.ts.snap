@@ -3,7 +3,7 @@
 exports[`Deck can be serialized 1`] = `
 Object {
   "drawPile": Array [
-    PassageCard {
+    Object {
       "connectors": Array [
         1,
         2,
@@ -12,6 +12,7 @@ Object {
       ],
       "id": "test-id-0",
       "isUpsideDown": false,
+      "parameters": undefined,
       "status": "unused",
     },
   ],

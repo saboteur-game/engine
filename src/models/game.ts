@@ -11,7 +11,6 @@ import performPlay from "../perform-play";
 import Board from "./board";
 import Card from "./cards/card";
 import CardParameters from "./cards/card-parameters";
-import GoldRewardCard from "./cards/gold-reward-cards";
 import Deck from "./deck";
 import Discard from "./discard";
 import Player from "./player";
@@ -178,7 +177,7 @@ class Game {
 
     const didGoldDiggersWin = this.board.isComplete;
     // eslint-disable-next-line @typescript-eslint/no-unused-vars
-    const { roundResults: ignore, ...gameState } = this.toJS();
+    const { roundResults: ignore, ...gameState } = this.toJSON();
     const roundResults = {
       didGoldDiggersWin,
       goldAllocation: this.allocateGold(didGoldDiggersWin),
@@ -199,7 +198,7 @@ class Game {
           });
           return mapping;
         },
-        {} as { [key: string]: GoldRewardCard[] }
+        {} as IGoldAllocation
       );
 
       const scoreboard = Object.keys(combinedResults)
@@ -288,7 +287,7 @@ class Game {
     return this.board.visualize();
   }
 
-  toJS(): Pojo {
+  toJSON(): Pojo {
     return {
       id: this.id,
       players: this.players,

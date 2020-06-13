@@ -11,9 +11,9 @@ class ActionCard extends Card {
     return this;
   }
 
-  toJS(): Pojo {
+  toJSON(): Pojo {
     return {
-      ...super.toJS(),
+      ...super.toJSON(),
       parameters: this.parameters,
     };
   }

@@ -3,7 +3,7 @@
 exports[`Board can be serialized 1`] = `
 Object {
   "grid": Object {
-    "0,0": StartPathCard {
+    "0,0": Object {
       "connectors": Array [
         1,
         2,
@@ -12,29 +12,36 @@ Object {
       ],
       "id": "test-id-6",
       "isUpsideDown": false,
+      "parameters": undefined,
       "status": "played",
     },
-    "8,-2": RockFinishPathCard {
+    "8,-2": Object {
       "connectors": Array [
         1,
+        2,
+        3,
         4,
       ],
       "id": "test-id-9",
       "isFaceDown": true,
       "isUpsideDown": false,
+      "parameters": undefined,
       "status": "played",
     },
-    "8,0": RockFinishPathCard {
+    "8,0": Object {
       "connectors": Array [
         1,
         2,
+        3,
+        4,
       ],
       "id": "test-id-8",
       "isFaceDown": true,
       "isUpsideDown": false,
+      "parameters": undefined,
       "status": "played",
     },
-    "8,2": GoldFinishPathCard {
+    "8,2": Object {
       "connectors": Array [
         1,
         2,
@@ -44,6 +51,7 @@ Object {
       "id": "test-id-7",
       "isFaceDown": true,
       "isUpsideDown": false,
+      "parameters": undefined,
       "status": "played",
     },
   },
@@ -56,13 +64,14 @@ Array [
   undefined,
   undefined,
   undefined,
-  PassageCard {
+  Object {
     "connectors": Array [
       2,
       4,
     ],
     "id": "test-id-62",
     "isUpsideDown": false,
+    "parameters": undefined,
     "status": "played",
   },
 ]
@@ -80,17 +89,18 @@ Array [
 exports[`Board get adjacent cards from the board when the position is beside the start card returns the start card and other surrounding cards 1`] = `
 Array [
   undefined,
-  PassageCard {
+  Object {
     "connectors": Array [
       2,
       4,
     ],
     "id": "test-id-20",
     "isUpsideDown": false,
+    "parameters": undefined,
     "status": "played",
   },
   undefined,
-  StartPathCard {
+  Object {
     "connectors": Array [
       1,
       2,
@@ -99,6 +109,7 @@ Array [
     ],
     "id": "test-id-6",
     "isUpsideDown": false,
+    "parameters": undefined,
     "status": "played",
   },
 ]
@@ -106,7 +117,7 @@ Array [
 
 exports[`Board get adjacent cards from the board when the position is surrounded returns surrounding cards 1`] = `
 Array [
-  PassageCard {
+  Object {
     "connectors": Array [
       1,
       2,
@@ -115,9 +126,10 @@ Array [
     ],
     "id": "test-id-40",
     "isUpsideDown": false,
+    "parameters": undefined,
     "status": "played",
   },
-  PassageCard {
+  Object {
     "connectors": Array [
       1,
       2,
@@ -126,9 +138,10 @@ Array [
     ],
     "id": "test-id-72",
     "isUpsideDown": false,
+    "parameters": undefined,
     "status": "played",
   },
-  PassageCard {
+  Object {
     "connectors": Array [
       1,
       2,
@@ -137,9 +150,10 @@ Array [
     ],
     "id": "test-id-54",
     "isUpsideDown": false,
+    "parameters": undefined,
     "status": "played",
   },
-  StartPathCard {
+  Object {
     "connectors": Array [
       1,
       2,
@@ -148,6 +162,7 @@ Array [
     ],
     "id": "test-id-6",
     "isUpsideDown": false,
+    "parameters": undefined,
     "status": "played",
   },
 ]
@@ -155,22 +170,22 @@ Array [
 
 exports[`Board get available positions from the board initial board setup returns the four surrounding positions of the start position 1`] = `
 Array [
-  Position {
+  Object {
     "id": "test-id-10",
     "x": 0,
     "y": 1,
   },
-  Position {
+  Object {
     "id": "test-id-11",
     "x": 1,
     "y": 0,
   },
-  Position {
+  Object {
     "id": "test-id-12",
     "x": 0,
     "y": -1,
   },
-  Position {
+  Object {
     "id": "test-id-13",
     "x": -1,
     "y": 0,
@@ -180,17 +195,17 @@ Array [
 
 exports[`Board get available positions from the board when there is a circular passage returns correct positions 1`] = `
 Array [
-  Position {
+  Object {
     "id": "test-id-135",
     "x": 0,
     "y": 1,
   },
-  Position {
+  Object {
     "id": "test-id-150",
     "x": 0,
     "y": -2,
   },
-  Position {
+  Object {
     "id": "test-id-155",
     "x": -2,
     "y": 0,
@@ -200,37 +215,37 @@ Array [
 
 exports[`Board get available positions from the board when there is a passage formed returns correct positions for continuing the passage  1`] = `
 Array [
-  Position {
+  Object {
     "id": "test-id-69",
     "x": 0,
     "y": 1,
   },
-  Position {
+  Object {
     "id": "test-id-73",
     "x": 2,
     "y": 2,
   },
-  Position {
+  Object {
     "id": "test-id-74",
     "x": 3,
     "y": 1,
   },
-  Position {
+  Object {
     "id": "test-id-77",
     "x": 2,
     "y": 0,
   },
-  Position {
+  Object {
     "id": "test-id-78",
     "x": 1,
     "y": -1,
   },
-  Position {
+  Object {
     "id": "test-id-83",
     "x": 0,
     "y": -2,
   },
-  Position {
+  Object {
     "id": "test-id-84",
     "x": -1,
     "y": 0,
@@ -240,47 +255,47 @@ Array [
 
 exports[`Board get available positions from the board when there is a passage formed to a finish path card returns correct positions for continuing the passage  1`] = `
 Array [
-  Position {
+  Object {
     "id": "test-id-202",
     "x": 0,
     "y": 1,
   },
-  Position {
+  Object {
     "id": "test-id-203",
     "x": 1,
     "y": 0,
   },
-  Position {
+  Object {
     "id": "test-id-213",
     "x": 4,
     "y": -1,
   },
-  Position {
+  Object {
     "id": "test-id-215",
     "x": 5,
     "y": -1,
   },
-  Position {
+  Object {
     "id": "test-id-219",
     "x": 8,
     "y": -1,
   },
-  Position {
+  Object {
     "id": "test-id-224",
     "x": 4,
     "y": -3,
   },
-  Position {
+  Object {
     "id": "test-id-228",
     "x": 1,
     "y": -2,
   },
-  Position {
+  Object {
     "id": "test-id-230",
     "x": 0,
     "y": -2,
   },
-  Position {
+  Object {
     "id": "test-id-231",
     "x": -1,
     "y": 0,
@@ -290,37 +305,37 @@ Array [
 
 exports[`Board get available positions from the board when there is a passage formed with upside down cards returns correct positions for continuing the passage  1`] = `
 Array [
-  Position {
+  Object {
     "id": "test-id-69",
     "x": 0,
     "y": 1,
   },
-  Position {
+  Object {
     "id": "test-id-71",
     "x": 1,
     "y": 1,
   },
-  Position {
+  Object {
     "id": "test-id-74",
     "x": 3,
     "y": 1,
   },
-  Position {
+  Object {
     "id": "test-id-78",
     "x": 1,
     "y": -1,
   },
-  Position {
+  Object {
     "id": "test-id-82",
     "x": 0,
     "y": -2,
   },
-  Position {
+  Object {
     "id": "test-id-83",
     "x": -1,
     "y": -1,
   },
-  Position {
+  Object {
     "id": "test-id-84",
     "x": -1,
     "y": 0,
@@ -330,17 +345,17 @@ Array [
 
 exports[`Board get available positions from the board when there is a passage with dead-ends returns correct positions and does not put positions around dead ends 1`] = `
 Array [
-  Position {
+  Object {
     "id": "test-id-120",
     "x": 0,
     "y": 1,
   },
-  Position {
+  Object {
     "id": "test-id-123",
     "x": 2,
     "y": 1,
   },
-  Position {
+  Object {
     "id": "test-id-131",
     "x": 0,
     "y": -2,

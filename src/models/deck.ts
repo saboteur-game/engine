@@ -23,7 +23,7 @@ class Deck {
     return this.drawPile.length;
   }
 
-  toJS(): Pojo {
+  toJSON(): Pojo {
     return {
       id: this.id,
       drawPile: this.drawPile,

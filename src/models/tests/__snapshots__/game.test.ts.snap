@@ -2,7 +2,7 @@
 
 exports[`Game addPlayer when no players have been added adds the player 1`] = `
 Array [
-  Player {
+  Object {
     "age": 35,
     "hand": Object {},
     "id": "test-id-108",
@@ -20,9 +20,9 @@ Array [
 
 exports[`Game can be serialized 1`] = `
 Object {
-  "board": Board {
+  "board": Object {
     "grid": Object {
-      "0,0": StartPathCard {
+      "0,0": Object {
         "connectors": Array [
           1,
           2,
@@ -31,29 +31,36 @@ Object {
         ],
         "id": "test-id-75",
         "isUpsideDown": false,
+        "parameters": undefined,
         "status": "played",
       },
-      "8,-2": RockFinishPathCard {
+      "8,-2": Object {
         "connectors": Array [
           1,
+          2,
+          3,
           4,
         ],
         "id": "test-id-78",
         "isFaceDown": true,
         "isUpsideDown": false,
+        "parameters": undefined,
         "status": "played",
       },
-      "8,0": RockFinishPathCard {
+      "8,0": Object {
         "connectors": Array [
           1,
           2,
+          3,
+          4,
         ],
         "id": "test-id-77",
         "isFaceDown": true,
         "isUpsideDown": false,
+        "parameters": undefined,
         "status": "played",
       },
-      "8,2": GoldFinishPathCard {
+      "8,2": Object {
         "connectors": Array [
           1,
           2,
@@ -63,159 +70,175 @@ Object {
         "id": "test-id-76",
         "isFaceDown": true,
         "isUpsideDown": false,
+        "parameters": undefined,
         "status": "played",
       },
     },
     "id": "test-id-74",
-    "isComplete": false,
   },
-  "deck": Deck {
+  "deck": Object {
     "drawPile": Array [
-      PassageCard {
+      Object {
         "connectors": Array [
           2,
           4,
         ],
         "id": "test-id-0",
         "isUpsideDown": false,
+        "parameters": undefined,
         "status": "unused",
       },
-      PassageCard {
+      Object {
         "connectors": Array [
           2,
           4,
         ],
         "id": "test-id-1",
         "isUpsideDown": false,
+        "parameters": undefined,
         "status": "unused",
       },
-      PassageCard {
+      Object {
         "connectors": Array [
           2,
           4,
         ],
         "id": "test-id-2",
         "isUpsideDown": false,
+        "parameters": undefined,
         "status": "unused",
       },
-      PassageCard {
+      Object {
         "connectors": Array [
           1,
           3,
         ],
         "id": "test-id-3",
         "isUpsideDown": false,
+        "parameters": undefined,
         "status": "unused",
       },
-      PassageCard {
+      Object {
         "connectors": Array [
           1,
           3,
         ],
         "id": "test-id-4",
         "isUpsideDown": false,
+        "parameters": undefined,
         "status": "unused",
       },
-      PassageCard {
+      Object {
         "connectors": Array [
           1,
           3,
         ],
         "id": "test-id-5",
         "isUpsideDown": false,
+        "parameters": undefined,
         "status": "unused",
       },
-      PassageCard {
+      Object {
         "connectors": Array [
           1,
           3,
         ],
         "id": "test-id-6",
         "isUpsideDown": false,
+        "parameters": undefined,
         "status": "unused",
       },
-      PassageCard {
+      Object {
         "connectors": Array [
           1,
           4,
         ],
         "id": "test-id-7",
         "isUpsideDown": false,
+        "parameters": undefined,
         "status": "unused",
       },
-      PassageCard {
+      Object {
         "connectors": Array [
           1,
           4,
         ],
         "id": "test-id-8",
         "isUpsideDown": false,
+        "parameters": undefined,
         "status": "unused",
       },
-      PassageCard {
+      Object {
         "connectors": Array [
           1,
           4,
         ],
         "id": "test-id-9",
         "isUpsideDown": false,
+        "parameters": undefined,
         "status": "unused",
       },
-      PassageCard {
+      Object {
         "connectors": Array [
           1,
           4,
         ],
         "id": "test-id-10",
         "isUpsideDown": false,
+        "parameters": undefined,
         "status": "unused",
       },
-      PassageCard {
+      Object {
         "connectors": Array [
           1,
           2,
         ],
         "id": "test-id-11",
         "isUpsideDown": false,
+        "parameters": undefined,
         "status": "unused",
       },
-      PassageCard {
+      Object {
         "connectors": Array [
           1,
           2,
         ],
         "id": "test-id-12",
         "isUpsideDown": false,
+        "parameters": undefined,
         "status": "unused",
       },
-      PassageCard {
+      Object {
         "connectors": Array [
           1,
           2,
         ],
         "id": "test-id-13",
         "isUpsideDown": false,
+        "parameters": undefined,
         "status": "unused",
       },
-      PassageCard {
+      Object {
         "connectors": Array [
           1,
           2,
         ],
         "id": "test-id-14",
         "isUpsideDown": false,
+        "parameters": undefined,
         "status": "unused",
       },
-      PassageCard {
+      Object {
         "connectors": Array [
           1,
           2,
         ],
         "id": "test-id-15",
         "isUpsideDown": false,
+        "parameters": undefined,
         "status": "unused",
       },
-      PassageCard {
+      Object {
         "connectors": Array [
           1,
           2,
@@ -223,9 +246,10 @@ Object {
         ],
         "id": "test-id-16",
         "isUpsideDown": false,
+        "parameters": undefined,
         "status": "unused",
       },
-      PassageCard {
+      Object {
         "connectors": Array [
           1,
           2,
@@ -233,9 +257,10 @@ Object {
         ],
         "id": "test-id-17",
         "isUpsideDown": false,
+        "parameters": undefined,
         "status": "unused",
       },
-      PassageCard {
+      Object {
         "connectors": Array [
           1,
           2,
@@ -243,9 +268,10 @@ Object {
         ],
         "id": "test-id-18",
         "isUpsideDown": false,
+        "parameters": undefined,
         "status": "unused",
       },
-      PassageCard {
+      Object {
         "connectors": Array [
           1,
           2,
@@ -253,9 +279,10 @@ Object {
         ],
         "id": "test-id-19",
         "isUpsideDown": false,
+        "parameters": undefined,
         "status": "unused",
       },
-      PassageCard {
+      Object {
         "connectors": Array [
           1,
           2,
@@ -263,9 +290,10 @@ Object {
         ],
         "id": "test-id-20",
         "isUpsideDown": false,
+        "parameters": undefined,
         "status": "unused",
       },
-      PassageCard {
+      Object {
         "connectors": Array [
           1,
           2,
@@ -273,9 +301,10 @@ Object {
         ],
         "id": "test-id-21",
         "isUpsideDown": false,
+        "parameters": undefined,
         "status": "unused",
       },
-      PassageCard {
+      Object {
         "connectors": Array [
           1,
           2,
@@ -283,9 +312,10 @@ Object {
         ],
         "id": "test-id-22",
         "isUpsideDown": false,
+        "parameters": undefined,
         "status": "unused",
       },
-      PassageCard {
+      Object {
         "connectors": Array [
           1,
           2,
@@ -293,9 +323,10 @@ Object {
         ],
         "id": "test-id-23",
         "isUpsideDown": false,
+        "parameters": undefined,
         "status": "unused",
       },
-      PassageCard {
+      Object {
         "connectors": Array [
           1,
           2,
@@ -303,9 +334,10 @@ Object {
         ],
         "id": "test-id-24",
         "isUpsideDown": false,
+        "parameters": undefined,
         "status": "unused",
       },
-      PassageCard {
+      Object {
         "connectors": Array [
           1,
           2,
@@ -313,9 +345,10 @@ Object {
         ],
         "id": "test-id-25",
         "isUpsideDown": false,
+        "parameters": undefined,
         "status": "unused",
       },
-      PassageCard {
+      Object {
         "connectors": Array [
           1,
           2,
@@ -324,9 +357,10 @@ Object {
         ],
         "id": "test-id-26",
         "isUpsideDown": false,
+        "parameters": undefined,
         "status": "unused",
       },
-      PassageCard {
+      Object {
         "connectors": Array [
           1,
           2,
@@ -335,9 +369,10 @@ Object {
         ],
         "id": "test-id-27",
         "isUpsideDown": false,
+        "parameters": undefined,
         "status": "unused",
       },
-      PassageCard {
+      Object {
         "connectors": Array [
           1,
           2,
@@ -346,9 +381,10 @@ Object {
         ],
         "id": "test-id-28",
         "isUpsideDown": false,
+        "parameters": undefined,
         "status": "unused",
       },
-      PassageCard {
+      Object {
         "connectors": Array [
           1,
           2,
@@ -357,9 +393,10 @@ Object {
         ],
         "id": "test-id-29",
         "isUpsideDown": false,
+        "parameters": undefined,
         "status": "unused",
       },
-      PassageCard {
+      Object {
         "connectors": Array [
           1,
           2,
@@ -368,61 +405,68 @@ Object {
         ],
         "id": "test-id-30",
         "isUpsideDown": false,
+        "parameters": undefined,
         "status": "unused",
       },
-      DeadendCard {
+      Object {
         "connectors": Array [
           1,
         ],
         "id": "test-id-31",
         "isUpsideDown": false,
+        "parameters": undefined,
         "status": "unused",
       },
-      DeadendCard {
+      Object {
         "connectors": Array [
           2,
         ],
         "id": "test-id-32",
         "isUpsideDown": false,
+        "parameters": undefined,
         "status": "unused",
       },
-      DeadendCard {
+      Object {
         "connectors": Array [
           1,
           2,
         ],
         "id": "test-id-33",
         "isUpsideDown": false,
+        "parameters": undefined,
         "status": "unused",
       },
-      DeadendCard {
+      Object {
         "connectors": Array [
           1,
           3,
         ],
         "id": "test-id-34",
         "isUpsideDown": false,
+        "parameters": undefined,
         "status": "unused",
       },
-      DeadendCard {
+      Object {
         "connectors": Array [
           1,
           4,
         ],
         "id": "test-id-35",
         "isUpsideDown": false,
+        "parameters": undefined,
         "status": "unused",
       },
-      DeadendCard {
+      Object {
         "connectors": Array [
           2,
           4,
         ],
         "id": "test-id-36",
         "isUpsideDown": false,
+        "parameters": undefined,
         "status": "unused",
       },
-      DeadendCard {
+      Object {
         "connectors": Array [
           1,
           2,
@@ -430,9 +474,10 @@ Object {
         ],
         "id": "test-id-37",
         "isUpsideDown": false,
+        "parameters": undefined,
         "status": "unused",
       },
-      DeadendCard {
+      Object {
         "connectors": Array [
           1,
           2,
@@ -440,9 +485,10 @@ Object {
         ],
         "id": "test-id-38",
         "isUpsideDown": false,
+        "parameters": undefined,
         "status": "unused",
       },
-      DeadendCard {
+      Object {
         "connectors": Array [
           1,
           2,
@@ -451,177 +497,205 @@ Object {
         ],
         "id": "test-id-39",
         "isUpsideDown": false,
+        "parameters": undefined,
         "status": "unused",
       },
-      MapActionCard {
+      Object {
         "id": "test-id-40",
+        "parameters": undefined,
         "status": "unused",
       },
-      MapActionCard {
+      Object {
         "id": "test-id-41",
+        "parameters": undefined,
         "status": "unused",
       },
-      MapActionCard {
+      Object {
         "id": "test-id-42",
+        "parameters": undefined,
         "status": "unused",
       },
-      MapActionCard {
+      Object {
         "id": "test-id-43",
+        "parameters": undefined,
         "status": "unused",
       },
-      MapActionCard {
+      Object {
         "id": "test-id-44",
+        "parameters": undefined,
         "status": "unused",
       },
-      MapActionCard {
+      Object {
         "id": "test-id-45",
+        "parameters": undefined,
         "status": "unused",
       },
-      RockfallActionCard {
+      Object {
         "id": "test-id-46",
+        "parameters": undefined,
         "status": "unused",
       },
-      RockfallActionCard {
+      Object {
         "id": "test-id-47",
+        "parameters": undefined,
         "status": "unused",
       },
-      RockfallActionCard {
+      Object {
         "id": "test-id-48",
+        "parameters": undefined,
         "status": "unused",
       },
-      BreakActionCard {
+      Object {
         "appliesTo": Array [
           "pick",
         ],
         "id": "test-id-49",
+        "parameters": undefined,
         "status": "unused",
       },
-      BreakActionCard {
+      Object {
         "appliesTo": Array [
           "pick",
         ],
         "id": "test-id-50",
+        "parameters": undefined,
         "status": "unused",
       },
-      BreakActionCard {
+      Object {
         "appliesTo": Array [
           "pick",
         ],
         "id": "test-id-51",
+        "parameters": undefined,
         "status": "unused",
       },
-      BreakActionCard {
+      Object {
         "appliesTo": Array [
           "lamp",
         ],
         "id": "test-id-52",
+        "parameters": undefined,
         "status": "unused",
       },
-      BreakActionCard {
+      Object {
         "appliesTo": Array [
           "lamp",
         ],
         "id": "test-id-53",
+        "parameters": undefined,
         "status": "unused",
       },
-      BreakActionCard {
+      Object {
         "appliesTo": Array [
           "lamp",
         ],
         "id": "test-id-54",
+        "parameters": undefined,
         "status": "unused",
       },
-      BreakActionCard {
+      Object {
         "appliesTo": Array [
           "wagon",
         ],
         "id": "test-id-55",
+        "parameters": undefined,
         "status": "unused",
       },
-      BreakActionCard {
+      Object {
         "appliesTo": Array [
           "wagon",
         ],
         "id": "test-id-56",
+        "parameters": undefined,
         "status": "unused",
       },
-      BreakActionCard {
+      Object {
         "appliesTo": Array [
           "wagon",
         ],
         "id": "test-id-57",
+        "parameters": undefined,
         "status": "unused",
       },
-      RepairActionCard {
+      Object {
         "appliesTo": Array [
           "pick",
         ],
         "id": "test-id-58",
+        "parameters": undefined,
         "status": "unused",
       },
-      RepairActionCard {
+      Object {
         "appliesTo": Array [
           "pick",
         ],
         "id": "test-id-59",
+        "parameters": undefined,
         "status": "unused",
       },
-      RepairActionCard {
+      Object {
         "appliesTo": Array [
           "lamp",
         ],
         "id": "test-id-60",
+        "parameters": undefined,
         "status": "unused",
       },
-      RepairActionCard {
+      Object {
         "appliesTo": Array [
           "lamp",
         ],
         "id": "test-id-61",
+        "parameters": undefined,
         "status": "unused",
       },
-      RepairActionCard {
+      Object {
         "appliesTo": Array [
           "wagon",
         ],
         "id": "test-id-62",
+        "parameters": undefined,
         "status": "unused",
       },
-      RepairActionCard {
+      Object {
         "appliesTo": Array [
           "wagon",
         ],
         "id": "test-id-63",
+        "parameters": undefined,
         "status": "unused",
       },
-      RepairActionCard {
+      Object {
         "appliesTo": Array [
           "pick",
           "lamp",
         ],
         "id": "test-id-64",
+        "parameters": undefined,
         "status": "unused",
       },
-      RepairActionCard {
+      Object {
         "appliesTo": Array [
           "pick",
           "wagon",
         ],
         "id": "test-id-65",
+        "parameters": undefined,
         "status": "unused",
       },
-      RepairActionCard {
+      Object {
         "appliesTo": Array [
           "lamp",
           "wagon",
         ],
         "id": "test-id-66",
+        "parameters": undefined,
         "status": "unused",
       },
     ],
     "id": "test-id-72",
   },
-  "discard": Discard {
+  "discard": Object {
     "discardPile": Array [],
     "id": "test-id-73",
   },
@@ -670,61 +744,67 @@ exports[`Game can visualize the board 1`] = `
 
 exports[`Game discardCard when game is started card is in the players hand adds a new card to the players hand 1`] = `
 Array [
-  PassageCard {
+  Object {
     "connectors": Array [
       2,
       4,
     ],
     "id": "test-id-0",
     "isUpsideDown": false,
+    "parameters": undefined,
     "status": "unused",
   },
-  PassageCard {
+  Object {
     "connectors": Array [
       1,
       3,
     ],
     "id": "test-id-3",
     "isUpsideDown": false,
+    "parameters": undefined,
     "status": "unused",
   },
-  PassageCard {
+  Object {
     "connectors": Array [
       1,
       3,
     ],
     "id": "test-id-6",
     "isUpsideDown": false,
+    "parameters": undefined,
     "status": "unused",
   },
-  PassageCard {
+  Object {
     "connectors": Array [
       1,
       4,
     ],
     "id": "test-id-9",
     "isUpsideDown": false,
+    "parameters": undefined,
     "status": "unused",
   },
-  PassageCard {
+  Object {
     "connectors": Array [
       1,
       2,
     ],
     "id": "test-id-12",
     "isUpsideDown": false,
+    "parameters": undefined,
     "status": "unused",
   },
-  PassageCard {
+  Object {
     "connectors": Array [
       1,
       2,
     ],
     "id": "test-id-15",
     "isUpsideDown": false,
+    "parameters": undefined,
     "status": "unused",
   },
-  PassageCard {
+  Object {
     "connectors": Array [
       1,
       2,
@@ -732,6 +812,7 @@ Array [
     ],
     "id": "test-id-18",
     "isUpsideDown": false,
+    "parameters": undefined,
     "status": "unused",
   },
 ]
@@ -741,9 +822,9 @@ exports[`Game playCard when game is started card finishes the game emits play-ca
 Object {
   "didGoldDiggersWin": true,
   "gameState": Object {
-    "board": Board {
+    "board": Object {
       "grid": Object {
-        "0,0": StartPathCard {
+        "0,0": Object {
           "connectors": Array [
             1,
             2,
@@ -752,9 +833,10 @@ Object {
           ],
           "id": "test-id-630",
           "isUpsideDown": false,
+          "parameters": undefined,
           "status": "played",
         },
-        "1,0": PassageCard {
+        "1,0": Object {
           "connectors": Array [
             2,
             4,
@@ -762,7 +844,7 @@ Object {
           "id": "test-id-635",
           "isUpsideDown": false,
           "parameters": Object {
-            "position": Position {
+            "position": Object {
               "id": "test-id-634",
               "x": 1,
               "y": 0,
@@ -770,7 +852,7 @@ Object {
           },
           "status": "played",
         },
-        "2,0": PassageCard {
+        "2,0": Object {
           "connectors": Array [
             2,
             4,
@@ -778,7 +860,7 @@ Object {
           "id": "test-id-645",
           "isUpsideDown": false,
           "parameters": Object {
-            "position": Position {
+            "position": Object {
               "id": "test-id-644",
               "x": 2,
               "y": 0,
@@ -786,7 +868,7 @@ Object {
           },
           "status": "played",
         },
-        "3,0": PassageCard {
+        "3,0": Object {
           "connectors": Array [
             2,
             4,
@@ -794,7 +876,7 @@ Object {
           "id": "test-id-657",
           "isUpsideDown": false,
           "parameters": Object {
-            "position": Position {
+            "position": Object {
               "id": "test-id-656",
               "x": 3,
               "y": 0,
@@ -802,7 +884,7 @@ Object {
           },
           "status": "played",
         },
-        "4,0": PassageCard {
+        "4,0": Object {
           "connectors": Array [
             2,
             4,
@@ -810,7 +892,7 @@ Object {
           "id": "test-id-671",
           "isUpsideDown": false,
           "parameters": Object {
-            "position": Position {
+            "position": Object {
               "id": "test-id-670",
               "x": 4,
               "y": 0,
@@ -818,7 +900,7 @@ Object {
           },
           "status": "played",
         },
-        "5,0": PassageCard {
+        "5,0": Object {
           "connectors": Array [
             2,
             4,
@@ -826,7 +908,7 @@ Object {
           "id": "test-id-687",
           "isUpsideDown": false,
           "parameters": Object {
-            "position": Position {
+            "position": Object {
               "id": "test-id-686",
               "x": 5,
               "y": 0,
@@ -834,7 +916,7 @@ Object {
           },
           "status": "played",
         },
-        "6,0": PassageCard {
+        "6,0": Object {
           "connectors": Array [
             2,
             4,
@@ -842,7 +924,7 @@ Object {
           "id": "test-id-705",
           "isUpsideDown": false,
           "parameters": Object {
-            "position": Position {
+            "position": Object {
               "id": "test-id-704",
               "x": 6,
               "y": 0,
@@ -850,7 +932,7 @@ Object {
           },
           "status": "played",
         },
-        "7,0": PassageCard {
+        "7,0": Object {
           "connectors": Array [
             1,
             4,
@@ -858,7 +940,7 @@ Object {
           "id": "test-id-725",
           "isUpsideDown": false,
           "parameters": Object {
-            "position": Position {
+            "position": Object {
               "id": "test-id-724",
               "x": 7,
               "y": 0,
@@ -866,7 +948,7 @@ Object {
           },
           "status": "played",
         },
-        "7,1": PassageCard {
+        "7,1": Object {
           "connectors": Array [
             3,
             2,
@@ -874,7 +956,7 @@ Object {
           "id": "test-id-747",
           "isUpsideDown": false,
           "parameters": Object {
-            "position": Position {
+            "position": Object {
               "id": "test-id-746",
               "x": 7,
               "y": 1,
@@ -882,7 +964,7 @@ Object {
           },
           "status": "played",
         },
-        "8,-2": RockFinishPathCard {
+        "8,-2": Object {
           "connectors": Array [
             1,
             4,
@@ -890,9 +972,10 @@ Object {
           "id": "test-id-633",
           "isFaceDown": false,
           "isUpsideDown": false,
+          "parameters": undefined,
           "status": "played",
         },
-        "8,0": RockFinishPathCard {
+        "8,0": Object {
           "connectors": Array [
             1,
             2,
@@ -900,9 +983,10 @@ Object {
           "id": "test-id-632",
           "isFaceDown": false,
           "isUpsideDown": true,
+          "parameters": undefined,
           "status": "played",
         },
-        "8,1": PassageCard {
+        "8,1": Object {
           "connectors": Array [
             1,
             4,
@@ -910,7 +994,7 @@ Object {
           "id": "test-id-771",
           "isUpsideDown": false,
           "parameters": Object {
-            "position": Position {
+            "position": Object {
               "id": "test-id-770",
               "x": 8,
               "y": 1,
@@ -918,7 +1002,7 @@ Object {
           },
           "status": "played",
         },
-        "8,2": GoldFinishPathCard {
+        "8,2": Object {
           "connectors": Array [
             1,
             2,
@@ -928,15 +1012,15 @@ Object {
           "id": "test-id-631",
           "isFaceDown": false,
           "isUpsideDown": false,
+          "parameters": undefined,
           "status": "played",
         },
       },
       "id": "test-id-629",
-      "isComplete": true,
     },
-    "deck": Deck {
+    "deck": Object {
       "drawPile": Array [
-        PassageCard {
+        Object {
           "connectors": Array [
             1,
             2,
@@ -945,9 +1029,10 @@ Object {
           ],
           "id": "test-id-27",
           "isUpsideDown": false,
+          "parameters": undefined,
           "status": "unused",
         },
-        PassageCard {
+        Object {
           "connectors": Array [
             1,
             2,
@@ -956,9 +1041,10 @@ Object {
           ],
           "id": "test-id-28",
           "isUpsideDown": false,
+          "parameters": undefined,
           "status": "unused",
         },
-        PassageCard {
+        Object {
           "connectors": Array [
             1,
             2,
@@ -967,9 +1053,10 @@ Object {
           ],
           "id": "test-id-29",
           "isUpsideDown": false,
+          "parameters": undefined,
           "status": "unused",
         },
-        PassageCard {
+        Object {
           "connectors": Array [
             1,
             2,
@@ -978,61 +1065,68 @@ Object {
           ],
           "id": "test-id-30",
           "isUpsideDown": false,
+          "parameters": undefined,
           "status": "unused",
         },
-        DeadendCard {
+        Object {
           "connectors": Array [
             1,
           ],
           "id": "test-id-31",
           "isUpsideDown": false,
+          "parameters": undefined,
           "status": "unused",
         },
-        DeadendCard {
+        Object {
           "connectors": Array [
             2,
           ],
           "id": "test-id-32",
           "isUpsideDown": false,
+          "parameters": undefined,
           "status": "unused",
         },
-        DeadendCard {
+        Object {
           "connectors": Array [
             1,
             2,
           ],
           "id": "test-id-33",
           "isUpsideDown": false,
+          "parameters": undefined,
           "status": "unused",
         },
-        DeadendCard {
+        Object {
           "connectors": Array [
             1,
             3,
           ],
           "id": "test-id-34",
           "isUpsideDown": false,
+          "parameters": undefined,
           "status": "unused",
         },
-        DeadendCard {
+        Object {
           "connectors": Array [
             1,
             4,
           ],
           "id": "test-id-35",
           "isUpsideDown": false,
+          "parameters": undefined,
           "status": "unused",
         },
-        DeadendCard {
+        Object {
           "connectors": Array [
             2,
             4,
           ],
           "id": "test-id-36",
           "isUpsideDown": false,
+          "parameters": undefined,
           "status": "unused",
         },
-        DeadendCard {
+        Object {
           "connectors": Array [
             1,
             2,
@@ -1040,9 +1134,10 @@ Object {
           ],
           "id": "test-id-37",
           "isUpsideDown": false,
+          "parameters": undefined,
           "status": "unused",
         },
-        DeadendCard {
+        Object {
           "connectors": Array [
             1,
             2,
@@ -1050,9 +1145,10 @@ Object {
           ],
           "id": "test-id-38",
           "isUpsideDown": false,
+          "parameters": undefined,
           "status": "unused",
         },
-        DeadendCard {
+        Object {
           "connectors": Array [
             1,
             2,
@@ -1061,177 +1157,205 @@ Object {
           ],
           "id": "test-id-39",
           "isUpsideDown": false,
+          "parameters": undefined,
           "status": "unused",
         },
-        MapActionCard {
+        Object {
           "id": "test-id-40",
+          "parameters": undefined,
           "status": "unused",
         },
-        MapActionCard {
+        Object {
           "id": "test-id-41",
+          "parameters": undefined,
           "status": "unused",
         },
-        MapActionCard {
+        Object {
           "id": "test-id-42",
+          "parameters": undefined,
           "status": "unused",
         },
-        MapActionCard {
+        Object {
           "id": "test-id-43",
+          "parameters": undefined,
           "status": "unused",
         },
-        MapActionCard {
+        Object {
           "id": "test-id-44",
+          "parameters": undefined,
           "status": "unused",
         },
-        MapActionCard {
+        Object {
           "id": "test-id-45",
+          "parameters": undefined,
           "status": "unused",
         },
-        RockfallActionCard {
+        Object {
           "id": "test-id-46",
+          "parameters": undefined,
           "status": "unused",
         },
-        RockfallActionCard {
+        Object {
           "id": "test-id-47",
+          "parameters": undefined,
           "status": "unused",
         },
-        RockfallActionCard {
+        Object {
           "id": "test-id-48",
+          "parameters": undefined,
           "status": "unused",
         },
-        BreakActionCard {
+        Object {
           "appliesTo": Array [
             "pick",
           ],
           "id": "test-id-49",
+          "parameters": undefined,
           "status": "unused",
         },
-        BreakActionCard {
+        Object {
           "appliesTo": Array [
             "pick",
           ],
           "id": "test-id-50",
+          "parameters": undefined,
           "status": "unused",
         },
-        BreakActionCard {
+        Object {
           "appliesTo": Array [
             "pick",
           ],
           "id": "test-id-51",
+          "parameters": undefined,
           "status": "unused",
         },
-        BreakActionCard {
+        Object {
           "appliesTo": Array [
             "lamp",
           ],
           "id": "test-id-52",
+          "parameters": undefined,
           "status": "unused",
         },
-        BreakActionCard {
+        Object {
           "appliesTo": Array [
             "lamp",
           ],
           "id": "test-id-53",
+          "parameters": undefined,
           "status": "unused",
         },
-        BreakActionCard {
+        Object {
           "appliesTo": Array [
             "lamp",
           ],
           "id": "test-id-54",
+          "parameters": undefined,
           "status": "unused",
         },
-        BreakActionCard {
+        Object {
           "appliesTo": Array [
             "wagon",
           ],
           "id": "test-id-55",
+          "parameters": undefined,
           "status": "unused",
         },
-        BreakActionCard {
+        Object {
           "appliesTo": Array [
             "wagon",
           ],
           "id": "test-id-56",
+          "parameters": undefined,
           "status": "unused",
         },
-        BreakActionCard {
+        Object {
           "appliesTo": Array [
             "wagon",
           ],
           "id": "test-id-57",
+          "parameters": undefined,
           "status": "unused",
         },
-        RepairActionCard {
+        Object {
           "appliesTo": Array [
             "pick",
           ],
           "id": "test-id-58",
+          "parameters": undefined,
           "status": "unused",
         },
-        RepairActionCard {
+        Object {
           "appliesTo": Array [
             "pick",
           ],
           "id": "test-id-59",
+          "parameters": undefined,
           "status": "unused",
         },
-        RepairActionCard {
+        Object {
           "appliesTo": Array [
             "lamp",
           ],
           "id": "test-id-60",
+          "parameters": undefined,
           "status": "unused",
         },
-        RepairActionCard {
+        Object {
           "appliesTo": Array [
             "lamp",
           ],
           "id": "test-id-61",
+          "parameters": undefined,
           "status": "unused",
         },
-        RepairActionCard {
+        Object {
           "appliesTo": Array [
             "wagon",
           ],
           "id": "test-id-62",
+          "parameters": undefined,
           "status": "unused",
         },
-        RepairActionCard {
+        Object {
           "appliesTo": Array [
             "wagon",
           ],
           "id": "test-id-63",
+          "parameters": undefined,
           "status": "unused",
         },
-        RepairActionCard {
+        Object {
           "appliesTo": Array [
             "pick",
             "lamp",
           ],
           "id": "test-id-64",
+          "parameters": undefined,
           "status": "unused",
         },
-        RepairActionCard {
+        Object {
           "appliesTo": Array [
             "pick",
             "wagon",
           ],
           "id": "test-id-65",
+          "parameters": undefined,
           "status": "unused",
         },
-        RepairActionCard {
+        Object {
           "appliesTo": Array [
             "lamp",
             "wagon",
           ],
           "id": "test-id-66",
+          "parameters": undefined,
           "status": "unused",
         },
       ],
       "id": "test-id-627",
     },
-    "discard": Discard {
+    "discard": Object {
       "discardPile": Array [],
       "id": "test-id-628",
     },
@@ -1244,37 +1368,40 @@ Object {
       "test-id-110",
     ],
     "players": Object {
-      "test-id-108": Player {
+      "test-id-108": Object {
         "age": 20,
         "hand": Object {
-          "test-id-0": PassageCard {
+          "test-id-0": Object {
             "connectors": Array [
               2,
               4,
             ],
             "id": "test-id-0",
             "isUpsideDown": false,
+            "parameters": undefined,
             "status": "unused",
           },
-          "test-id-12": PassageCard {
+          "test-id-12": Object {
             "connectors": Array [
               1,
               2,
             ],
             "id": "test-id-12",
             "isUpsideDown": false,
+            "parameters": undefined,
             "status": "unused",
           },
-          "test-id-15": PassageCard {
+          "test-id-15": Object {
             "connectors": Array [
               1,
               2,
             ],
             "id": "test-id-15",
             "isUpsideDown": false,
+            "parameters": undefined,
             "status": "unused",
           },
-          "test-id-20": PassageCard {
+          "test-id-20": Object {
             "connectors": Array [
               1,
               2,
@@ -1282,9 +1409,10 @@ Object {
             ],
             "id": "test-id-20",
             "isUpsideDown": false,
+            "parameters": undefined,
             "status": "unused",
           },
-          "test-id-23": PassageCard {
+          "test-id-23": Object {
             "connectors": Array [
               1,
               2,
@@ -1292,9 +1420,10 @@ Object {
             ],
             "id": "test-id-23",
             "isUpsideDown": false,
+            "parameters": undefined,
             "status": "unused",
           },
-          "test-id-26": PassageCard {
+          "test-id-26": Object {
             "connectors": Array [
               1,
               2,
@@ -1303,33 +1432,37 @@ Object {
             ],
             "id": "test-id-26",
             "isUpsideDown": false,
+            "parameters": undefined,
             "status": "unused",
           },
-          "test-id-3": PassageCard {
+          "test-id-3": Object {
             "connectors": Array [
               1,
               3,
             ],
             "id": "test-id-3",
             "isUpsideDown": false,
+            "parameters": undefined,
             "status": "unused",
           },
-          "test-id-6": PassageCard {
+          "test-id-6": Object {
             "connectors": Array [
               1,
               3,
             ],
             "id": "test-id-6",
             "isUpsideDown": false,
+            "parameters": undefined,
             "status": "unused",
           },
-          "test-id-9": PassageCard {
+          "test-id-9": Object {
             "connectors": Array [
               1,
               4,
             ],
             "id": "test-id-9",
             "isUpsideDown": false,
+            "parameters": undefined,
             "status": "unused",
           },
         },
@@ -1343,37 +1476,40 @@ Object {
         },
         "viewedFinishCards": Object {},
       },
-      "test-id-109": Player {
+      "test-id-109": Object {
         "age": 21,
         "hand": Object {
-          "test-id-1": PassageCard {
+          "test-id-1": Object {
             "connectors": Array [
               2,
               4,
             ],
             "id": "test-id-1",
             "isUpsideDown": false,
+            "parameters": undefined,
             "status": "unused",
           },
-          "test-id-10": PassageCard {
+          "test-id-10": Object {
             "connectors": Array [
               1,
               4,
             ],
             "id": "test-id-10",
             "isUpsideDown": false,
+            "parameters": undefined,
             "status": "unused",
           },
-          "test-id-13": PassageCard {
+          "test-id-13": Object {
             "connectors": Array [
               1,
               2,
             ],
             "id": "test-id-13",
             "isUpsideDown": false,
+            "parameters": undefined,
             "status": "unused",
           },
-          "test-id-16": PassageCard {
+          "test-id-16": Object {
             "connectors": Array [
               1,
               2,
@@ -1381,9 +1517,10 @@ Object {
             ],
             "id": "test-id-16",
             "isUpsideDown": false,
+            "parameters": undefined,
             "status": "unused",
           },
-          "test-id-18": PassageCard {
+          "test-id-18": Object {
             "connectors": Array [
               1,
               2,
@@ -1391,9 +1528,10 @@ Object {
             ],
             "id": "test-id-18",
             "isUpsideDown": false,
+            "parameters": undefined,
             "status": "unused",
           },
-          "test-id-21": PassageCard {
+          "test-id-21": Object {
             "connectors": Array [
               1,
               2,
@@ -1401,9 +1539,10 @@ Object {
             ],
             "id": "test-id-21",
             "isUpsideDown": false,
+            "parameters": undefined,
             "status": "unused",
           },
-          "test-id-24": PassageCard {
+          "test-id-24": Object {
             "connectors": Array [
               1,
               2,
@@ -1411,24 +1550,27 @@ Object {
             ],
             "id": "test-id-24",
             "isUpsideDown": false,
+            "parameters": undefined,
             "status": "unused",
           },
-          "test-id-4": PassageCard {
+          "test-id-4": Object {
             "connectors": Array [
               1,
               3,
             ],
             "id": "test-id-4",
             "isUpsideDown": false,
+            "parameters": undefined,
             "status": "unused",
           },
-          "test-id-7": PassageCard {
+          "test-id-7": Object {
             "connectors": Array [
               1,
               4,
             ],
             "id": "test-id-7",
             "isUpsideDown": false,
+            "parameters": undefined,
             "status": "unused",
           },
         },
@@ -1442,28 +1584,30 @@ Object {
         },
         "viewedFinishCards": Object {},
       },
-      "test-id-110": Player {
+      "test-id-110": Object {
         "age": 22,
         "hand": Object {
-          "test-id-11": PassageCard {
+          "test-id-11": Object {
             "connectors": Array [
               1,
               2,
             ],
             "id": "test-id-11",
             "isUpsideDown": false,
+            "parameters": undefined,
             "status": "unused",
           },
-          "test-id-14": PassageCard {
+          "test-id-14": Object {
             "connectors": Array [
               1,
               2,
             ],
             "id": "test-id-14",
             "isUpsideDown": false,
+            "parameters": undefined,
             "status": "unused",
           },
-          "test-id-17": PassageCard {
+          "test-id-17": Object {
             "connectors": Array [
               1,
               2,
@@ -1471,9 +1615,10 @@ Object {
             ],
             "id": "test-id-17",
             "isUpsideDown": false,
+            "parameters": undefined,
             "status": "unused",
           },
-          "test-id-19": PassageCard {
+          "test-id-19": Object {
             "connectors": Array [
               1,
               2,
@@ -1481,18 +1626,20 @@ Object {
             ],
             "id": "test-id-19",
             "isUpsideDown": false,
+            "parameters": undefined,
             "status": "unused",
           },
-          "test-id-2": PassageCard {
+          "test-id-2": Object {
             "connectors": Array [
               2,
               4,
             ],
             "id": "test-id-2",
             "isUpsideDown": false,
+            "parameters": undefined,
             "status": "unused",
           },
-          "test-id-22": PassageCard {
+          "test-id-22": Object {
             "connectors": Array [
               1,
               2,
@@ -1500,9 +1647,10 @@ Object {
             ],
             "id": "test-id-22",
             "isUpsideDown": false,
+            "parameters": undefined,
             "status": "unused",
           },
-          "test-id-25": PassageCard {
+          "test-id-25": Object {
             "connectors": Array [
               1,
               2,
@@ -1510,24 +1658,27 @@ Object {
             ],
             "id": "test-id-25",
             "isUpsideDown": false,
+            "parameters": undefined,
             "status": "unused",
           },
-          "test-id-5": PassageCard {
+          "test-id-5": Object {
             "connectors": Array [
               1,
               3,
             ],
             "id": "test-id-5",
             "isUpsideDown": false,
+            "parameters": undefined,
             "status": "unused",
           },
-          "test-id-8": PassageCard {
+          "test-id-8": Object {
             "connectors": Array [
               1,
               4,
             ],
             "id": "test-id-8",
             "isUpsideDown": false,
+            "parameters": undefined,
             "status": "unused",
           },
         },
@@ -1564,17 +1715,17 @@ Object {
   },
   "goldAllocation": Object {
     "test-id-109": Array [
-      GoldRewardCard {
+      Object {
         "id": "test-id-86",
         "value": 2,
       },
     ],
     "test-id-110": Array [
-      GoldRewardCard {
+      Object {
         "id": "test-id-87",
         "value": 2,
       },
-      GoldRewardCard {
+      Object {
         "id": "test-id-88",
         "value": 2,
       },
@@ -1586,28 +1737,30 @@ Object {
 exports[`Game playCard when game is started card finishes the game emits play-card, end-turn, end-round and end-game events 2`] = `
 Array [
   Object {
-    "player": Player {
+    "player": Object {
       "age": 22,
       "hand": Object {
-        "test-id-11": PassageCard {
+        "test-id-11": Object {
           "connectors": Array [
             1,
             2,
           ],
           "id": "test-id-11",
           "isUpsideDown": false,
+          "parameters": undefined,
           "status": "unused",
         },
-        "test-id-14": PassageCard {
+        "test-id-14": Object {
           "connectors": Array [
             1,
             2,
           ],
           "id": "test-id-14",
           "isUpsideDown": false,
+          "parameters": undefined,
           "status": "unused",
         },
-        "test-id-17": PassageCard {
+        "test-id-17": Object {
           "connectors": Array [
             1,
             2,
@@ -1615,9 +1768,10 @@ Array [
           ],
           "id": "test-id-17",
           "isUpsideDown": false,
+          "parameters": undefined,
           "status": "unused",
         },
-        "test-id-19": PassageCard {
+        "test-id-19": Object {
           "connectors": Array [
             1,
             2,
@@ -1625,18 +1779,20 @@ Array [
           ],
           "id": "test-id-19",
           "isUpsideDown": false,
+          "parameters": undefined,
           "status": "unused",
         },
-        "test-id-2": PassageCard {
+        "test-id-2": Object {
           "connectors": Array [
             2,
             4,
           ],
           "id": "test-id-2",
           "isUpsideDown": false,
+          "parameters": undefined,
           "status": "unused",
         },
-        "test-id-22": PassageCard {
+        "test-id-22": Object {
           "connectors": Array [
             1,
             2,
@@ -1644,9 +1800,10 @@ Array [
           ],
           "id": "test-id-22",
           "isUpsideDown": false,
+          "parameters": undefined,
           "status": "unused",
         },
-        "test-id-25": PassageCard {
+        "test-id-25": Object {
           "connectors": Array [
             1,
             2,
@@ -1654,24 +1811,27 @@ Array [
           ],
           "id": "test-id-25",
           "isUpsideDown": false,
+          "parameters": undefined,
           "status": "unused",
         },
-        "test-id-5": PassageCard {
+        "test-id-5": Object {
           "connectors": Array [
             1,
             3,
           ],
           "id": "test-id-5",
           "isUpsideDown": false,
+          "parameters": undefined,
           "status": "unused",
         },
-        "test-id-8": PassageCard {
+        "test-id-8": Object {
           "connectors": Array [
             1,
             4,
           ],
           "id": "test-id-8",
           "isUpsideDown": false,
+          "parameters": undefined,
           "status": "unused",
         },
       },
@@ -1688,37 +1848,40 @@ Array [
     "totalGold": 14,
   },
   Object {
-    "player": Player {
+    "player": Object {
       "age": 21,
       "hand": Object {
-        "test-id-1": PassageCard {
+        "test-id-1": Object {
           "connectors": Array [
             2,
             4,
           ],
           "id": "test-id-1",
           "isUpsideDown": false,
+          "parameters": undefined,
           "status": "unused",
         },
-        "test-id-10": PassageCard {
+        "test-id-10": Object {
           "connectors": Array [
             1,
             4,
           ],
           "id": "test-id-10",
           "isUpsideDown": false,
+          "parameters": undefined,
           "status": "unused",
         },
-        "test-id-13": PassageCard {
+        "test-id-13": Object {
           "connectors": Array [
             1,
             2,
           ],
           "id": "test-id-13",
           "isUpsideDown": false,
+          "parameters": undefined,
           "status": "unused",
         },
-        "test-id-16": PassageCard {
+        "test-id-16": Object {
           "connectors": Array [
             1,
             2,
@@ -1726,9 +1889,10 @@ Array [
           ],
           "id": "test-id-16",
           "isUpsideDown": false,
+          "parameters": undefined,
           "status": "unused",
         },
-        "test-id-18": PassageCard {
+        "test-id-18": Object {
           "connectors": Array [
             1,
             2,
@@ -1736,9 +1900,10 @@ Array [
           ],
           "id": "test-id-18",
           "isUpsideDown": false,
+          "parameters": undefined,
           "status": "unused",
         },
-        "test-id-21": PassageCard {
+        "test-id-21": Object {
           "connectors": Array [
             1,
             2,
@@ -1746,9 +1911,10 @@ Array [
           ],
           "id": "test-id-21",
           "isUpsideDown": false,
+          "parameters": undefined,
           "status": "unused",
         },
-        "test-id-24": PassageCard {
+        "test-id-24": Object {
           "connectors": Array [
             1,
             2,
@@ -1756,24 +1922,27 @@ Array [
           ],
           "id": "test-id-24",
           "isUpsideDown": false,
+          "parameters": undefined,
           "status": "unused",
         },
-        "test-id-4": PassageCard {
+        "test-id-4": Object {
           "connectors": Array [
             1,
             3,
           ],
           "id": "test-id-4",
           "isUpsideDown": false,
+          "parameters": undefined,
           "status": "unused",
         },
-        "test-id-7": PassageCard {
+        "test-id-7": Object {
           "connectors": Array [
             1,
             4,
           ],
           "id": "test-id-7",
           "isUpsideDown": false,
+          "parameters": undefined,
           "status": "unused",
         },
       },
@@ -1796,9 +1965,9 @@ exports[`Game playCard when game is started card finishes the round emits play-c
 Object {
   "didGoldDiggersWin": true,
   "gameState": Object {
-    "board": Board {
+    "board": Object {
       "grid": Object {
-        "0,0": StartPathCard {
+        "0,0": Object {
           "connectors": Array [
             1,
             2,
@@ -1807,9 +1976,10 @@ Object {
           ],
           "id": "test-id-75",
           "isUpsideDown": false,
+          "parameters": undefined,
           "status": "played",
         },
-        "1,0": PassageCard {
+        "1,0": Object {
           "connectors": Array [
             2,
             4,
@@ -1817,7 +1987,7 @@ Object {
           "id": "test-id-113",
           "isUpsideDown": false,
           "parameters": Object {
-            "position": Position {
+            "position": Object {
               "id": "test-id-112",
               "x": 1,
               "y": 0,
@@ -1825,7 +1995,7 @@ Object {
           },
           "status": "played",
         },
-        "2,0": PassageCard {
+        "2,0": Object {
           "connectors": Array [
             2,
             4,
@@ -1833,7 +2003,7 @@ Object {
           "id": "test-id-123",
           "isUpsideDown": false,
           "parameters": Object {
-            "position": Position {
+            "position": Object {
               "id": "test-id-122",
               "x": 2,
               "y": 0,
@@ -1841,7 +2011,7 @@ Object {
           },
           "status": "played",
         },
-        "3,0": PassageCard {
+        "3,0": Object {
           "connectors": Array [
             2,
             4,
@@ -1849,7 +2019,7 @@ Object {
           "id": "test-id-135",
           "isUpsideDown": false,
           "parameters": Object {
-            "position": Position {
+            "position": Object {
               "id": "test-id-134",
               "x": 3,
               "y": 0,
@@ -1857,7 +2027,7 @@ Object {
           },
           "status": "played",
         },
-        "4,0": PassageCard {
+        "4,0": Object {
           "connectors": Array [
             2,
             4,
@@ -1865,7 +2035,7 @@ Object {
           "id": "test-id-149",
           "isUpsideDown": false,
           "parameters": Object {
-            "position": Position {
+            "position": Object {
               "id": "test-id-148",
               "x": 4,
               "y": 0,
@@ -1873,7 +2043,7 @@ Object {
           },
           "status": "played",
         },
-        "5,0": PassageCard {
+        "5,0": Object {
           "connectors": Array [
             2,
             4,
@@ -1881,7 +2051,7 @@ Object {
           "id": "test-id-165",
           "isUpsideDown": false,
           "parameters": Object {
-            "position": Position {
+            "position": Object {
               "id": "test-id-164",
               "x": 5,
               "y": 0,
@@ -1889,7 +2059,7 @@ Object {
           },
           "status": "played",
         },
-        "6,0": PassageCard {
+        "6,0": Object {
           "connectors": Array [
             2,
             4,
@@ -1897,7 +2067,7 @@ Object {
           "id": "test-id-183",
           "isUpsideDown": false,
           "parameters": Object {
-            "position": Position {
+            "position": Object {
               "id": "test-id-182",
               "x": 6,
               "y": 0,
@@ -1905,7 +2075,7 @@ Object {
           },
           "status": "played",
         },
-        "7,0": PassageCard {
+        "7,0": Object {
           "connectors": Array [
             1,
             4,
@@ -1913,7 +2083,7 @@ Object {
           "id": "test-id-203",
           "isUpsideDown": false,
           "parameters": Object {
-            "position": Position {
+            "position": Object {
               "id": "test-id-202",
               "x": 7,
               "y": 0,
@@ -1921,7 +2091,7 @@ Object {
           },
           "status": "played",
         },
-        "7,1": PassageCard {
+        "7,1": Object {
           "connectors": Array [
             3,
             2,
@@ -1929,7 +2099,7 @@ Object {
           "id": "test-id-225",
           "isUpsideDown": false,
           "parameters": Object {
-            "position": Position {
+            "position": Object {
               "id": "test-id-224",
               "x": 7,
               "y": 1,
@@ -1937,7 +2107,7 @@ Object {
           },
           "status": "played",
         },
-        "8,-2": RockFinishPathCard {
+        "8,-2": Object {
           "connectors": Array [
             1,
             4,
@@ -1945,9 +2115,10 @@ Object {
           "id": "test-id-78",
           "isFaceDown": false,
           "isUpsideDown": false,
+          "parameters": undefined,
           "status": "played",
         },
-        "8,0": RockFinishPathCard {
+        "8,0": Object {
           "connectors": Array [
             1,
             2,
@@ -1955,9 +2126,10 @@ Object {
           "id": "test-id-77",
           "isFaceDown": false,
           "isUpsideDown": true,
+          "parameters": undefined,
           "status": "played",
         },
-        "8,1": PassageCard {
+        "8,1": Object {
           "connectors": Array [
             1,
             4,
@@ -1965,7 +2137,7 @@ Object {
           "id": "test-id-249",
           "isUpsideDown": false,
           "parameters": Object {
-            "position": Position {
+            "position": Object {
               "id": "test-id-248",
               "x": 8,
               "y": 1,
@@ -1973,7 +2145,7 @@ Object {
           },
           "status": "played",
         },
-        "8,2": GoldFinishPathCard {
+        "8,2": Object {
           "connectors": Array [
             1,
             2,
@@ -1983,163 +2155,185 @@ Object {
           "id": "test-id-76",
           "isFaceDown": false,
           "isUpsideDown": false,
+          "parameters": undefined,
           "status": "played",
         },
       },
       "id": "test-id-74",
-      "isComplete": true,
     },
-    "deck": Deck {
+    "deck": Object {
       "drawPile": Array [
-        MapActionCard {
+        Object {
           "id": "test-id-45",
+          "parameters": undefined,
           "status": "unused",
         },
-        RockfallActionCard {
+        Object {
           "id": "test-id-46",
+          "parameters": undefined,
           "status": "unused",
         },
-        RockfallActionCard {
+        Object {
           "id": "test-id-47",
+          "parameters": undefined,
           "status": "unused",
         },
-        RockfallActionCard {
+        Object {
           "id": "test-id-48",
+          "parameters": undefined,
           "status": "unused",
         },
-        BreakActionCard {
+        Object {
           "appliesTo": Array [
             "pick",
           ],
           "id": "test-id-49",
+          "parameters": undefined,
           "status": "unused",
         },
-        BreakActionCard {
+        Object {
           "appliesTo": Array [
             "pick",
           ],
           "id": "test-id-50",
+          "parameters": undefined,
           "status": "unused",
         },
-        BreakActionCard {
+        Object {
           "appliesTo": Array [
             "pick",
           ],
           "id": "test-id-51",
+          "parameters": undefined,
           "status": "unused",
         },
-        BreakActionCard {
+        Object {
           "appliesTo": Array [
             "lamp",
           ],
           "id": "test-id-52",
+          "parameters": undefined,
           "status": "unused",
         },
-        BreakActionCard {
+        Object {
           "appliesTo": Array [
             "lamp",
           ],
           "id": "test-id-53",
+          "parameters": undefined,
           "status": "unused",
         },
-        BreakActionCard {
+        Object {
           "appliesTo": Array [
             "lamp",
           ],
           "id": "test-id-54",
+          "parameters": undefined,
           "status": "unused",
         },
-        BreakActionCard {
+        Object {
           "appliesTo": Array [
             "wagon",
           ],
           "id": "test-id-55",
+          "parameters": undefined,
           "status": "unused",
         },
-        BreakActionCard {
+        Object {
           "appliesTo": Array [
             "wagon",
           ],
           "id": "test-id-56",
+          "parameters": undefined,
           "status": "unused",
         },
-        BreakActionCard {
+        Object {
           "appliesTo": Array [
             "wagon",
           ],
           "id": "test-id-57",
+          "parameters": undefined,
           "status": "unused",
         },
-        RepairActionCard {
+        Object {
           "appliesTo": Array [
             "pick",
           ],
           "id": "test-id-58",
+          "parameters": undefined,
           "status": "unused",
         },
-        RepairActionCard {
+        Object {
           "appliesTo": Array [
             "pick",
           ],
           "id": "test-id-59",
+          "parameters": undefined,
           "status": "unused",
         },
-        RepairActionCard {
+        Object {
           "appliesTo": Array [
             "lamp",
           ],
           "id": "test-id-60",
+          "parameters": undefined,
           "status": "unused",
         },
-        RepairActionCard {
+        Object {
           "appliesTo": Array [
             "lamp",
           ],
           "id": "test-id-61",
+          "parameters": undefined,
           "status": "unused",
         },
-        RepairActionCard {
+        Object {
           "appliesTo": Array [
             "wagon",
           ],
           "id": "test-id-62",
+          "parameters": undefined,
           "status": "unused",
         },
-        RepairActionCard {
+        Object {
           "appliesTo": Array [
             "wagon",
           ],
           "id": "test-id-63",
+          "parameters": undefined,
           "status": "unused",
         },
-        RepairActionCard {
+        Object {
           "appliesTo": Array [
             "pick",
             "lamp",
           ],
           "id": "test-id-64",
+          "parameters": undefined,
           "status": "unused",
         },
-        RepairActionCard {
+        Object {
           "appliesTo": Array [
             "pick",
             "wagon",
           ],
           "id": "test-id-65",
+          "parameters": undefined,
           "status": "unused",
         },
-        RepairActionCard {
+        Object {
           "appliesTo": Array [
             "lamp",
             "wagon",
           ],
           "id": "test-id-66",
+          "parameters": undefined,
           "status": "unused",
         },
       ],
       "id": "test-id-72",
     },
-    "discard": Discard {
+    "discard": Object {
       "discardPile": Array [],
       "id": "test-id-73",
     },
@@ -2152,61 +2346,67 @@ Object {
       "test-id-110",
     ],
     "players": Object {
-      "test-id-108": Player {
+      "test-id-108": Object {
         "age": 20,
         "hand": Object {
-          "test-id-0": PassageCard {
+          "test-id-0": Object {
             "connectors": Array [
               2,
               4,
             ],
             "id": "test-id-0",
             "isUpsideDown": false,
+            "parameters": undefined,
             "status": "unused",
           },
-          "test-id-12": PassageCard {
+          "test-id-12": Object {
             "connectors": Array [
               1,
               2,
             ],
             "id": "test-id-12",
             "isUpsideDown": false,
+            "parameters": undefined,
             "status": "unused",
           },
-          "test-id-15": PassageCard {
+          "test-id-15": Object {
             "connectors": Array [
               1,
               2,
             ],
             "id": "test-id-15",
             "isUpsideDown": false,
+            "parameters": undefined,
             "status": "unused",
           },
-          "test-id-3": PassageCard {
+          "test-id-3": Object {
             "connectors": Array [
               1,
               3,
             ],
             "id": "test-id-3",
             "isUpsideDown": false,
+            "parameters": undefined,
             "status": "unused",
           },
-          "test-id-6": PassageCard {
+          "test-id-6": Object {
             "connectors": Array [
               1,
               3,
             ],
             "id": "test-id-6",
             "isUpsideDown": false,
+            "parameters": undefined,
             "status": "unused",
           },
-          "test-id-9": PassageCard {
+          "test-id-9": Object {
             "connectors": Array [
               1,
               4,
             ],
             "id": "test-id-9",
             "isUpsideDown": false,
+            "parameters": undefined,
             "status": "unused",
           },
         },
@@ -2220,37 +2420,40 @@ Object {
         },
         "viewedFinishCards": Object {},
       },
-      "test-id-109": Player {
+      "test-id-109": Object {
         "age": 21,
         "hand": Object {
-          "test-id-1": PassageCard {
+          "test-id-1": Object {
             "connectors": Array [
               2,
               4,
             ],
             "id": "test-id-1",
             "isUpsideDown": false,
+            "parameters": undefined,
             "status": "unused",
           },
-          "test-id-10": PassageCard {
+          "test-id-10": Object {
             "connectors": Array [
               1,
               4,
             ],
             "id": "test-id-10",
             "isUpsideDown": false,
+            "parameters": undefined,
             "status": "unused",
           },
-          "test-id-13": PassageCard {
+          "test-id-13": Object {
             "connectors": Array [
               1,
               2,
             ],
             "id": "test-id-13",
             "isUpsideDown": false,
+            "parameters": undefined,
             "status": "unused",
           },
-          "test-id-16": PassageCard {
+          "test-id-16": Object {
             "connectors": Array [
               1,
               2,
@@ -2258,24 +2461,27 @@ Object {
             ],
             "id": "test-id-16",
             "isUpsideDown": false,
+            "parameters": undefined,
             "status": "unused",
           },
-          "test-id-4": PassageCard {
+          "test-id-4": Object {
             "connectors": Array [
               1,
               3,
             ],
             "id": "test-id-4",
             "isUpsideDown": false,
+            "parameters": undefined,
             "status": "unused",
           },
-          "test-id-7": PassageCard {
+          "test-id-7": Object {
             "connectors": Array [
               1,
               4,
             ],
             "id": "test-id-7",
             "isUpsideDown": false,
+            "parameters": undefined,
             "status": "unused",
           },
         },
@@ -2289,28 +2495,30 @@ Object {
         },
         "viewedFinishCards": Object {},
       },
-      "test-id-110": Player {
+      "test-id-110": Object {
         "age": 22,
         "hand": Object {
-          "test-id-11": PassageCard {
+          "test-id-11": Object {
             "connectors": Array [
               1,
               2,
             ],
             "id": "test-id-11",
             "isUpsideDown": false,
+            "parameters": undefined,
             "status": "unused",
           },
-          "test-id-14": PassageCard {
+          "test-id-14": Object {
             "connectors": Array [
               1,
               2,
             ],
             "id": "test-id-14",
             "isUpsideDown": false,
+            "parameters": undefined,
             "status": "unused",
           },
-          "test-id-17": PassageCard {
+          "test-id-17": Object {
             "connectors": Array [
               1,
               2,
@@ -2318,33 +2526,37 @@ Object {
             ],
             "id": "test-id-17",
             "isUpsideDown": false,
+            "parameters": undefined,
             "status": "unused",
           },
-          "test-id-2": PassageCard {
+          "test-id-2": Object {
             "connectors": Array [
               2,
               4,
             ],
             "id": "test-id-2",
             "isUpsideDown": false,
+            "parameters": undefined,
             "status": "unused",
           },
-          "test-id-5": PassageCard {
+          "test-id-5": Object {
             "connectors": Array [
               1,
               3,
             ],
             "id": "test-id-5",
             "isUpsideDown": false,
+            "parameters": undefined,
             "status": "unused",
           },
-          "test-id-8": PassageCard {
+          "test-id-8": Object {
             "connectors": Array [
               1,
               4,
             ],
             "id": "test-id-8",
             "isUpsideDown": false,
+            "parameters": undefined,
             "status": "unused",
           },
         },
@@ -2381,17 +2593,17 @@ Object {
   },
   "goldAllocation": Object {
     "test-id-109": Array [
-      GoldRewardCard {
+      Object {
         "id": "test-id-81",
         "value": 3,
       },
     ],
     "test-id-110": Array [
-      GoldRewardCard {
+      Object {
         "id": "test-id-80",
         "value": 3,
       },
-      GoldRewardCard {
+      Object {
         "id": "test-id-82",
         "value": 3,
       },
@@ -2402,61 +2614,67 @@ Object {
 
 exports[`Game playCard when game is started card is in the players hand adds a new card to the players hand 1`] = `
 Array [
-  PassageCard {
+  Object {
     "connectors": Array [
       2,
       4,
     ],
     "id": "test-id-0",
     "isUpsideDown": false,
+    "parameters": undefined,
     "status": "unused",
   },
-  PassageCard {
+  Object {
     "connectors": Array [
       1,
       3,
     ],
     "id": "test-id-3",
     "isUpsideDown": false,
+    "parameters": undefined,
     "status": "unused",
   },
-  PassageCard {
+  Object {
     "connectors": Array [
       1,
       3,
     ],
     "id": "test-id-6",
     "isUpsideDown": false,
+    "parameters": undefined,
     "status": "unused",
   },
-  PassageCard {
+  Object {
     "connectors": Array [
       1,
       4,
     ],
     "id": "test-id-9",
     "isUpsideDown": false,
+    "parameters": undefined,
     "status": "unused",
   },
-  PassageCard {
+  Object {
     "connectors": Array [
       1,
       2,
     ],
     "id": "test-id-12",
     "isUpsideDown": false,
+    "parameters": undefined,
     "status": "unused",
   },
-  PassageCard {
+  Object {
     "connectors": Array [
       1,
       2,
     ],
     "id": "test-id-15",
     "isUpsideDown": false,
+    "parameters": undefined,
     "status": "unused",
   },
-  PassageCard {
+  Object {
     "connectors": Array [
       1,
       2,
@@ -2464,16 +2682,17 @@ Array [
     ],
     "id": "test-id-18",
     "isUpsideDown": false,
+    "parameters": undefined,
     "status": "unused",
   },
 ]
 `;
 
 exports[`Game playCard when game is started card is in the players hand adds the card to the discard pile 1`] = `
-MapActionCard {
+Object {
   "id": "test-id-111",
   "parameters": Object {
-    "position": Position {
+    "position": Object {
       "id": "test-id-69",
       "x": 8,
       "y": 0,
@@ -2485,61 +2704,67 @@ MapActionCard {
 
 exports[`Game start with enough players sets player allegiances and deals cards 1`] = `
 Array [
-  Player {
+  Object {
     "age": 20,
     "hand": Object {
-      "test-id-0": PassageCard {
+      "test-id-0": Object {
         "connectors": Array [
           2,
           4,
         ],
         "id": "test-id-0",
         "isUpsideDown": false,
+        "parameters": undefined,
         "status": "unused",
       },
-      "test-id-12": PassageCard {
+      "test-id-12": Object {
         "connectors": Array [
           1,
           2,
         ],
         "id": "test-id-12",
         "isUpsideDown": false,
+        "parameters": undefined,
         "status": "unused",
       },
-      "test-id-15": PassageCard {
+      "test-id-15": Object {
         "connectors": Array [
           1,
           2,
         ],
         "id": "test-id-15",
         "isUpsideDown": false,
+        "parameters": undefined,
         "status": "unused",
       },
-      "test-id-3": PassageCard {
+      "test-id-3": Object {
         "connectors": Array [
           1,
           3,
         ],
         "id": "test-id-3",
         "isUpsideDown": false,
+        "parameters": undefined,
         "status": "unused",
       },
-      "test-id-6": PassageCard {
+      "test-id-6": Object {
         "connectors": Array [
           1,
           3,
         ],
         "id": "test-id-6",
         "isUpsideDown": false,
+        "parameters": undefined,
         "status": "unused",
       },
-      "test-id-9": PassageCard {
+      "test-id-9": Object {
         "connectors": Array [
           1,
           4,
         ],
         "id": "test-id-9",
         "isUpsideDown": false,
+        "parameters": undefined,
         "status": "unused",
       },
     },
@@ -2553,37 +2778,40 @@ Array [
     },
     "viewedFinishCards": Object {},
   },
-  Player {
+  Object {
     "age": 21,
     "hand": Object {
-      "test-id-1": PassageCard {
+      "test-id-1": Object {
         "connectors": Array [
           2,
           4,
         ],
         "id": "test-id-1",
         "isUpsideDown": false,
+        "parameters": undefined,
         "status": "unused",
       },
-      "test-id-10": PassageCard {
+      "test-id-10": Object {
         "connectors": Array [
           1,
           4,
         ],
         "id": "test-id-10",
         "isUpsideDown": false,
+        "parameters": undefined,
         "status": "unused",
       },
-      "test-id-13": PassageCard {
+      "test-id-13": Object {
         "connectors": Array [
           1,
           2,
         ],
         "id": "test-id-13",
         "isUpsideDown": false,
+        "parameters": undefined,
         "status": "unused",
       },
-      "test-id-16": PassageCard {
+      "test-id-16": Object {
         "connectors": Array [
           1,
           2,
@@ -2591,24 +2819,27 @@ Array [
         ],
         "id": "test-id-16",
         "isUpsideDown": false,
+        "parameters": undefined,
         "status": "unused",
       },
-      "test-id-4": PassageCard {
+      "test-id-4": Object {
         "connectors": Array [
           1,
           3,
         ],
         "id": "test-id-4",
         "isUpsideDown": false,
+        "parameters": undefined,
         "status": "unused",
       },
-      "test-id-7": PassageCard {
+      "test-id-7": Object {
         "connectors": Array [
           1,
           4,
         ],
         "id": "test-id-7",
         "isUpsideDown": false,
+        "parameters": undefined,
         "status": "unused",
       },
     },
@@ -2622,28 +2853,30 @@ Array [
     },
     "viewedFinishCards": Object {},
   },
-  Player {
+  Object {
     "age": 22,
     "hand": Object {
-      "test-id-11": PassageCard {
+      "test-id-11": Object {
         "connectors": Array [
           1,
           2,
         ],
         "id": "test-id-11",
         "isUpsideDown": false,
+        "parameters": undefined,
         "status": "unused",
       },
-      "test-id-14": PassageCard {
+      "test-id-14": Object {
         "connectors": Array [
           1,
           2,
         ],
         "id": "test-id-14",
         "isUpsideDown": false,
+        "parameters": undefined,
         "status": "unused",
       },
-      "test-id-17": PassageCard {
+      "test-id-17": Object {
         "connectors": Array [
           1,
           2,
@@ -2651,33 +2884,37 @@ Array [
         ],
         "id": "test-id-17",
         "isUpsideDown": false,
+        "parameters": undefined,
         "status": "unused",
       },
-      "test-id-2": PassageCard {
+      "test-id-2": Object {
         "connectors": Array [
           2,
           4,
         ],
         "id": "test-id-2",
         "isUpsideDown": false,
+        "parameters": undefined,
         "status": "unused",
       },
-      "test-id-5": PassageCard {
+      "test-id-5": Object {
         "connectors": Array [
           1,
           3,
         ],
         "id": "test-id-5",
         "isUpsideDown": false,
+        "parameters": undefined,
         "status": "unused",
       },
-      "test-id-8": PassageCard {
+      "test-id-8": Object {
         "connectors": Array [
           1,
           4,
         ],
         "id": "test-id-8",
         "isUpsideDown": false,
+        "parameters": undefined,
         "status": "unused",
       },
     },
@@ -2698,9 +2935,9 @@ exports[`Game when the deck is empty and players have multiple cards in their ha
 Object {
   "didGoldDiggersWin": false,
   "gameState": Object {
-    "board": Board {
+    "board": Object {
       "grid": Object {
-        "0,0": StartPathCard {
+        "0,0": Object {
           "connectors": Array [
             1,
             2,
@@ -2709,29 +2946,36 @@ Object {
           ],
           "id": "test-id-124",
           "isUpsideDown": false,
+          "parameters": undefined,
           "status": "played",
         },
-        "8,-2": RockFinishPathCard {
+        "8,-2": Object {
           "connectors": Array [
             1,
+            2,
+            3,
             4,
           ],
           "id": "test-id-127",
           "isFaceDown": true,
           "isUpsideDown": false,
+          "parameters": undefined,
           "status": "played",
         },
-        "8,0": RockFinishPathCard {
+        "8,0": Object {
           "connectors": Array [
             1,
             2,
+            3,
+            4,
           ],
           "id": "test-id-126",
           "isFaceDown": true,
           "isUpsideDown": false,
+          "parameters": undefined,
           "status": "played",
         },
-        "8,2": GoldFinishPathCard {
+        "8,2": Object {
           "connectors": Array [
             1,
             2,
@@ -2741,28 +2985,31 @@ Object {
           "id": "test-id-125",
           "isFaceDown": true,
           "isUpsideDown": false,
+          "parameters": undefined,
           "status": "played",
         },
       },
       "id": "test-id-123",
-      "isComplete": false,
     },
-    "deck": Deck {
+    "deck": Object {
       "drawPile": Array [],
       "id": "test-id-115",
     },
-    "discard": Discard {
+    "discard": Object {
       "discardPile": Array [
-        MapActionCard {
+        Object {
           "id": "test-id-118",
+          "parameters": undefined,
           "status": "discarded",
         },
-        MapActionCard {
+        Object {
           "id": "test-id-117",
+          "parameters": undefined,
           "status": "discarded",
         },
-        MapActionCard {
+        Object {
           "id": "test-id-116",
+          "parameters": undefined,
           "status": "discarded",
         },
       ],
@@ -2777,15 +3024,17 @@ Object {
       "test-id-159",
     ],
     "players": Object {
-      "test-id-157": Player {
+      "test-id-157": Object {
         "age": 20,
         "hand": Object {
-          "test-id-215": MapActionCard {
+          "test-id-215": Object {
             "id": "test-id-215",
+            "parameters": undefined,
             "status": "unused",
           },
-          "test-id-218": MapActionCard {
+          "test-id-218": Object {
             "id": "test-id-218",
+            "parameters": undefined,
             "status": "unused",
           },
         },
@@ -2799,15 +3048,17 @@ Object {
         },
         "viewedFinishCards": Object {},
       },
-      "test-id-158": Player {
+      "test-id-158": Object {
         "age": 21,
         "hand": Object {
-          "test-id-216": MapActionCard {
+          "test-id-216": Object {
             "id": "test-id-216",
+            "parameters": undefined,
             "status": "unused",
           },
-          "test-id-219": MapActionCard {
+          "test-id-219": Object {
             "id": "test-id-219",
+            "parameters": undefined,
             "status": "unused",
           },
         },
@@ -2821,15 +3072,17 @@ Object {
         },
         "viewedFinishCards": Object {},
       },
-      "test-id-159": Player {
+      "test-id-159": Object {
         "age": 22,
         "hand": Object {
-          "test-id-217": MapActionCard {
+          "test-id-217": Object {
             "id": "test-id-217",
+            "parameters": undefined,
             "status": "unused",
           },
-          "test-id-220": MapActionCard {
+          "test-id-220": Object {
             "id": "test-id-220",
+            "parameters": undefined,
             "status": "unused",
           },
         },
@@ -2863,11 +3116,11 @@ Object {
   },
   "goldAllocation": Object {
     "test-id-157": Array [
-      GoldRewardCard {
+      Object {
         "id": "test-id-129",
         "value": 3,
       },
-      GoldRewardCard {
+      Object {
         "id": "test-id-141",
         "value": 1,
       },
@@ -2880,9 +3133,9 @@ exports[`Game when the deck is empty and players have one card in their hand whe
 Object {
   "didGoldDiggersWin": false,
   "gameState": Object {
-    "board": Board {
+    "board": Object {
       "grid": Object {
-        "0,0": StartPathCard {
+        "0,0": Object {
           "connectors": Array [
             1,
             2,
@@ -2891,29 +3144,36 @@ Object {
           ],
           "id": "test-id-118",
           "isUpsideDown": false,
+          "parameters": undefined,
           "status": "played",
         },
-        "8,-2": RockFinishPathCard {
+        "8,-2": Object {
           "connectors": Array [
             1,
+            2,
+            3,
             4,
           ],
           "id": "test-id-121",
           "isFaceDown": true,
           "isUpsideDown": false,
+          "parameters": undefined,
           "status": "played",
         },
-        "8,0": RockFinishPathCard {
+        "8,0": Object {
           "connectors": Array [
             1,
             2,
+            3,
+            4,
           ],
           "id": "test-id-120",
           "isFaceDown": true,
           "isUpsideDown": false,
+          "parameters": undefined,
           "status": "played",
         },
-        "8,2": GoldFinishPathCard {
+        "8,2": Object {
           "connectors": Array [
             1,
             2,
@@ -2923,28 +3183,31 @@ Object {
           "id": "test-id-119",
           "isFaceDown": true,
           "isUpsideDown": false,
+          "parameters": undefined,
           "status": "played",
         },
       },
       "id": "test-id-117",
-      "isComplete": false,
     },
-    "deck": Deck {
+    "deck": Object {
       "drawPile": Array [],
       "id": "test-id-112",
     },
-    "discard": Discard {
+    "discard": Object {
       "discardPile": Array [
-        MapActionCard {
+        Object {
           "id": "test-id-115",
+          "parameters": undefined,
           "status": "discarded",
         },
-        MapActionCard {
+        Object {
           "id": "test-id-114",
+          "parameters": undefined,
           "status": "discarded",
         },
-        MapActionCard {
+        Object {
           "id": "test-id-113",
+          "parameters": undefined,
           "status": "discarded",
         },
       ],
@@ -2959,11 +3222,12 @@ Object {
       "test-id-153",
     ],
     "players": Object {
-      "test-id-151": Player {
+      "test-id-151": Object {
         "age": 20,
         "hand": Object {
-          "test-id-209": MapActionCard {
+          "test-id-209": Object {
             "id": "test-id-209",
+            "parameters": undefined,
             "status": "unused",
           },
         },
@@ -2977,11 +3241,12 @@ Object {
         },
         "viewedFinishCards": Object {},
       },
-      "test-id-152": Player {
+      "test-id-152": Object {
         "age": 21,
         "hand": Object {
-          "test-id-210": MapActionCard {
+          "test-id-210": Object {
             "id": "test-id-210",
+            "parameters": undefined,
             "status": "unused",
           },
         },
@@ -2995,11 +3260,12 @@ Object {
         },
         "viewedFinishCards": Object {},
       },
-      "test-id-153": Player {
+      "test-id-153": Object {
         "age": 22,
         "hand": Object {
-          "test-id-211": MapActionCard {
+          "test-id-211": Object {
             "id": "test-id-211",
+            "parameters": undefined,
             "status": "unused",
           },
         },
@@ -3033,11 +3299,11 @@ Object {
   },
   "goldAllocation": Object {
     "test-id-151": Array [
-      GoldRewardCard {
+      Object {
         "id": "test-id-123",
         "value": 3,
       },
-      GoldRewardCard {
+      Object {
         "id": "test-id-135",
         "value": 1,
       },
@@ -3050,9 +3316,9 @@ exports[`Game when the deck is empty and players have one card in their hand whe
 Object {
   "didGoldDiggersWin": false,
   "gameState": Object {
-    "board": Board {
+    "board": Object {
       "grid": Object {
-        "0,0": StartPathCard {
+        "0,0": Object {
           "connectors": Array [
             1,
             2,
@@ -3061,29 +3327,36 @@ Object {
           ],
           "id": "test-id-118",
           "isUpsideDown": false,
+          "parameters": undefined,
           "status": "played",
         },
-        "8,-2": RockFinishPathCard {
+        "8,-2": Object {
           "connectors": Array [
             1,
+            2,
+            3,
             4,
           ],
           "id": "test-id-121",
           "isFaceDown": true,
           "isUpsideDown": false,
+          "parameters": undefined,
           "status": "played",
         },
-        "8,0": RockFinishPathCard {
+        "8,0": Object {
           "connectors": Array [
             1,
             2,
+            3,
+            4,
           ],
           "id": "test-id-120",
           "isFaceDown": true,
           "isUpsideDown": false,
+          "parameters": undefined,
           "status": "played",
         },
-        "8,2": GoldFinishPathCard {
+        "8,2": Object {
           "connectors": Array [
             1,
             2,
@@ -3093,22 +3366,22 @@ Object {
           "id": "test-id-119",
           "isFaceDown": true,
           "isUpsideDown": false,
+          "parameters": undefined,
           "status": "played",
         },
       },
       "id": "test-id-117",
-      "isComplete": false,
     },
-    "deck": Deck {
+    "deck": Object {
       "drawPile": Array [],
       "id": "test-id-112",
     },
-    "discard": Discard {
+    "discard": Object {
       "discardPile": Array [
-        MapActionCard {
+        Object {
           "id": "test-id-115",
           "parameters": Object {
-            "position": Position {
+            "position": Object {
               "id": "test-id-69",
               "x": 8,
               "y": 0,
@@ -3116,10 +3389,10 @@ Object {
           },
           "status": "played",
         },
-        MapActionCard {
+        Object {
           "id": "test-id-114",
           "parameters": Object {
-            "position": Position {
+            "position": Object {
               "id": "test-id-69",
               "x": 8,
               "y": 0,
@@ -3127,10 +3400,10 @@ Object {
           },
           "status": "played",
         },
-        MapActionCard {
+        Object {
           "id": "test-id-113",
           "parameters": Object {
-            "position": Position {
+            "position": Object {
               "id": "test-id-69",
               "x": 8,
               "y": 0,
@@ -3150,11 +3423,12 @@ Object {
       "test-id-153",
     ],
     "players": Object {
-      "test-id-151": Player {
+      "test-id-151": Object {
         "age": 20,
         "hand": Object {
-          "test-id-209": MapActionCard {
+          "test-id-209": Object {
             "id": "test-id-209",
+            "parameters": undefined,
             "status": "unused",
           },
         },
@@ -3168,11 +3442,12 @@ Object {
         },
         "viewedFinishCards": Object {},
       },
-      "test-id-152": Player {
+      "test-id-152": Object {
         "age": 21,
         "hand": Object {
-          "test-id-210": MapActionCard {
+          "test-id-210": Object {
             "id": "test-id-210",
+            "parameters": undefined,
             "status": "unused",
           },
         },
@@ -3186,11 +3461,12 @@ Object {
         },
         "viewedFinishCards": Object {},
       },
-      "test-id-153": Player {
+      "test-id-153": Object {
         "age": 22,
         "hand": Object {
-          "test-id-211": MapActionCard {
+          "test-id-211": Object {
             "id": "test-id-211",
+            "parameters": undefined,
             "status": "unused",
           },
         },
@@ -3224,11 +3500,11 @@ Object {
   },
   "goldAllocation": Object {
     "test-id-151": Array [
-      GoldRewardCard {
+      Object {
         "id": "test-id-123",
         "value": 3,
       },
-      GoldRewardCard {
+      Object {
         "id": "test-id-135",
         "value": 1,
       },
@@ -3241,9 +3517,9 @@ exports[`Game when the deck is empty and players have one card in their hand whe
 Object {
   "didGoldDiggersWin": false,
   "gameState": Object {
-    "board": Board {
+    "board": Object {
       "grid": Object {
-        "0,0": StartPathCard {
+        "0,0": Object {
           "connectors": Array [
             1,
             2,
@@ -3252,29 +3528,36 @@ Object {
           ],
           "id": "test-id-121",
           "isUpsideDown": false,
+          "parameters": undefined,
           "status": "played",
         },
-        "8,-2": RockFinishPathCard {
+        "8,-2": Object {
           "connectors": Array [
             1,
+            2,
+            3,
             4,
           ],
           "id": "test-id-124",
           "isFaceDown": true,
           "isUpsideDown": false,
+          "parameters": undefined,
           "status": "played",
         },
-        "8,0": RockFinishPathCard {
+        "8,0": Object {
           "connectors": Array [
             1,
             2,
+            3,
+            4,
           ],
           "id": "test-id-123",
           "isFaceDown": true,
           "isUpsideDown": false,
+          "parameters": undefined,
           "status": "played",
         },
-        "8,2": GoldFinishPathCard {
+        "8,2": Object {
           "connectors": Array [
             1,
             2,
@@ -3284,30 +3567,32 @@ Object {
           "id": "test-id-122",
           "isFaceDown": true,
           "isUpsideDown": false,
+          "parameters": undefined,
           "status": "played",
         },
       },
       "id": "test-id-120",
-      "isComplete": false,
     },
-    "deck": Deck {
+    "deck": Object {
       "drawPile": Array [],
       "id": "test-id-115",
     },
-    "discard": Discard {
+    "discard": Object {
       "discardPile": Array [
-        MapActionCard {
+        Object {
           "id": "test-id-118",
+          "parameters": undefined,
           "status": "discarded",
         },
-        MapActionCard {
+        Object {
           "id": "test-id-117",
+          "parameters": undefined,
           "status": "discarded",
         },
-        MapActionCard {
+        Object {
           "id": "test-id-116",
           "parameters": Object {
-            "position": Position {
+            "position": Object {
               "id": "test-id-69",
               "x": 8,
               "y": 0,
@@ -3327,11 +3612,12 @@ Object {
       "test-id-156",
     ],
     "players": Object {
-      "test-id-154": Player {
+      "test-id-154": Object {
         "age": 20,
         "hand": Object {
-          "test-id-212": MapActionCard {
+          "test-id-212": Object {
             "id": "test-id-212",
+            "parameters": undefined,
             "status": "unused",
           },
         },
@@ -3345,11 +3631,12 @@ Object {
         },
         "viewedFinishCards": Object {},
       },
-      "test-id-155": Player {
+      "test-id-155": Object {
         "age": 21,
         "hand": Object {
-          "test-id-213": MapActionCard {
+          "test-id-213": Object {
             "id": "test-id-213",
+            "parameters": undefined,
             "status": "unused",
           },
         },
@@ -3363,11 +3650,12 @@ Object {
         },
         "viewedFinishCards": Object {},
       },
-      "test-id-156": Player {
+      "test-id-156": Object {
         "age": 22,
         "hand": Object {
-          "test-id-214": MapActionCard {
+          "test-id-214": Object {
             "id": "test-id-214",
+            "parameters": undefined,
             "status": "unused",
           },
         },
@@ -3401,11 +3689,11 @@ Object {
   },
   "goldAllocation": Object {
     "test-id-154": Array [
-      GoldRewardCard {
+      Object {
         "id": "test-id-126",
         "value": 3,
       },
-      GoldRewardCard {
+      Object {
         "id": "test-id-138",
         "value": 1,
       },

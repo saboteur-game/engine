@@ -44,7 +44,7 @@ class Card {
     }
   }
 
-  toJS(): Pojo {
+  toJSON(): Pojo {
     return {
       id: this.id,
       status: this.status,

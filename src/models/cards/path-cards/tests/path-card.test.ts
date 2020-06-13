@@ -15,7 +15,7 @@ describe("PathCard", () => {
   });
 
   it("can be serialized", () => {
-    expect(pathCard.toJS()).toMatchSnapshot();
+    expect(pathCard.toJSON()).toMatchSnapshot();
   });
 
   it("does not implement visalization", () => {

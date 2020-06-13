@@ -3,115 +3,115 @@
 exports[`RewardDeck can be serialized 1`] = `
 Object {
   "drawPile": Array [
-    GoldRewardCard {
+    Object {
       "id": "test-id-1",
       "value": 3,
     },
-    GoldRewardCard {
+    Object {
       "id": "test-id-2",
       "value": 3,
     },
-    GoldRewardCard {
+    Object {
       "id": "test-id-3",
       "value": 3,
     },
-    GoldRewardCard {
+    Object {
       "id": "test-id-4",
       "value": 3,
     },
-    GoldRewardCard {
+    Object {
       "id": "test-id-5",
       "value": 2,
     },
-    GoldRewardCard {
+    Object {
       "id": "test-id-6",
       "value": 2,
     },
-    GoldRewardCard {
+    Object {
       "id": "test-id-7",
       "value": 2,
     },
-    GoldRewardCard {
+    Object {
       "id": "test-id-8",
       "value": 2,
     },
-    GoldRewardCard {
+    Object {
       "id": "test-id-9",
       "value": 2,
     },
-    GoldRewardCard {
+    Object {
       "id": "test-id-10",
       "value": 2,
     },
-    GoldRewardCard {
+    Object {
       "id": "test-id-11",
       "value": 2,
     },
-    GoldRewardCard {
+    Object {
       "id": "test-id-12",
       "value": 2,
     },
-    GoldRewardCard {
+    Object {
       "id": "test-id-13",
       "value": 1,
     },
-    GoldRewardCard {
+    Object {
       "id": "test-id-14",
       "value": 1,
     },
-    GoldRewardCard {
+    Object {
       "id": "test-id-15",
       "value": 1,
     },
-    GoldRewardCard {
+    Object {
       "id": "test-id-16",
       "value": 1,
     },
-    GoldRewardCard {
+    Object {
       "id": "test-id-17",
       "value": 1,
     },
-    GoldRewardCard {
+    Object {
       "id": "test-id-18",
       "value": 1,
     },
-    GoldRewardCard {
+    Object {
       "id": "test-id-19",
       "value": 1,
     },
-    GoldRewardCard {
+    Object {
       "id": "test-id-20",
       "value": 1,
     },
-    GoldRewardCard {
+    Object {
       "id": "test-id-21",
       "value": 1,
     },
-    GoldRewardCard {
+    Object {
       "id": "test-id-22",
       "value": 1,
     },
-    GoldRewardCard {
+    Object {
       "id": "test-id-23",
       "value": 1,
     },
-    GoldRewardCard {
+    Object {
       "id": "test-id-24",
       "value": 1,
     },
-    GoldRewardCard {
+    Object {
       "id": "test-id-25",
       "value": 1,
     },
-    GoldRewardCard {
+    Object {
       "id": "test-id-26",
       "value": 1,
     },
-    GoldRewardCard {
+    Object {
       "id": "test-id-27",
       "value": 1,
     },
-    GoldRewardCard {
+    Object {
       "id": "test-id-28",
       "value": 1,
     },

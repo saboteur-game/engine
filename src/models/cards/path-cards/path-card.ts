@@ -28,9 +28,9 @@ class PathCard extends Card {
     throw new Error("Not implemented");
   }
 
-  toJS(): Pojo {
+  toJSON(): Pojo {
     return {
-      ...super.toJS(),
+      ...super.toJSON(),
       connectors: this.connectors,
       isUpsideDown: this.isUpsideDown,
       parameters: this.parameters,

@@ -103,7 +103,7 @@ class Player {
     );
   }
 
-  toJS(): Pojo {
+  toJSON(): Pojo {
     return {
       id: this.id,
       name: this.name,
@@ -111,6 +111,7 @@ class Player {
       hand: this.hand,
       viewedFinishCards: this.viewedFinishCards,
       isSaboteur: this.isSaboteur,
+      tools: this.tools,
     };
   }
 }

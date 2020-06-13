@@ -79,7 +79,7 @@ class RewardDeck {
     );
   }
 
-  toJS(): Pojo {
+  toJSON(): Pojo {
     return {
       id: this.id,
       drawPile: this.drawPile,

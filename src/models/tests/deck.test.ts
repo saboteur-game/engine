@@ -18,7 +18,7 @@ describe("Deck", () => {
   });
 
   it("can be serialized", () => {
-    expect(new Deck().toJS()).toMatchSnapshot();
+    expect(new Deck().toJSON()).toMatchSnapshot();
   });
 
   describe("draw card when the pile is populated", () => {

@@ -1,6 +1,7 @@
-import { PathCard } from ".";
-import { Sides } from "../card";
+import { Pojo } from "../../../utils";
 import getCardVisualization from "../../../utils/get-card-visualization";
+import { Sides } from "../card";
+import { PathCard } from ".";
 
 const UNKNOWN_CARD = "▕▔▔▔▔▏\n▕ ?? ▏\n▕▁▁▁▁▏";
 
@@ -27,6 +28,16 @@ export class FinishPathCard extends PathCard {
     if (!this.connectors.includes(side)) {
       this.rotate();
     }
+  }
+
+  toJSON(): Pojo {
+    return {
+      ...super.toJSON(),
+      isFaceDown: this.isFaceDown,
+      ...(this.isFaceDown
+        ? { connectors: [Sides.top, Sides.right, Sides.bottom, Sides.left] }
+        : {}),
+    };
   }
 }
 

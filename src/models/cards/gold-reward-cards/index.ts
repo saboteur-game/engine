@@ -9,7 +9,7 @@ class GoldRewardCard {
     this.value = value;
   }
 
-  toJS(): Pojo {
+  toJSON(): Pojo {
     return {
       id: this.id,
       value: this.value,
