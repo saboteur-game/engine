@@ -2,151 +2,167 @@
 
 exports[`cards getShuffledDeck returns a full deck 1`] = `
 Array [
-  PassageCard {
+  Object {
     "connectors": Array [
       2,
       4,
     ],
     "id": "test-id-0",
     "isUpsideDown": false,
+    "parameters": undefined,
     "status": "unused",
   },
-  PassageCard {
+  Object {
     "connectors": Array [
       2,
       4,
     ],
     "id": "test-id-1",
     "isUpsideDown": false,
+    "parameters": undefined,
     "status": "unused",
   },
-  PassageCard {
+  Object {
     "connectors": Array [
       2,
       4,
     ],
     "id": "test-id-2",
     "isUpsideDown": false,
+    "parameters": undefined,
     "status": "unused",
   },
-  PassageCard {
+  Object {
     "connectors": Array [
       1,
       3,
     ],
     "id": "test-id-3",
     "isUpsideDown": false,
+    "parameters": undefined,
     "status": "unused",
   },
-  PassageCard {
+  Object {
     "connectors": Array [
       1,
       3,
     ],
     "id": "test-id-4",
     "isUpsideDown": false,
+    "parameters": undefined,
     "status": "unused",
   },
-  PassageCard {
+  Object {
     "connectors": Array [
       1,
       3,
     ],
     "id": "test-id-5",
     "isUpsideDown": false,
+    "parameters": undefined,
     "status": "unused",
   },
-  PassageCard {
+  Object {
     "connectors": Array [
       1,
       3,
     ],
     "id": "test-id-6",
     "isUpsideDown": false,
+    "parameters": undefined,
     "status": "unused",
   },
-  PassageCard {
+  Object {
     "connectors": Array [
       1,
       4,
     ],
     "id": "test-id-7",
     "isUpsideDown": false,
+    "parameters": undefined,
     "status": "unused",
   },
-  PassageCard {
+  Object {
     "connectors": Array [
       1,
       4,
     ],
     "id": "test-id-8",
     "isUpsideDown": false,
+    "parameters": undefined,
     "status": "unused",
   },
-  PassageCard {
+  Object {
     "connectors": Array [
       1,
       4,
     ],
     "id": "test-id-9",
     "isUpsideDown": false,
+    "parameters": undefined,
     "status": "unused",
   },
-  PassageCard {
+  Object {
     "connectors": Array [
       1,
       4,
     ],
     "id": "test-id-10",
     "isUpsideDown": false,
+    "parameters": undefined,
     "status": "unused",
   },
-  PassageCard {
+  Object {
     "connectors": Array [
       1,
       2,
     ],
     "id": "test-id-11",
     "isUpsideDown": false,
+    "parameters": undefined,
     "status": "unused",
   },
-  PassageCard {
+  Object {
     "connectors": Array [
       1,
       2,
     ],
     "id": "test-id-12",
     "isUpsideDown": false,
+    "parameters": undefined,
     "status": "unused",
   },
-  PassageCard {
+  Object {
     "connectors": Array [
       1,
       2,
     ],
     "id": "test-id-13",
     "isUpsideDown": false,
+    "parameters": undefined,
     "status": "unused",
   },
-  PassageCard {
+  Object {
     "connectors": Array [
       1,
       2,
     ],
     "id": "test-id-14",
     "isUpsideDown": false,
+    "parameters": undefined,
     "status": "unused",
   },
-  PassageCard {
+  Object {
     "connectors": Array [
       1,
       2,
     ],
     "id": "test-id-15",
     "isUpsideDown": false,
+    "parameters": undefined,
     "status": "unused",
   },
-  PassageCard {
+  Object {
     "connectors": Array [
       1,
       2,
@@ -154,9 +170,10 @@ Array [
     ],
     "id": "test-id-16",
     "isUpsideDown": false,
+    "parameters": undefined,
     "status": "unused",
   },
-  PassageCard {
+  Object {
     "connectors": Array [
       1,
       2,
@@ -164,9 +181,10 @@ Array [
     ],
     "id": "test-id-17",
     "isUpsideDown": false,
+    "parameters": undefined,
     "status": "unused",
   },
-  PassageCard {
+  Object {
     "connectors": Array [
       1,
       2,
@@ -174,9 +192,10 @@ Array [
     ],
     "id": "test-id-18",
     "isUpsideDown": false,
+    "parameters": undefined,
     "status": "unused",
   },
-  PassageCard {
+  Object {
     "connectors": Array [
       1,
       2,
@@ -184,9 +203,10 @@ Array [
     ],
     "id": "test-id-19",
     "isUpsideDown": false,
+    "parameters": undefined,
     "status": "unused",
   },
-  PassageCard {
+  Object {
     "connectors": Array [
       1,
       2,
@@ -194,9 +214,10 @@ Array [
     ],
     "id": "test-id-20",
     "isUpsideDown": false,
+    "parameters": undefined,
     "status": "unused",
   },
-  PassageCard {
+  Object {
     "connectors": Array [
       1,
       2,
@@ -204,9 +225,10 @@ Array [
     ],
     "id": "test-id-21",
     "isUpsideDown": false,
+    "parameters": undefined,
     "status": "unused",
   },
-  PassageCard {
+  Object {
     "connectors": Array [
       1,
       2,
@@ -214,9 +236,10 @@ Array [
     ],
     "id": "test-id-22",
     "isUpsideDown": false,
+    "parameters": undefined,
     "status": "unused",
   },
-  PassageCard {
+  Object {
     "connectors": Array [
       1,
       2,
@@ -224,9 +247,10 @@ Array [
     ],
     "id": "test-id-23",
     "isUpsideDown": false,
+    "parameters": undefined,
     "status": "unused",
   },
-  PassageCard {
+  Object {
     "connectors": Array [
       1,
       2,
@@ -234,9 +258,10 @@ Array [
     ],
     "id": "test-id-24",
     "isUpsideDown": false,
+    "parameters": undefined,
     "status": "unused",
   },
-  PassageCard {
+  Object {
     "connectors": Array [
       1,
       2,
@@ -244,9 +269,10 @@ Array [
     ],
     "id": "test-id-25",
     "isUpsideDown": false,
+    "parameters": undefined,
     "status": "unused",
   },
-  PassageCard {
+  Object {
     "connectors": Array [
       1,
       2,
@@ -255,9 +281,10 @@ Array [
     ],
     "id": "test-id-26",
     "isUpsideDown": false,
+    "parameters": undefined,
     "status": "unused",
   },
-  PassageCard {
+  Object {
     "connectors": Array [
       1,
       2,
@@ -266,9 +293,10 @@ Array [
     ],
     "id": "test-id-27",
     "isUpsideDown": false,
+    "parameters": undefined,
     "status": "unused",
   },
-  PassageCard {
+  Object {
     "connectors": Array [
       1,
       2,
@@ -277,9 +305,10 @@ Array [
     ],
     "id": "test-id-28",
     "isUpsideDown": false,
+    "parameters": undefined,
     "status": "unused",
   },
-  PassageCard {
+  Object {
     "connectors": Array [
       1,
       2,
@@ -288,9 +317,10 @@ Array [
     ],
     "id": "test-id-29",
     "isUpsideDown": false,
+    "parameters": undefined,
     "status": "unused",
   },
-  PassageCard {
+  Object {
     "connectors": Array [
       1,
       2,
@@ -299,61 +329,68 @@ Array [
     ],
     "id": "test-id-30",
     "isUpsideDown": false,
+    "parameters": undefined,
     "status": "unused",
   },
-  DeadendCard {
+  Object {
     "connectors": Array [
       1,
     ],
     "id": "test-id-31",
     "isUpsideDown": false,
+    "parameters": undefined,
     "status": "unused",
   },
-  DeadendCard {
+  Object {
     "connectors": Array [
       2,
     ],
     "id": "test-id-32",
     "isUpsideDown": false,
+    "parameters": undefined,
     "status": "unused",
   },
-  DeadendCard {
+  Object {
     "connectors": Array [
       1,
       2,
     ],
     "id": "test-id-33",
     "isUpsideDown": false,
+    "parameters": undefined,
     "status": "unused",
   },
-  DeadendCard {
+  Object {
     "connectors": Array [
       1,
       3,
     ],
     "id": "test-id-34",
     "isUpsideDown": false,
+    "parameters": undefined,
     "status": "unused",
   },
-  DeadendCard {
+  Object {
     "connectors": Array [
       1,
       4,
     ],
     "id": "test-id-35",
     "isUpsideDown": false,
+    "parameters": undefined,
     "status": "unused",
   },
-  DeadendCard {
+  Object {
     "connectors": Array [
       2,
       4,
     ],
     "id": "test-id-36",
     "isUpsideDown": false,
+    "parameters": undefined,
     "status": "unused",
   },
-  DeadendCard {
+  Object {
     "connectors": Array [
       1,
       2,
@@ -361,9 +398,10 @@ Array [
     ],
     "id": "test-id-37",
     "isUpsideDown": false,
+    "parameters": undefined,
     "status": "unused",
   },
-  DeadendCard {
+  Object {
     "connectors": Array [
       1,
       2,
@@ -371,9 +409,10 @@ Array [
     ],
     "id": "test-id-38",
     "isUpsideDown": false,
+    "parameters": undefined,
     "status": "unused",
   },
-  DeadendCard {
+  Object {
     "connectors": Array [
       1,
       2,
@@ -382,171 +421,199 @@ Array [
     ],
     "id": "test-id-39",
     "isUpsideDown": false,
+    "parameters": undefined,
     "status": "unused",
   },
-  MapActionCard {
+  Object {
     "id": "test-id-40",
+    "parameters": undefined,
     "status": "unused",
   },
-  MapActionCard {
+  Object {
     "id": "test-id-41",
+    "parameters": undefined,
     "status": "unused",
   },
-  MapActionCard {
+  Object {
     "id": "test-id-42",
+    "parameters": undefined,
     "status": "unused",
   },
-  MapActionCard {
+  Object {
     "id": "test-id-43",
+    "parameters": undefined,
     "status": "unused",
   },
-  MapActionCard {
+  Object {
     "id": "test-id-44",
+    "parameters": undefined,
     "status": "unused",
   },
-  MapActionCard {
+  Object {
     "id": "test-id-45",
+    "parameters": undefined,
     "status": "unused",
   },
-  RockfallActionCard {
+  Object {
     "id": "test-id-46",
+    "parameters": undefined,
     "status": "unused",
   },
-  RockfallActionCard {
+  Object {
     "id": "test-id-47",
+    "parameters": undefined,
     "status": "unused",
   },
-  RockfallActionCard {
+  Object {
     "id": "test-id-48",
+    "parameters": undefined,
     "status": "unused",
   },
-  BreakActionCard {
+  Object {
     "appliesTo": Array [
       "pick",
     ],
     "id": "test-id-49",
+    "parameters": undefined,
     "status": "unused",
   },
-  BreakActionCard {
+  Object {
     "appliesTo": Array [
       "pick",
     ],
     "id": "test-id-50",
+    "parameters": undefined,
     "status": "unused",
   },
-  BreakActionCard {
+  Object {
     "appliesTo": Array [
       "pick",
     ],
     "id": "test-id-51",
+    "parameters": undefined,
     "status": "unused",
   },
-  BreakActionCard {
+  Object {
     "appliesTo": Array [
       "lamp",
     ],
     "id": "test-id-52",
+    "parameters": undefined,
     "status": "unused",
   },
-  BreakActionCard {
+  Object {
     "appliesTo": Array [
       "lamp",
     ],
     "id": "test-id-53",
+    "parameters": undefined,
     "status": "unused",
   },
-  BreakActionCard {
+  Object {
     "appliesTo": Array [
       "lamp",
     ],
     "id": "test-id-54",
+    "parameters": undefined,
     "status": "unused",
   },
-  BreakActionCard {
+  Object {
     "appliesTo": Array [
       "wagon",
     ],
     "id": "test-id-55",
+    "parameters": undefined,
     "status": "unused",
   },
-  BreakActionCard {
+  Object {
     "appliesTo": Array [
       "wagon",
     ],
     "id": "test-id-56",
+    "parameters": undefined,
     "status": "unused",
   },
-  BreakActionCard {
+  Object {
     "appliesTo": Array [
       "wagon",
     ],
     "id": "test-id-57",
+    "parameters": undefined,
     "status": "unused",
   },
-  RepairActionCard {
+  Object {
     "appliesTo": Array [
       "pick",
     ],
     "id": "test-id-58",
+    "parameters": undefined,
     "status": "unused",
   },
-  RepairActionCard {
+  Object {
     "appliesTo": Array [
       "pick",
     ],
     "id": "test-id-59",
+    "parameters": undefined,
     "status": "unused",
   },
-  RepairActionCard {
+  Object {
     "appliesTo": Array [
       "lamp",
     ],
     "id": "test-id-60",
+    "parameters": undefined,
     "status": "unused",
   },
-  RepairActionCard {
+  Object {
     "appliesTo": Array [
       "lamp",
     ],
     "id": "test-id-61",
+    "parameters": undefined,
     "status": "unused",
   },
-  RepairActionCard {
+  Object {
     "appliesTo": Array [
       "wagon",
     ],
     "id": "test-id-62",
+    "parameters": undefined,
     "status": "unused",
   },
-  RepairActionCard {
+  Object {
     "appliesTo": Array [
       "wagon",
     ],
     "id": "test-id-63",
+    "parameters": undefined,
     "status": "unused",
   },
-  RepairActionCard {
+  Object {
     "appliesTo": Array [
       "pick",
       "lamp",
     ],
     "id": "test-id-64",
+    "parameters": undefined,
     "status": "unused",
   },
-  RepairActionCard {
+  Object {
     "appliesTo": Array [
       "pick",
       "wagon",
     ],
     "id": "test-id-65",
+    "parameters": undefined,
     "status": "unused",
   },
-  RepairActionCard {
+  Object {
     "appliesTo": Array [
       "lamp",
       "wagon",
     ],
     "id": "test-id-66",
+    "parameters": undefined,
     "status": "unused",
   },
 ]

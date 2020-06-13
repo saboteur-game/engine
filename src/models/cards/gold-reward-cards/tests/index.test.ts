@@ -8,6 +8,6 @@ describe("GoldRewardCard", () => {
   });
 
   it("can be serialized", () => {
-    expect(goldRewardCard.toJS()).toMatchSnapshot();
+    expect(goldRewardCard.toJSON()).toMatchSnapshot();
   });
 });

@@ -20,9 +20,9 @@ export class ToolActionCard extends ActionCard {
     return super.play(parameters);
   }
 
-  toJS(): Pojo {
+  toJSON(): Pojo {
     return {
-      ...super.toJS(),
+      ...super.toJSON(),
       appliesTo: this.appliesTo,
     };
   }

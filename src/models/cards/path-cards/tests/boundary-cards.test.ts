@@ -60,6 +60,10 @@ describe("Boundary Cards", () => {
       it("can be visualized", () => {
         expect(card.visualize()).toMatchSnapshot();
       });
+
+      it("can be serialized", () => {
+        expect(card.toJSON()).toMatchSnapshot();
+      });
     });
 
     describe("when face up", () => {
@@ -69,6 +73,10 @@ describe("Boundary Cards", () => {
 
       it("can be visualized", () => {
         expect(card.visualize()).toMatchSnapshot();
+      });
+
+      it("can be serialized", () => {
+        expect(card.toJSON()).toMatchSnapshot();
       });
     });
   });
@@ -90,6 +98,10 @@ describe("Boundary Cards", () => {
       it("can be visualized upside down", () => {
         expect(cardUpsideDown.visualize()).toMatchSnapshot();
       });
+
+      it("can be serialized", () => {
+        expect(cardRightSideUp.toJSON()).toMatchSnapshot();
+      });
     });
 
     describe("when face up", () => {
@@ -104,6 +116,10 @@ describe("Boundary Cards", () => {
 
       it("can be visualized upside down", () => {
         expect(cardUpsideDown.visualize()).toMatchSnapshot();
+      });
+
+      it("can be serialized", () => {
+        expect(cardRightSideUp.toJSON()).toMatchSnapshot();
       });
     });
   });

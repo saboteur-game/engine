@@ -9,7 +9,7 @@ describe("RewardDeck", () => {
   let rewardDeck: RewardDeck;
 
   it("can be serialized", () => {
-    expect(new RewardDeck().toJS()).toMatchSnapshot();
+    expect(new RewardDeck().toJSON()).toMatchSnapshot();
   });
 
   describe("drawCard", () => {
@@ -21,7 +21,7 @@ describe("RewardDeck", () => {
       it("draws a card from the deck and returns it", () => {
         expect(rewardDeck.getCardCount()).toBe(28);
         expect(rewardDeck.drawCard()).toMatchInlineSnapshot(`
-          GoldRewardCard {
+          Object {
             "id": "test-id-1",
             "value": 3,
           }
@@ -62,15 +62,15 @@ describe("RewardDeck", () => {
         expect(rewardDeck.getCardCount()).toBe(5);
         expect(rewardDeck.extractCardsToValue(4)).toMatchInlineSnapshot(`
           Array [
-            GoldRewardCard {
+            Object {
               "id": "test-id-0",
               "value": 2,
             },
-            GoldRewardCard {
+            Object {
               "id": "test-id-2",
               "value": 1,
             },
-            GoldRewardCard {
+            Object {
               "id": "test-id-3",
               "value": 1,
             },
@@ -96,11 +96,11 @@ describe("RewardDeck", () => {
         expect(rewardDeck.getCardCount()).toBe(4);
         expect(rewardDeck.extractCardsToValue(4)).toMatchInlineSnapshot(`
           Array [
-            GoldRewardCard {
+            Object {
               "id": "test-id-1",
               "value": 3,
             },
-            GoldRewardCard {
+            Object {
               "id": "test-id-2",
               "value": 1,
             },
@@ -126,7 +126,7 @@ describe("RewardDeck", () => {
         expect(rewardDeck.getCardCount()).toBe(4);
         expect(rewardDeck.extractCardsToValue(2)).toMatchInlineSnapshot(`
           Array [
-            GoldRewardCard {
+            Object {
               "id": "test-id-3",
               "value": 2,
             },
@@ -151,11 +151,11 @@ describe("RewardDeck", () => {
         expect(rewardDeck.getCardCount()).toBe(3);
         expect(rewardDeck.extractCardsToValue(4)).toMatchInlineSnapshot(`
           Array [
-            GoldRewardCard {
+            Object {
               "id": "test-id-2",
               "value": 3,
             },
-            GoldRewardCard {
+            Object {
               "id": "test-id-32",
               "value": 1,
             },
@@ -180,11 +180,11 @@ describe("RewardDeck", () => {
         expect(rewardDeck.getCardCount()).toBe(3);
         expect(rewardDeck.extractCardsToValue(2)).toMatchInlineSnapshot(`
           Array [
-            GoldRewardCard {
+            Object {
               "id": "test-id-32",
               "value": 1,
             },
-            GoldRewardCard {
+            Object {
               "id": "test-id-33",
               "value": 1,
             },
@@ -210,11 +210,11 @@ describe("RewardDeck", () => {
         expect(rewardDeck.getCardCount()).toBe(4);
         expect(rewardDeck.extractCardsToValue(4)).toMatchInlineSnapshot(`
           Array [
-            GoldRewardCard {
+            Object {
               "id": "test-id-0",
               "value": 2,
             },
-            GoldRewardCard {
+            Object {
               "id": "test-id-3",
               "value": 2,
             },

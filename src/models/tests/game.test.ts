@@ -73,7 +73,7 @@ describe("Game", () => {
   });
 
   it("can be serialized", () => {
-    expect(game.toJS()).toMatchSnapshot();
+    expect(game.toJSON()).toMatchSnapshot();
   });
 
   it("can visualize the board", () => {

@@ -50,7 +50,7 @@ describe("Board", () => {
   });
 
   it("can be serialized", () => {
-    expect(board.toJS()).toMatchSnapshot();
+    expect(board.toJSON()).toMatchSnapshot();
   });
 
   describe("visualize", () => {

@@ -17,7 +17,7 @@ describe("Player", () => {
   });
 
   it("can be serialized", () => {
-    expect(player.toJS()).toMatchSnapshot();
+    expect(player.toJSON()).toMatchSnapshot();
   });
 
   it("will be provided random age if unspecified", () => {

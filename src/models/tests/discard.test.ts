@@ -11,7 +11,7 @@ describe("Discard", () => {
   });
 
   it("can be serialized", () => {
-    expect(discard.toJS()).toMatchSnapshot();
+    expect(discard.toJSON()).toMatchSnapshot();
   });
 
   describe("addPlayed", () => {

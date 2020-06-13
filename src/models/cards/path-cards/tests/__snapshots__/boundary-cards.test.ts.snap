@@ -1,15 +1,63 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
+exports[`Boundary Cards GoldFinishPathCard when face down can be serialized 1`] = `
+Object {
+  "connectors": Array [
+    1,
+    2,
+    3,
+    4,
+  ],
+  "id": "test-id-0",
+  "isFaceDown": true,
+  "isUpsideDown": false,
+  "parameters": undefined,
+  "status": "unused",
+}
+`;
+
 exports[`Boundary Cards GoldFinishPathCard when face down can be visualized 1`] = `
 "▕▔▔▔▔▏
 ▕ ?? ▏
 ▕▁▁▁▁▏"
 `;
 
+exports[`Boundary Cards GoldFinishPathCard when face up can be serialized 1`] = `
+Object {
+  "connectors": Array [
+    1,
+    2,
+    3,
+    4,
+  ],
+  "id": "test-id-0",
+  "isFaceDown": false,
+  "isUpsideDown": false,
+  "parameters": undefined,
+  "status": "unused",
+}
+`;
+
 exports[`Boundary Cards GoldFinishPathCard when face up can be visualized 1`] = `
 "██  ██
   !!  
 ██  ██"
+`;
+
+exports[`Boundary Cards RockFinishPathCard when face down can be serialized 1`] = `
+Object {
+  "connectors": Array [
+    1,
+    2,
+    3,
+    4,
+  ],
+  "id": "test-id-0",
+  "isFaceDown": true,
+  "isUpsideDown": false,
+  "parameters": undefined,
+  "status": "unused",
+}
 `;
 
 exports[`Boundary Cards RockFinishPathCard when face down can be visualized right side up 1`] = `
@@ -22,6 +70,20 @@ exports[`Boundary Cards RockFinishPathCard when face down can be visualized upsi
 "▕▔▔▔▔▏
 ▕ ?? ▏
 ▕▁▁▁▁▏"
+`;
+
+exports[`Boundary Cards RockFinishPathCard when face up can be serialized 1`] = `
+Object {
+  "connectors": Array [
+    1,
+    2,
+  ],
+  "id": "test-id-0",
+  "isFaceDown": false,
+  "isUpsideDown": false,
+  "parameters": undefined,
+  "status": "unused",
+}
 `;
 
 exports[`Boundary Cards RockFinishPathCard when face up can be visualized right side up 1`] = `

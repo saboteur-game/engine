@@ -2,7 +2,7 @@ import Position from "../position";
 
 describe("Position", () => {
   it("can be serialized", () => {
-    expect(new Position(1, 2).toJS()).toMatchSnapshot();
+    expect(new Position(1, 2).toJSON()).toMatchSnapshot();
   });
 
   it("can be stringified", () => {
@@ -11,7 +11,7 @@ describe("Position", () => {
 
   it("returns the position above", () => {
     expect(new Position(0, 0).above()).toMatchInlineSnapshot(`
-      Position {
+      Object {
         "id": "test-id-1",
         "x": 0,
         "y": 1,
@@ -21,7 +21,7 @@ describe("Position", () => {
 
   it("returns the position below", () => {
     expect(new Position(0, 0).below()).toMatchInlineSnapshot(`
-      Position {
+      Object {
         "id": "test-id-1",
         "x": 0,
         "y": -1,
@@ -31,7 +31,7 @@ describe("Position", () => {
 
   it("returns the position left", () => {
     expect(new Position(0, 0).left()).toMatchInlineSnapshot(`
-      Position {
+      Object {
         "id": "test-id-1",
         "x": -1,
         "y": 0,
@@ -41,7 +41,7 @@ describe("Position", () => {
 
   it("returns the position right", () => {
     expect(new Position(0, 0).right()).toMatchInlineSnapshot(`
-      Position {
+      Object {
         "id": "test-id-1",
         "x": 1,
         "y": 0,

@@ -2,8 +2,9 @@
 
 exports[`Player addToHand when there are cards in the players hand returns populated array 1`] = `
 Array [
-  MapActionCard {
+  Object {
     "id": "test-id-1",
+    "parameters": undefined,
     "status": "unused",
   },
 ]
@@ -16,6 +17,11 @@ Object {
   "id": "test-id-2",
   "isSaboteur": false,
   "name": "Alice",
+  "tools": Object {
+    "lamp": true,
+    "pick": true,
+    "wagon": true,
+  },
   "viewedFinishCards": Object {},
 }
 `;

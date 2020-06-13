@@ -14,7 +14,7 @@ describe("ActionCard", () => {
   });
 
   it("can be serialized", () => {
-    expect(actionCard.toJS()).toMatchSnapshot();
+    expect(actionCard.toJSON()).toMatchSnapshot();
   });
 
   describe("play a card", () => {

@@ -38,7 +38,7 @@ class Discard {
     return null;
   }
 
-  toJS(): Pojo {
+  toJSON(): Pojo {
     return {
       id: this.id,
       discardPile: this.discardPile,

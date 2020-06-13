@@ -12,7 +12,7 @@ describe("ToolActionCard", () => {
   });
 
   it("can be serialized", () => {
-    expect(toolActionCard.toJS()).toMatchSnapshot();
+    expect(toolActionCard.toJSON()).toMatchSnapshot();
   });
 
   describe("play a card", () => {

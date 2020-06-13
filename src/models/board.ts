@@ -223,7 +223,7 @@ class Board {
     return [top, right, bottom, left];
   }
 
-  toJS(): Pojo {
+  toJSON(): Pojo {
     return {
       id: this.id,
       grid: this.grid,
