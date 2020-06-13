@@ -269,6 +269,48 @@ describe("Board", () => {
         });
       });
 
+      describe("and card is in between two finish cards", () => {
+        beforeEach(() => {
+          traverseBoard(board);
+          board.addCard(
+            new PassageCard([Sides.bottom, Sides.left]),
+            new Position(7, 0)
+          );
+          board.addCard(
+            new PassageCard([Sides.top, Sides.right]),
+            new Position(7, -1)
+          );
+        });
+
+        it("turns over the middle finish card when right side up", () => {
+          expect(isFaceDown(board, topFinishPosition)).toBe(true);
+          expect(isFaceDown(board, middleFinishPosition)).toBe(true);
+          expect(isFaceDown(board, bottomFinishPosition)).toBe(true);
+          board.addCard(
+            new PassageCard([Sides.top, Sides.right, Sides.left]),
+            new Position(8, -1)
+          );
+          expect(isFaceDown(board, topFinishPosition)).toBe(true);
+          expect(isFaceDown(board, middleFinishPosition)).toBe(false);
+          expect(isFaceDown(board, bottomFinishPosition)).toBe(true);
+          expect(board.isComplete).toBe(false);
+        });
+
+        it("turns over the bottom finish card when upside-down", () => {
+          expect(isFaceDown(board, topFinishPosition)).toBe(true);
+          expect(isFaceDown(board, middleFinishPosition)).toBe(true);
+          expect(isFaceDown(board, bottomFinishPosition)).toBe(true);
+          board.addCard(
+            new PassageCard([Sides.top, Sides.right, Sides.left], true),
+            new Position(8, -1)
+          );
+          expect(isFaceDown(board, topFinishPosition)).toBe(true);
+          expect(isFaceDown(board, middleFinishPosition)).toBe(true);
+          expect(isFaceDown(board, bottomFinishPosition)).toBe(false);
+          expect(board.isComplete).toBe(false);
+        });
+      });
+
       describe("and card connects to finish card", () => {
         beforeEach(() => {
           traverseBoard(board);
