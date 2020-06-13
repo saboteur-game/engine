@@ -8,7 +8,8 @@
     "type-check": "tsc --noEmit",
     "lint": "npm run eslint && npm run type-check",
     "lint.fix": "npm run eslint -- --fix && npm run type-check",
-    "test": "jest"
+    "test": "jest",
+    "example": "npx ts-node ./example/index.ts"
   },
   "keywords": [
     "saboteur",

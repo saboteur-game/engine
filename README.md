@@ -28,9 +28,21 @@ This repository is a work in progress. Active tasks can be found on
 
 ### Running the example
 
+There is an example simulation of running the game. This attempts to play tunnel
+cards to route to first the middle final card, then top final card, and lastly
+the bottom final card. Saboteur players do not help and just discard. There are
+no action cards played or any attempt to find out which final card is the gold
+card.
+
+This can be run with
+
 ```
-$  npx ts-node ./example/index.ts
+$  npm run example
 ```
+
+It will output the final board state and the allegiance of each player after
+each round. At the end of the game, the scoreboard is output with the amount of
+gold taken for each player.
 
 ### 🛠️ Tools
 

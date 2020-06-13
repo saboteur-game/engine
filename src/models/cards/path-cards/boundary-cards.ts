@@ -25,7 +25,7 @@ export class FinishPathCard extends PathCard {
 
   turnOver(side: Sides): void {
     this.isFaceDown = false;
-    if (!this.connectors.includes(side)) {
+    if (!this.connectors.includes(side) && !this.isUpsideDown) {
       this.rotate();
     }
   }
