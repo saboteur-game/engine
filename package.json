@@ -29,7 +29,7 @@
   "dependencies": {
     "@types/uuid": "^8.0.0",
     "eventemitter2": "^6.4.2",
-    "uuid": "^8.1.0"
+    "uuid": "^8.2.0"
   },
   "devDependencies": {
     "@types/jest": "^26.0.0",
