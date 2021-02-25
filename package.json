@@ -28,7 +28,7 @@
   "license": "MIT",
   "dependencies": {
     "@types/uuid": "^8.0.0",
-    "eventemitter2": "^6.4.2",
+    "eventemitter2": "^6.4.4",
     "uuid": "^8.1.0"
   },
   "devDependencies": {
